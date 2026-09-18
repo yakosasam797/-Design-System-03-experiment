@@ -1,0 +1,32 @@
+.pt-nav-item:focus-visible,
+.pt-notes__main:focus-visible,
+.pt-notes__add:focus-visible,
+.pt-side-collapse:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* Shared accessible focus — Q6=B */
+.pt-focusable:focus-visible,
+.pt-btn:focus-visible,
+.pt-icon-btn:focus-visible,
+.pt-search:focus-within,
+.pt-filter-btn:focus-visible,
+.pt-tab:focus-visible,
+.pt-cbx:focus-visible,
+.pt-pg:focus-visible,
+.pt-skip-link:focus-visible,
+.pt-choice-opt:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.pt-search:focus-within {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.pt-search input:focus,
+.pt-search input:focus-visible {
+  outline: none;
+}

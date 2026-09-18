@@ -1,0 +1,42 @@
+.pt-st {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background-color: var(--surface);
+  font-family: var(--type-label-status-family);
+  font-size: var(--type-label-status-size);
+  font-weight: var(--type-label-status-weight);
+  line-height: var(--type-label-status-line);
+  color: var(--ink);
+  white-space: nowrap;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.pt-st--open {
+  background-color: var(--info-bg);
+  color: var(--info);
+  border-color: var(--info-line);
+}
+
+.pt-st--progress {
+  background-color: var(--warn-bg);
+  color: var(--warn);
+  border-color: var(--warn-line);
+}
+
+.pt-st--blocked {
+  background-color: var(--bad-bg);
+  color: var(--bad);
+  border-color: var(--bad-line);
+}
+
+.pt-st--done {
+  background-color: var(--ok-bg);
+  color: var(--ok);
+  border-color: var(--ok-line);
+}

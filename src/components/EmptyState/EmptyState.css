@@ -1,0 +1,45 @@
+.pt-empty {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--blockShadow);
+  padding: 56px 24px;
+  text-align: center;
+}
+
+.pt-empty__ic {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 14px;
+  border-radius: 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  color: var(--ink-3);
+}
+
+.pt-empty h4 {
+  font-family: var(--type-heading-section-family);
+  font-size: var(--type-heading-section-size);
+  font-weight: var(--type-heading-section-weight);
+  letter-spacing: var(--type-heading-section-tracking);
+  margin: 0 0 5px;
+  color: var(--ink);
+}
+
+.pt-empty p {
+  font-family: var(--type-body-copy-family);
+  font-size: var(--type-body-copy-size);
+  font-weight: var(--type-body-copy-weight);
+  line-height: var(--type-body-copy-line);
+  color: var(--ink-2);
+  margin: 0;
+}
+
+.pt-empty__action {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}

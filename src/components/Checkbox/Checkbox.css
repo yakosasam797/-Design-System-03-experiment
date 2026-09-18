@@ -1,0 +1,44 @@
+.pt-cbx {
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--checkbox-line);
+  border-radius: var(--radius-xs);
+  background: var(--surface);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: var(--on-brand, #fff);
+  flex: none;
+  padding: 0;
+}
+
+.pt-cbx svg {
+  opacity: 0;
+  transition: opacity 0.1s ease;
+}
+
+.pt-cbx--on {
+  background: var(--pink);
+  border-color: var(--pink);
+}
+
+.pt-cbx--on svg {
+  opacity: 1;
+}
+
+.pt-cbx--some {
+  background: var(--pink);
+  border-color: var(--pink);
+}
+
+.pt-cbx__dash {
+  width: 9px;
+  height: 2px;
+  background: var(--on-brand, #fff);
+  border-radius: 2px;
+}
+
+.pt-cbx:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

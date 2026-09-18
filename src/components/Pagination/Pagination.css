@@ -1,0 +1,60 @@
+.pt-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px var(--page-pad, 16px) 16px;
+  min-width: 0;
+  border-top: 1px solid var(--line);
+  background: var(--panel-ground);
+}
+
+.pt-foot__range {
+  font-family: var(--type-mono-range-family);
+  font-size: var(--type-mono-range-size);
+  font-weight: var(--type-mono-range-weight);
+  color: var(--ink-2);
+}
+
+.pt-pager {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pt-pg {
+  min-width: 30px;
+  height: 30px;
+  padding: 0 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink-2);
+  font-family: var(--type-mono-range-family);
+  font-size: var(--type-mono-range-size);
+  font-weight: var(--type-mono-range-weight);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.pt-pg:hover:not(:disabled) {
+  background: var(--surface-3);
+}
+
+.pt-pg--active {
+  background: var(--pink-soft);
+  color: var(--pink-ink);
+  border-color: var(--pink-line);
+}
+
+.pt-pg:disabled {
+  opacity: 1;
+  color: var(--ink-4);
+  border-color: var(--line-2);
+  cursor: not-allowed;
+}
+
+.pt-pg:disabled:hover {
+  background: var(--surface);
+}

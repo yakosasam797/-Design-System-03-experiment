@@ -1,0 +1,37 @@
+.pt-search {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: transparent;
+  min-width: 0;
+}
+
+.pt-search--full {
+  flex: 1 1 260px;
+  max-width: none;
+}
+
+.pt-search > svg {
+  color: var(--ink-2);
+  flex: none;
+}
+
+.pt-search input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--type-body-search-family);
+  font-size: var(--type-body-search-size);
+  font-weight: var(--type-body-search-weight);
+  color: var(--ink);
+}
+
+.pt-search input::placeholder {
+  color: var(--ink-3);
+}

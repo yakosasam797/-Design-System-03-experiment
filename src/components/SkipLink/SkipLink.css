@@ -1,0 +1,34 @@
+.pt-skip-link {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  z-index: 1000;
+  background: var(--surface);
+  color: var(--ink);
+  font-family: "Onest", sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pt-skip-link:focus,
+.pt-skip-link:focus-visible {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  width: auto;
+  height: auto;
+  margin: 0;
+  clip: auto;
+  overflow: visible;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  box-shadow: var(--panelShadow);
+}

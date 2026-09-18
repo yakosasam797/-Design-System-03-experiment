@@ -1,0 +1,55 @@
+.pt-tabbar {
+  display: flex;
+  align-items: stretch;
+  gap: 2px;
+  margin: 0;
+  border-bottom: 1px solid var(--line);
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.pt-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 44px;
+  padding: 0 10px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: var(--ink-2);
+  font-family: var(--type-label-tab-family);
+  font-size: var(--type-label-tab-size);
+  font-weight: var(--type-label-tab-weight);
+  cursor: pointer;
+  white-space: nowrap;
+  margin-bottom: -1px;
+  flex: none;
+}
+
+.pt-tab:hover {
+  color: var(--ink);
+}
+
+.pt-tab--active {
+  color: var(--pink);
+  font-weight: var(--type-label-tab-weight-active);
+  border-bottom-color: var(--pink);
+}
+
+/* Q1=A — neutral count chips */
+.pt-tab__chip {
+  display: inline-grid;
+  place-items: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 6px;
+  background: var(--surface-2);
+  color: var(--ink-2);
+  border: 1px solid var(--line);
+  font-family: var(--type-mono-count-family);
+  font-size: var(--type-mono-count-size);
+  font-weight: var(--type-mono-count-weight);
+}

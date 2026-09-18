@@ -1,0 +1,35 @@
+.pt-icon-btn {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--ink-2);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  position: relative;
+  flex: none;
+  padding: 0;
+}
+
+.pt-icon-btn:hover:not(:disabled) {
+  background: var(--surface-3);
+  color: var(--ink);
+}
+
+.pt-icon-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pt-icon-btn__alert {
+  position: absolute;
+  top: 6px;
+  right: 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-pill);
+  background: var(--bad);
+  border: 1.5px solid var(--surface);
+}

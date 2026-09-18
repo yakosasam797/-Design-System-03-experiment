@@ -1,0 +1,257 @@
+.pt-sheet {
+  margin: 0 calc(var(--page-pad, 16px) * -1);
+  min-width: 0;
+  max-width: none;
+  container-type: inline-size;
+  container-name: sheet;
+}
+
+/* Q5=B — horizontal scroll on narrow viewports */
+.pt-sheet__scroll {
+  overflow-x: auto;
+  min-width: 0;
+  width: 100%;
+}
+
+.pt-sheet__row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(120px, 1fr);
+  align-items: stretch;
+  min-width: 720px;
+  background: transparent;
+}
+
+/* Booking List columns — mirrors --bk-cols */
+.pt-sheet--booking {
+  --pt-check-col: calc(var(--page-pad, 16px) + 46px);
+  --pt-bk-cols: var(--pt-check-col) minmax(240px, 2.1fr) 168px 118px minmax(220px, 1.4fr) minmax(168px, 0.9fr) 112px;
+}
+
+.pt-sheet--booking .pt-sheet__row {
+  grid-auto-flow: unset;
+  grid-auto-columns: unset;
+  grid-template-columns: var(--pt-bk-cols);
+  min-width: 880px;
+}
+
+.pt-sheet__head {
+  background: var(--side);
+}
+
+.pt-sheet__cell {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  padding: 10px 14px;
+  border-left: 1px solid var(--line);
+  border-bottom: 1px solid var(--line-2);
+  min-height: 52px;
+}
+
+/* Booking density — AppShell shell container */
+@container shell (min-width: 1180px) {
+  .pt-sheet--booking .pt-sheet__row:not(.pt-sheet__head) > .pt-sheet__cell:not(.pt-sheet__cell--check),
+  .pt-sheet--booking .pt-sheet__head > .pt-sheet__cell:not(.pt-sheet__cell--check) {
+    padding: 12px 16px;
+  }
+}
+
+@container shell (min-width: 1760px) {
+  .pt-sheet--booking .pt-sheet__row:not(.pt-sheet__head) > .pt-sheet__cell {
+    min-height: 56px;
+  }
+}
+
+/* Standalone DataSheet stories */
+@container sheet (min-width: 1180px) {
+  .pt-sheet--booking .pt-sheet__row:not(.pt-sheet__head) > .pt-sheet__cell:not(.pt-sheet__cell--check),
+  .pt-sheet--booking .pt-sheet__head > .pt-sheet__cell:not(.pt-sheet__cell--check) {
+    padding: 12px 16px;
+  }
+}
+
+@container sheet (min-width: 1760px) {
+  .pt-sheet--booking .pt-sheet__row:not(.pt-sheet__head) > .pt-sheet__cell {
+    min-height: 56px;
+  }
+}
+
+/* Storybook / viewport fallback when canvas is wide */
+@media (min-width: 1280px) {
+  .pt-sheet--booking .pt-sheet__row:not(.pt-sheet__head) > .pt-sheet__cell:not(.pt-sheet__cell--check),
+  .pt-sheet--booking .pt-sheet__head > .pt-sheet__cell:not(.pt-sheet__cell--check) {
+    padding: 12px 16px;
+  }
+}
+
+.pt-sheet__head .pt-sheet__cell {
+  min-height: 40px;
+  background: var(--side);
+  border-top: 1px solid var(--line);
+  border-bottom-color: var(--line);
+  font-family: var(--type-label-table-head-family);
+  font-size: var(--type-label-table-head-size);
+  font-weight: var(--type-label-table-head-weight);
+  letter-spacing: var(--type-label-table-head-tracking);
+  color: var(--ink-2);
+}
+
+.pt-sheet__row > .pt-sheet__cell:first-child {
+  border-left: none;
+  padding-left: var(--page-pad, 16px);
+}
+
+.pt-sheet__cell--check {
+  justify-content: flex-start;
+}
+
+.pt-sheet__row > .pt-sheet__cell:last-child {
+  padding-right: 16px;
+}
+
+.pt-sheet__row:hover:not(.pt-sheet__head):not(.pt-sheet__row--loading) > .pt-sheet__cell {
+  background: var(--surface);
+}
+
+.pt-sheet__lead {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+
+.pt-sheet__lead--start {
+  align-items: flex-start;
+}
+
+.pt-sheet__lead--start > svg {
+  margin-top: 2px;
+}
+
+.pt-sheet__lead > svg {
+  color: var(--ink-2);
+  flex: none;
+}
+
+.pt-sheet__title {
+  font-family: var(--type-body-emphasis-family);
+  font-size: var(--type-body-emphasis-size);
+  font-weight: var(--type-body-emphasis-weight);
+  color: var(--ink);
+  line-height: var(--type-body-emphasis-line);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pt-sheet__title .ell,
+.ell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  max-width: 100%;
+}
+
+.pt-sheet__sub {
+  font-family: var(--type-mono-id-family);
+  font-size: var(--type-mono-id-size);
+  font-weight: var(--type-mono-id-weight);
+  color: var(--ink-2);
+}
+
+.pt-sheet__stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+  min-width: 0;
+  width: 100%;
+}
+
+.pt-sheet__line {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  font-family: var(--type-body-emphasis-family);
+  font-size: var(--type-body-emphasis-size);
+  font-weight: var(--type-body-emphasis-weight);
+  color: var(--ink);
+}
+
+.pt-sheet__line--muted {
+  font-family: var(--type-body-secondary-family);
+  font-size: var(--type-body-secondary-size);
+  font-weight: var(--type-body-secondary-weight);
+  color: var(--ink-2);
+}
+
+.pt-sheet__line svg {
+  color: var(--ink-2);
+  flex: none;
+}
+
+.pt-sheet__money {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.pt-sheet__amount {
+  font-family: var(--type-mono-money-family);
+  font-size: var(--type-mono-money-size);
+  font-weight: var(--type-mono-money-weight);
+  letter-spacing: var(--type-mono-money-tracking);
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.pt-sheet__owner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.pt-sheet__owner > svg {
+  color: var(--ink-2);
+  flex: none;
+}
+
+.pt-sheet__owner > span:not(.pt-avatar) {
+  font-family: var(--type-body-owner-count-family);
+  font-size: var(--type-body-owner-count-size);
+  color: var(--ink-2);
+  font-weight: var(--type-body-owner-count-weight);
+  white-space: nowrap;
+}
+
+.pt-sheet__skeleton {
+  display: block;
+  height: 12px;
+  width: 70%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--surface-2), var(--surface-3), var(--surface-2));
+  background-size: 200% 100%;
+  animation: pt-shimmer 1.2s ease-in-out infinite;
+}
+
+@keyframes pt-shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pt-sheet__skeleton {
+    animation: none;
+  }
+}

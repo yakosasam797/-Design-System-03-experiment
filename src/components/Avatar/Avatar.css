@@ -1,0 +1,23 @@
+.pt-avatar {
+  border-radius: var(--radius-sm);
+  display: grid;
+  place-items: center;
+  flex: none;
+  font-family: var(--type-label-avatar-family);
+  font-size: var(--type-label-avatar-size);
+  font-weight: var(--type-label-avatar-weight);
+  background: var(--color-avatar-work-bg, var(--accent-soft));
+  color: var(--color-avatar-work-text, var(--accent-ink));
+}
+
+.pt-avatar--sm {
+  font-family: var(--type-label-avatar-sm-family);
+  font-size: var(--type-label-avatar-sm-size);
+  font-weight: var(--type-label-avatar-sm-weight);
+}
+
+.pt-avatar--pink {
+  background: var(--color-avatar-person-bg, var(--pink-avatar));
+  color: var(--color-avatar-person-text, var(--pink-ink));
+  border: 1px solid var(--color-avatar-person-border, var(--pink-line));
+}
