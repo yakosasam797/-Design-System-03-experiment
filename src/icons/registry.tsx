@@ -74,8 +74,7 @@ export const ICON_REGISTRY = {
     category: "Actions",
     screens: ["vouchers","tasks","travellers","documents","finance","script"] as const,
     sizes: [15] as const,
-    strokeWidth: 1.7,
-    
+    fill: true,
     interactive: true,
     status: "approved",
     a11y: "decorative; label on control when icon-only",

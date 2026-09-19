@@ -9,6 +9,8 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: ButtonSize;
   leadingIcon?: ReactNode;
   trailingIcon?: ReactNode;
+  /** Booking `.btn-icon` — square control, no label text. Pair with `aria-label`. */
+  iconOnly?: boolean;
   children?: ReactNode;
 }
 
@@ -17,22 +19,39 @@ export function Button({
   size = "md",
   leadingIcon,
   trailingIcon,
+  iconOnly = false,
   className = "",
   type = "button",
   children,
   ...rest
 }: ButtonProps) {
+  const iconClass = iconOnly ? "pt-btn--icon" : "";
+  const { "aria-label": ariaLabelProp, ...restBtn } = rest;
+  const label =
+    ariaLabelProp ?? (iconOnly && typeof children === "string" ? children : undefined);
+
   return (
     <button
       type={type}
-      className={`pt-btn pt-btn--${variant} pt-btn--${size} ${className}`.trim()}
-      {...rest}
+      className={`pt-btn pt-btn--${variant} pt-btn--${size} ${iconClass} ${className}`.trim()}
+      aria-label={label}
+      {...restBtn}
     >
       {leadingIcon ? <span className="pt-btn__icon">{leadingIcon}</span> : null}
-      {children}
+      {iconOnly ? null : children}
       {trailingIcon ? <span className="pt-btn__icon">{trailingIcon}</span> : null}
     </button>
   );
+}
+
+export function RowActions({
+  children,
+  className = "",
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return <div className={`pt-row-acts ${className}`.trim()}>{children}</div>;
 }
 
 export default Button;

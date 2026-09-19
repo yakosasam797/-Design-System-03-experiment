@@ -3,7 +3,7 @@ import "./tokens/typography.css";
 import "./styles/reset.css";
 import "./styles/focus.css";
 
-export { Button } from "./components/Button/Button";
+export { Button, RowActions } from "./components/Button/Button";
 export type { ButtonProps, ButtonVariant, ButtonSize } from "./components/Button/Button";
 
 export { IconButton } from "./components/IconButton/IconButton";
@@ -35,6 +35,7 @@ export type { TabBarProps, TabItem, TabProps } from "./components/TabBar/TabBar"
 
 export { Pagination } from "./components/Pagination/Pagination";
 export type { PaginationProps } from "./components/Pagination/Pagination";
+export { pageCountFor, rangeLabel } from "./components/Pagination/paginationMath";
 
 export { EmptyState } from "./components/EmptyState/EmptyState";
 export type { EmptyStateProps, EmptyStateVariant } from "./components/EmptyState/EmptyState";

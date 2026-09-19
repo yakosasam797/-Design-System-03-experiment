@@ -13,11 +13,27 @@ describe("Pagination page math", () => {
     expect(pageCountFor(0, 10)).toBe(1);
   });
 
-  it("builds valid range labels", () => {
-    expect(rangeLabel(1, 10, 25)).toBe("Showing 1–10 of 25");
-    expect(rangeLabel(2, 10, 25)).toBe("Showing 11–20 of 25");
-    expect(rangeLabel(3, 10, 25)).toBe("Showing 21–25 of 25");
-    expect(rangeLabel(1, 3, 3)).toBe("Showing 1–3 of 3");
+  it("renders a single page for 10 items at page size 10", () => {
+    expect(pageCountFor(10, 10)).toBe(1);
+    expect(rangeLabel(1, 10, 10)).toBe("Showing 1–10 of 10");
+    const onPageChange = vi.fn();
+    render(
+      <Pagination rangeLabel={rangeLabel(1, 10, 10)} page={1} pageCount={1} onPageChange={onPageChange} />,
+    );
+    const pageBtns = screen.getAllByRole("button").filter((b) => /^\d+$/.test(b.textContent || ""));
+    expect(pageBtns).toHaveLength(1);
+    expect(screen.getByRole("button", { name: "Next page" })).toBeDisabled();
+  });
+
+  it("renders two page numbers only when total is 11 at page size 10", () => {
+    expect(pageCountFor(11, 10)).toBe(2);
+    expect(rangeLabel(1, 10, 11)).toBe("Showing 1–10 of 11");
+    render(
+      <Pagination rangeLabel={rangeLabel(1, 10, 11)} page={1} pageCount={2} onPageChange={vi.fn()} />,
+    );
+    const pageBtns = screen.getAllByRole("button").filter((b) => /^\d+$/.test(b.textContent || ""));
+    expect(pageBtns).toHaveLength(2);
+    expect(screen.getByRole("button", { name: "Next page" })).toBeEnabled();
   });
 });
 

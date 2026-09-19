@@ -115,3 +115,57 @@
 .pt-btn--ghost:active:not(:disabled) {
   background: var(--surface-2);
 }
+
+/* Booking `.btn-icon` — table More, composer attach, etc. */
+.pt-btn--icon {
+  padding: 0;
+  width: var(--size-control-md, 38px);
+}
+
+.pt-btn--icon.pt-btn--sm {
+  width: var(--size-control-sm, 32px);
+}
+
+.pt-btn--icon.pt-btn--toolbar {
+  width: var(--size-control-toolbar, 36px);
+}
+
+.pt-btn--icon.pt-btn--xs {
+  width: 27px;
+  height: 27px;
+}
+
+.pt-btn--ghost.pt-btn--icon {
+  color: var(--ink-2);
+}
+
+.pt-btn--ghost.pt-btn--icon:hover:not(:disabled) {
+  color: var(--ink);
+}
+
+.pt-row-acts {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+
+/* Booking sheet `.row-acts .more-btn` — 28px, not Topbar 36px and not generic btn-icon 32px. */
+.pt-row-acts .pt-btn--ghost.pt-btn--icon {
+  width: 28px;
+  height: 28px;
+  border-color: transparent;
+  background: transparent;
+  color: var(--ink-3);
+}
+
+.pt-row-acts .pt-btn--ghost.pt-btn--icon:hover:not(:disabled) {
+  background: var(--surface-3);
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.pt-row-acts .pt-btn--ghost.pt-btn--icon:active:not(:disabled) {
+  background: var(--surface-2);
+}

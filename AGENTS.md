@@ -41,6 +41,47 @@ Inspect Storybook **Patterns/AppShell** before building any full page.
 8. Ignore Direction 01 extraction docs (dark 268px sidebar, role switcher). Direction 03 Booking + these stories are the source of truth.
 9. Before handoff, prove that `AppShell`, `Sidebar`, and `Topbar` imports resolve from `@paryatech/design-system`.
 
+## Table row actions
+
+Booking sheet CTAs are **one Button recipe**, not a local CSS button.
+
+```tsx
+import { Button, RowActions, Icon } from "@paryatech/design-system";
+
+<RowActions>
+  <Button variant="brand" size="sm" leadingIcon={<Icon name="eye" size="sm" />}>
+    View
+  </Button>
+  <Button
+    variant="ghost"
+    size="sm"
+    iconOnly
+    aria-label="More"
+    leadingIcon={<Icon name="more" size={15} />}
+  />
+</RowActions>
+```
+
+- **View** → `brand` + `sm` + `eye` (14px)
+- **Open** / **Continue** → `brand` + `sm` + `openExternal` (14px)
+- **More** → `ghost` + `sm` + `iconOnly` inside `RowActions` (Booking sheet `.more-btn`: 28×28, transparent border). Do **not** use Topbar `IconButton` (36px) in a table row.
+- Do not omit `leadingIcon` on labelled row CTAs.
+- Do not restyle these with local CSS.
+
+Storybook: **Components/Button → Table row actions (Booking)**.
+
+## Pagination data
+
+`Pagination` already supports one or many pages. Do not invent extra records to force a second page.
+
+- Booking list recipe: 3 items → `Showing 1–3 of 3`, `pageCount={1}`
+- 10-row list at page size 10 → `Showing 1–10 of 10`, `pageCount={1}`
+- Use `pageCountFor` + `rangeLabel` so the label matches the buttons
+- `TwoPages` / `MultiplePages` stories are capability demos, not product recipes
+- Booking has no ellipsis pager — do not add one
+
+## AppShell usage
+
 ```tsx
 <AppShell
   variant="list" // or "detail"
@@ -65,6 +106,10 @@ Inspect Storybook **Patterns/AppShell** before building any full page.
 - [ ] No local shell styling
 - [ ] Visual comparison vs Booking shell completed
 - [ ] Imports for AppShell / Sidebar / Topbar resolve from the package
+- [ ] Table View / Open / Continue use `Button variant="brand" size="sm"` + required leading icon
+- [ ] Table More uses `Button iconOnly` inside `RowActions`, not Topbar `IconButton`
+- [ ] Pagination totals match the product reference (do not invent rows to demo paging)
+- [ ] Range text comes from `rangeLabel` (no extra noun)
 
 Run `node scripts/check-local-shell.mjs <consumer-root>` to flag product-level shell clones. Nested panel navigation is allowed.
 

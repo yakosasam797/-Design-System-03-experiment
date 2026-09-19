@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "./Button";
+import { Button, RowActions } from "./Button";
 import { Icon } from "../../icons";
 
 const meta: Meta<typeof Button> = {
@@ -117,6 +117,54 @@ export const ListCtas: Story = {
       <Button variant="ghost" size="sm" leadingIcon={<Icon name="clear" size="sm" />}>
         Clear
       </Button>
+    </div>
+  ),
+};
+
+/**
+ * Booking sheet `.row-acts`. Do not use Topbar IconButton (36px) in a table row.
+ * View uses the eye glyph; Open / Continue use openExternal. More is icon-only ghost sm.
+ */
+export const TableRowActions: Story = {
+  name: "Table row actions (Booking)",
+  render: () => (
+    <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+      <RowActions>
+        <Button variant="brand" size="sm" leadingIcon={<Icon name="eye" size="sm" />}>
+          View
+        </Button>
+        <Button
+          variant="ghost"
+          size="sm"
+          iconOnly
+          aria-label="More"
+          leadingIcon={<Icon name="more" size={15} />}
+        />
+      </RowActions>
+      <RowActions>
+        <Button variant="brand" size="sm" leadingIcon={<Icon name="openExternal" size="sm" />}>
+          Open
+        </Button>
+        <Button
+          variant="ghost"
+          size="sm"
+          iconOnly
+          aria-label="More"
+          leadingIcon={<Icon name="more" size={15} />}
+        />
+      </RowActions>
+      <RowActions>
+        <Button variant="brand" size="sm" leadingIcon={<Icon name="openExternal" size="sm" />}>
+          Continue
+        </Button>
+        <Button
+          variant="ghost"
+          size="sm"
+          iconOnly
+          aria-label="More"
+          leadingIcon={<Icon name="more" size={15} />}
+        />
+      </RowActions>
     </div>
   ),
 };

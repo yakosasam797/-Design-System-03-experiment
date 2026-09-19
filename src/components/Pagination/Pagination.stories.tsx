@@ -40,6 +40,45 @@ export const BookingSinglePage: Story = {
   },
 };
 
+/** Faithful 10-row list recipe (Vendor CRM reference). Not a demo of two pages. */
+export const TenItemsSinglePage: Story = {
+  name: "TenItemsSinglePage",
+  args: {
+    rangeLabel: rangeLabel(1, 10, 10),
+    page: 1,
+    pageCount: pageCountFor(10, 10),
+    onPageChange: fn(),
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByText("Showing 1–10 of 10")).toBeInTheDocument();
+    const pageBtns = canvas.getAllByRole("button").filter((b) => /^\d+$/.test(b.textContent || ""));
+    await expect(pageBtns).toHaveLength(1);
+    await expect(canvas.getByRole("button", { name: "Previous page" })).toBeDisabled();
+    await expect(canvas.getByRole("button", { name: "Next page" })).toBeDisabled();
+  },
+};
+
+/** Capability only — do not use this total in a 10-row product recipe. */
+export const TwoPages: Story = {
+  name: "TwoPages",
+  args: {
+    rangeLabel: rangeLabel(1, 10, 11),
+    page: 1,
+    pageCount: pageCountFor(11, 10),
+    onPageChange: fn(),
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByText("Showing 1–10 of 11")).toBeInTheDocument();
+    const pageBtns = canvas.getAllByRole("button").filter((b) => /^\d+$/.test(b.textContent || ""));
+    await expect(pageBtns).toHaveLength(2);
+    await expect(canvas.getByRole("button", { name: "Next page" })).toBeEnabled();
+    await userEvent.click(canvas.getByRole("button", { name: "Next page" }));
+    await expect(args.onPageChange).toHaveBeenCalledWith(2);
+  },
+};
+
 const PAGE_SIZE = 10;
 const TOTAL_MULTI = 25;
 const MULTI_COUNT = pageCountFor(TOTAL_MULTI, PAGE_SIZE); // 3

@@ -1,0 +1,1168 @@
+{
+  "capturedAt": "2026-09-19T10:45:32.677Z",
+  "bookingList": {
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "range": [
+      "Showing 1–3 of 3"
+    ],
+    "pagerButtons": [
+      [
+        {
+          "text": "",
+          "aria": "Previous page",
+          "disabled": true,
+          "current": null,
+          "tag": "BUTTON",
+          "className": "pg",
+          "ariaLabel": "Previous page",
+          "w": 31,
+          "h": 30,
+          "padding": "0px 8px",
+          "gap": "normal",
+          "color": "rgb(138, 144, 154)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(238, 240, 243)",
+          "borderRadius": "8px",
+          "fontFamily": "\"JetBrains Mono\", monospace",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "lineHeight": "normal",
+          "icon": {
+            "w": 13,
+            "h": 13,
+            "fill": "none",
+            "stroke": "currentColor"
+          }
+        },
+        {
+          "text": "1",
+          "aria": null,
+          "disabled": false,
+          "current": "page",
+          "tag": "BUTTON",
+          "className": "pg active",
+          "ariaLabel": null,
+          "w": 30,
+          "h": 30,
+          "padding": "0px 8px",
+          "gap": "normal",
+          "color": "rgb(133, 63, 100)",
+          "backgroundColor": "rgb(251, 238, 244)",
+          "border": "1px solid rgb(239, 207, 223)",
+          "borderRadius": "8px",
+          "fontFamily": "\"JetBrains Mono\", monospace",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "lineHeight": "normal",
+          "icon": null
+        },
+        {
+          "text": "",
+          "aria": "Next page",
+          "disabled": true,
+          "current": null,
+          "tag": "BUTTON",
+          "className": "pg",
+          "ariaLabel": "Next page",
+          "w": 31,
+          "h": 30,
+          "padding": "0px 8px",
+          "gap": "normal",
+          "color": "rgb(138, 144, 154)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(238, 240, 243)",
+          "borderRadius": "8px",
+          "fontFamily": "\"JetBrains Mono\", monospace",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "lineHeight": "normal",
+          "icon": {
+            "w": 13,
+            "h": 13,
+            "fill": "none",
+            "stroke": "currentColor"
+          }
+        }
+      ]
+    ],
+    "rowActs": []
+  },
+  "bookingDetail": {
+    "error": "locator.waitFor: Timeout 8000ms exceeded.\nCall log:\n  - waiting for locator('#view-detail.show .row-acts').visible().first() to be visible\n"
+  },
+  "story-pagination-10": {
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "range": [
+      "Showing 1–10 of 10"
+    ],
+    "pagerButtons": [
+      [
+        {
+          "text": "",
+          "aria": "Previous page",
+          "disabled": true,
+          "current": null,
+          "tag": "BUTTON",
+          "className": "pt-pg",
+          "ariaLabel": "Previous page",
+          "w": 31,
+          "h": 30,
+          "padding": "0px 8px",
+          "gap": "normal",
+          "color": "rgb(138, 144, 154)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(238, 240, 243)",
+          "borderRadius": "8px",
+          "fontFamily": "\"JetBrains Mono\", monospace",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "lineHeight": "normal",
+          "icon": {
+            "w": 13,
+            "h": 13,
+            "fill": "none",
+            "stroke": "currentColor"
+          }
+        },
+        {
+          "text": "1",
+          "aria": null,
+          "disabled": false,
+          "current": "page",
+          "tag": "BUTTON",
+          "className": "pt-pg pt-pg--active",
+          "ariaLabel": null,
+          "w": 30,
+          "h": 30,
+          "padding": "0px 8px",
+          "gap": "normal",
+          "color": "rgb(133, 63, 100)",
+          "backgroundColor": "rgb(251, 238, 244)",
+          "border": "1px solid rgb(239, 207, 223)",
+          "borderRadius": "8px",
+          "fontFamily": "\"JetBrains Mono\", monospace",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "lineHeight": "normal",
+          "icon": null
+        },
+        {
+          "text": "",
+          "aria": "Next page",
+          "disabled": true,
+          "current": null,
+          "tag": "BUTTON",
+          "className": "pt-pg",
+          "ariaLabel": "Next page",
+          "w": 31,
+          "h": 30,
+          "padding": "0px 8px",
+          "gap": "normal",
+          "color": "rgb(138, 144, 154)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(238, 240, 243)",
+          "borderRadius": "8px",
+          "fontFamily": "\"JetBrains Mono\", monospace",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "lineHeight": "normal",
+          "icon": {
+            "w": 13,
+            "h": 13,
+            "fill": "none",
+            "stroke": "currentColor"
+          }
+        }
+      ]
+    ],
+    "rowActs": []
+  },
+  "story-pagination-11": {
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "range": [
+      "Showing 1–10 of 11"
+    ],
+    "pagerButtons": [
+      [
+        {
+          "text": "",
+          "aria": "Previous page",
+          "disabled": true,
+          "current": null,
+          "tag": "BUTTON",
+          "className": "pt-pg",
+          "ariaLabel": "Previous page",
+          "w": 31,
+          "h": 30,
+          "padding": "0px 8px",
+          "gap": "normal",
+          "color": "rgb(138, 144, 154)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(238, 240, 243)",
+          "borderRadius": "8px",
+          "fontFamily": "\"JetBrains Mono\", monospace",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "lineHeight": "normal",
+          "icon": {
+            "w": 13,
+            "h": 13,
+            "fill": "none",
+            "stroke": "currentColor"
+          }
+        },
+        {
+          "text": "1",
+          "aria": null,
+          "disabled": false,
+          "current": "page",
+          "tag": "BUTTON",
+          "className": "pt-pg pt-pg--active",
+          "ariaLabel": null,
+          "w": 30,
+          "h": 30,
+          "padding": "0px 8px",
+          "gap": "normal",
+          "color": "rgb(133, 63, 100)",
+          "backgroundColor": "rgb(251, 238, 244)",
+          "border": "1px solid rgb(239, 207, 223)",
+          "borderRadius": "8px",
+          "fontFamily": "\"JetBrains Mono\", monospace",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "lineHeight": "normal",
+          "icon": null
+        },
+        {
+          "text": "2",
+          "aria": null,
+          "disabled": false,
+          "current": null,
+          "tag": "BUTTON",
+          "className": "pt-pg",
+          "ariaLabel": null,
+          "w": 30,
+          "h": 30,
+          "padding": "0px 8px",
+          "gap": "normal",
+          "color": "rgb(62, 69, 80)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(228, 231, 236)",
+          "borderRadius": "8px",
+          "fontFamily": "\"JetBrains Mono\", monospace",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "lineHeight": "normal",
+          "icon": null
+        },
+        {
+          "text": "",
+          "aria": "Next page",
+          "disabled": false,
+          "current": null,
+          "tag": "BUTTON",
+          "className": "pt-pg",
+          "ariaLabel": "Next page",
+          "w": 31,
+          "h": 30,
+          "padding": "0px 8px",
+          "gap": "normal",
+          "color": "rgb(62, 69, 80)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(228, 231, 236)",
+          "borderRadius": "8px",
+          "fontFamily": "\"JetBrains Mono\", monospace",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "lineHeight": "normal",
+          "icon": {
+            "w": 13,
+            "h": 13,
+            "fill": "none",
+            "stroke": "currentColor"
+          }
+        }
+      ]
+    ],
+    "rowActs": []
+  },
+  "story-table-row-actions": {
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "range": [],
+    "pagerButtons": [],
+    "rowActs": []
+  },
+  "vendorList": {
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "range": [
+      "Showing 1–10 of 10"
+    ],
+    "pagerButtons": [
+      [
+        {
+          "text": "",
+          "aria": "Previous page",
+          "disabled": true,
+          "current": null,
+          "tag": "BUTTON",
+          "className": "pt-pg",
+          "ariaLabel": "Previous page",
+          "w": 31,
+          "h": 30,
+          "padding": "0px 8px",
+          "gap": "normal",
+          "color": "rgb(138, 144, 154)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(238, 240, 243)",
+          "borderRadius": "8px",
+          "fontFamily": "\"JetBrains Mono\", monospace",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "lineHeight": "normal",
+          "icon": {
+            "w": 13,
+            "h": 13,
+            "fill": "none",
+            "stroke": "currentColor"
+          }
+        },
+        {
+          "text": "1",
+          "aria": null,
+          "disabled": false,
+          "current": "page",
+          "tag": "BUTTON",
+          "className": "pt-pg pt-pg--active",
+          "ariaLabel": null,
+          "w": 30,
+          "h": 30,
+          "padding": "0px 8px",
+          "gap": "normal",
+          "color": "rgb(133, 63, 100)",
+          "backgroundColor": "rgb(251, 238, 244)",
+          "border": "1px solid rgb(239, 207, 223)",
+          "borderRadius": "8px",
+          "fontFamily": "\"JetBrains Mono\", monospace",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "lineHeight": "normal",
+          "icon": null
+        },
+        {
+          "text": "",
+          "aria": "Next page",
+          "disabled": true,
+          "current": null,
+          "tag": "BUTTON",
+          "className": "pt-pg",
+          "ariaLabel": "Next page",
+          "w": 31,
+          "h": 30,
+          "padding": "0px 8px",
+          "gap": "normal",
+          "color": "rgb(138, 144, 154)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "border": "1px solid rgb(238, 240, 243)",
+          "borderRadius": "8px",
+          "fontFamily": "\"JetBrains Mono\", monospace",
+          "fontSize": "12px",
+          "fontWeight": "400",
+          "lineHeight": "normal",
+          "icon": {
+            "w": 13,
+            "h": 13,
+            "fill": "none",
+            "stroke": "currentColor"
+          }
+        }
+      ]
+    ],
+    "rowActs": [
+      {
+        "group": {
+          "text": "View",
+          "tag": "DIV",
+          "className": "pt-row-acts",
+          "ariaLabel": null,
+          "w": 111.7,
+          "h": 32,
+          "padding": "0px",
+          "gap": "10px",
+          "color": "rgb(22, 24, 29)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px none rgb(22, 24, 29)",
+          "borderRadius": "0px",
+          "fontFamily": "\"Public Sans\", system-ui, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "lineHeight": "21px",
+          "icon": {
+            "w": 14,
+            "h": 14,
+            "fill": "none",
+            "stroke": "currentColor"
+          }
+        },
+        "buttons": [
+          {
+            "text": "View",
+            "tag": "BUTTON",
+            "className": "pt-btn pt-btn--brand pt-btn--sm",
+            "ariaLabel": null,
+            "w": 73.7,
+            "h": 32,
+            "padding": "0px 11px",
+            "gap": "6px",
+            "color": "rgb(15, 110, 99)",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "1px solid rgb(15, 110, 99)",
+            "borderRadius": "8px",
+            "fontFamily": "Onest, system-ui, sans-serif",
+            "fontSize": "12.5px",
+            "fontWeight": "600",
+            "lineHeight": "12.5px",
+            "icon": {
+              "w": 14,
+              "h": 14,
+              "fill": "none",
+              "stroke": "currentColor"
+            }
+          },
+          {
+            "text": "",
+            "tag": "BUTTON",
+            "className": "pt-btn pt-btn--ghost pt-btn--sm pt-btn--icon",
+            "ariaLabel": "More",
+            "w": 28,
+            "h": 28,
+            "padding": "0px",
+            "gap": "6px",
+            "color": "rgb(84, 92, 103)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "1px solid rgba(0, 0, 0, 0)",
+            "borderRadius": "8px",
+            "fontFamily": "Onest, system-ui, sans-serif",
+            "fontSize": "12.5px",
+            "fontWeight": "600",
+            "lineHeight": "12.5px",
+            "icon": {
+              "w": 15,
+              "h": 15,
+              "fill": "currentColor",
+              "stroke": null
+            }
+          }
+        ]
+      },
+      {
+        "group": {
+          "text": "View",
+          "tag": "DIV",
+          "className": "pt-row-acts",
+          "ariaLabel": null,
+          "w": 111.7,
+          "h": 32,
+          "padding": "0px",
+          "gap": "10px",
+          "color": "rgb(22, 24, 29)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px none rgb(22, 24, 29)",
+          "borderRadius": "0px",
+          "fontFamily": "\"Public Sans\", system-ui, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "lineHeight": "21px",
+          "icon": {
+            "w": 14,
+            "h": 14,
+            "fill": "none",
+            "stroke": "currentColor"
+          }
+        },
+        "buttons": [
+          {
+            "text": "View",
+            "tag": "BUTTON",
+            "className": "pt-btn pt-btn--brand pt-btn--sm",
+            "ariaLabel": null,
+            "w": 73.7,
+            "h": 32,
+            "padding": "0px 11px",
+            "gap": "6px",
+            "color": "rgb(15, 110, 99)",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "1px solid rgb(15, 110, 99)",
+            "borderRadius": "8px",
+            "fontFamily": "Onest, system-ui, sans-serif",
+            "fontSize": "12.5px",
+            "fontWeight": "600",
+            "lineHeight": "12.5px",
+            "icon": {
+              "w": 14,
+              "h": 14,
+              "fill": "none",
+              "stroke": "currentColor"
+            }
+          },
+          {
+            "text": "",
+            "tag": "BUTTON",
+            "className": "pt-btn pt-btn--ghost pt-btn--sm pt-btn--icon",
+            "ariaLabel": "More",
+            "w": 28,
+            "h": 28,
+            "padding": "0px",
+            "gap": "6px",
+            "color": "rgb(84, 92, 103)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "1px solid rgba(0, 0, 0, 0)",
+            "borderRadius": "8px",
+            "fontFamily": "Onest, system-ui, sans-serif",
+            "fontSize": "12.5px",
+            "fontWeight": "600",
+            "lineHeight": "12.5px",
+            "icon": {
+              "w": 15,
+              "h": 15,
+              "fill": "currentColor",
+              "stroke": null
+            }
+          }
+        ]
+      },
+      {
+        "group": {
+          "text": "View",
+          "tag": "DIV",
+          "className": "pt-row-acts",
+          "ariaLabel": null,
+          "w": 111.7,
+          "h": 32,
+          "padding": "0px",
+          "gap": "10px",
+          "color": "rgb(22, 24, 29)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px none rgb(22, 24, 29)",
+          "borderRadius": "0px",
+          "fontFamily": "\"Public Sans\", system-ui, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "lineHeight": "21px",
+          "icon": {
+            "w": 14,
+            "h": 14,
+            "fill": "none",
+            "stroke": "currentColor"
+          }
+        },
+        "buttons": [
+          {
+            "text": "View",
+            "tag": "BUTTON",
+            "className": "pt-btn pt-btn--brand pt-btn--sm",
+            "ariaLabel": null,
+            "w": 73.7,
+            "h": 32,
+            "padding": "0px 11px",
+            "gap": "6px",
+            "color": "rgb(15, 110, 99)",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "1px solid rgb(15, 110, 99)",
+            "borderRadius": "8px",
+            "fontFamily": "Onest, system-ui, sans-serif",
+            "fontSize": "12.5px",
+            "fontWeight": "600",
+            "lineHeight": "12.5px",
+            "icon": {
+              "w": 14,
+              "h": 14,
+              "fill": "none",
+              "stroke": "currentColor"
+            }
+          },
+          {
+            "text": "",
+            "tag": "BUTTON",
+            "className": "pt-btn pt-btn--ghost pt-btn--sm pt-btn--icon",
+            "ariaLabel": "More",
+            "w": 28,
+            "h": 28,
+            "padding": "0px",
+            "gap": "6px",
+            "color": "rgb(84, 92, 103)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "1px solid rgba(0, 0, 0, 0)",
+            "borderRadius": "8px",
+            "fontFamily": "Onest, system-ui, sans-serif",
+            "fontSize": "12.5px",
+            "fontWeight": "600",
+            "lineHeight": "12.5px",
+            "icon": {
+              "w": 15,
+              "h": 15,
+              "fill": "currentColor",
+              "stroke": null
+            }
+          }
+        ]
+      },
+      {
+        "group": {
+          "text": "View",
+          "tag": "DIV",
+          "className": "pt-row-acts",
+          "ariaLabel": null,
+          "w": 111.7,
+          "h": 32,
+          "padding": "0px",
+          "gap": "10px",
+          "color": "rgb(22, 24, 29)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px none rgb(22, 24, 29)",
+          "borderRadius": "0px",
+          "fontFamily": "\"Public Sans\", system-ui, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "lineHeight": "21px",
+          "icon": {
+            "w": 14,
+            "h": 14,
+            "fill": "none",
+            "stroke": "currentColor"
+          }
+        },
+        "buttons": [
+          {
+            "text": "View",
+            "tag": "BUTTON",
+            "className": "pt-btn pt-btn--brand pt-btn--sm",
+            "ariaLabel": null,
+            "w": 73.7,
+            "h": 32,
+            "padding": "0px 11px",
+            "gap": "6px",
+            "color": "rgb(15, 110, 99)",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "1px solid rgb(15, 110, 99)",
+            "borderRadius": "8px",
+            "fontFamily": "Onest, system-ui, sans-serif",
+            "fontSize": "12.5px",
+            "fontWeight": "600",
+            "lineHeight": "12.5px",
+            "icon": {
+              "w": 14,
+              "h": 14,
+              "fill": "none",
+              "stroke": "currentColor"
+            }
+          },
+          {
+            "text": "",
+            "tag": "BUTTON",
+            "className": "pt-btn pt-btn--ghost pt-btn--sm pt-btn--icon",
+            "ariaLabel": "More",
+            "w": 28,
+            "h": 28,
+            "padding": "0px",
+            "gap": "6px",
+            "color": "rgb(84, 92, 103)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "1px solid rgba(0, 0, 0, 0)",
+            "borderRadius": "8px",
+            "fontFamily": "Onest, system-ui, sans-serif",
+            "fontSize": "12.5px",
+            "fontWeight": "600",
+            "lineHeight": "12.5px",
+            "icon": {
+              "w": 15,
+              "h": 15,
+              "fill": "currentColor",
+              "stroke": null
+            }
+          }
+        ]
+      },
+      {
+        "group": {
+          "text": "View",
+          "tag": "DIV",
+          "className": "pt-row-acts",
+          "ariaLabel": null,
+          "w": 111.7,
+          "h": 32,
+          "padding": "0px",
+          "gap": "10px",
+          "color": "rgb(22, 24, 29)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px none rgb(22, 24, 29)",
+          "borderRadius": "0px",
+          "fontFamily": "\"Public Sans\", system-ui, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "lineHeight": "21px",
+          "icon": {
+            "w": 14,
+            "h": 14,
+            "fill": "none",
+            "stroke": "currentColor"
+          }
+        },
+        "buttons": [
+          {
+            "text": "View",
+            "tag": "BUTTON",
+            "className": "pt-btn pt-btn--brand pt-btn--sm",
+            "ariaLabel": null,
+            "w": 73.7,
+            "h": 32,
+            "padding": "0px 11px",
+            "gap": "6px",
+            "color": "rgb(15, 110, 99)",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "1px solid rgb(15, 110, 99)",
+            "borderRadius": "8px",
+            "fontFamily": "Onest, system-ui, sans-serif",
+            "fontSize": "12.5px",
+            "fontWeight": "600",
+            "lineHeight": "12.5px",
+            "icon": {
+              "w": 14,
+              "h": 14,
+              "fill": "none",
+              "stroke": "currentColor"
+            }
+          },
+          {
+            "text": "",
+            "tag": "BUTTON",
+            "className": "pt-btn pt-btn--ghost pt-btn--sm pt-btn--icon",
+            "ariaLabel": "More",
+            "w": 28,
+            "h": 28,
+            "padding": "0px",
+            "gap": "6px",
+            "color": "rgb(84, 92, 103)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "1px solid rgba(0, 0, 0, 0)",
+            "borderRadius": "8px",
+            "fontFamily": "Onest, system-ui, sans-serif",
+            "fontSize": "12.5px",
+            "fontWeight": "600",
+            "lineHeight": "12.5px",
+            "icon": {
+              "w": 15,
+              "h": 15,
+              "fill": "currentColor",
+              "stroke": null
+            }
+          }
+        ]
+      },
+      {
+        "group": {
+          "text": "View",
+          "tag": "DIV",
+          "className": "pt-row-acts",
+          "ariaLabel": null,
+          "w": 111.7,
+          "h": 32,
+          "padding": "0px",
+          "gap": "10px",
+          "color": "rgb(22, 24, 29)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px none rgb(22, 24, 29)",
+          "borderRadius": "0px",
+          "fontFamily": "\"Public Sans\", system-ui, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "lineHeight": "21px",
+          "icon": {
+            "w": 14,
+            "h": 14,
+            "fill": "none",
+            "stroke": "currentColor"
+          }
+        },
+        "buttons": [
+          {
+            "text": "View",
+            "tag": "BUTTON",
+            "className": "pt-btn pt-btn--brand pt-btn--sm",
+            "ariaLabel": null,
+            "w": 73.7,
+            "h": 32,
+            "padding": "0px 11px",
+            "gap": "6px",
+            "color": "rgb(15, 110, 99)",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "1px solid rgb(15, 110, 99)",
+            "borderRadius": "8px",
+            "fontFamily": "Onest, system-ui, sans-serif",
+            "fontSize": "12.5px",
+            "fontWeight": "600",
+            "lineHeight": "12.5px",
+            "icon": {
+              "w": 14,
+              "h": 14,
+              "fill": "none",
+              "stroke": "currentColor"
+            }
+          },
+          {
+            "text": "",
+            "tag": "BUTTON",
+            "className": "pt-btn pt-btn--ghost pt-btn--sm pt-btn--icon",
+            "ariaLabel": "More",
+            "w": 28,
+            "h": 28,
+            "padding": "0px",
+            "gap": "6px",
+            "color": "rgb(84, 92, 103)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "1px solid rgba(0, 0, 0, 0)",
+            "borderRadius": "8px",
+            "fontFamily": "Onest, system-ui, sans-serif",
+            "fontSize": "12.5px",
+            "fontWeight": "600",
+            "lineHeight": "12.5px",
+            "icon": {
+              "w": 15,
+              "h": 15,
+              "fill": "currentColor",
+              "stroke": null
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "vendorDetail": {
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "range": [],
+    "pagerButtons": [],
+    "rowActs": [
+      {
+        "group": {
+          "text": "Open",
+          "tag": "DIV",
+          "className": "pt-row-acts",
+          "ariaLabel": null,
+          "w": 114,
+          "h": 32,
+          "padding": "0px",
+          "gap": "10px",
+          "color": "rgb(22, 24, 29)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px none rgb(22, 24, 29)",
+          "borderRadius": "0px",
+          "fontFamily": "\"Public Sans\", system-ui, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "lineHeight": "21px",
+          "icon": {
+            "w": 14,
+            "h": 14,
+            "fill": "none",
+            "stroke": "currentColor"
+          }
+        },
+        "buttons": [
+          {
+            "text": "Open",
+            "tag": "BUTTON",
+            "className": "pt-btn pt-btn--brand pt-btn--sm",
+            "ariaLabel": null,
+            "w": 76,
+            "h": 32,
+            "padding": "0px 11px",
+            "gap": "6px",
+            "color": "rgb(15, 110, 99)",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "1px solid rgb(15, 110, 99)",
+            "borderRadius": "8px",
+            "fontFamily": "Onest, system-ui, sans-serif",
+            "fontSize": "12.5px",
+            "fontWeight": "600",
+            "lineHeight": "12.5px",
+            "icon": {
+              "w": 14,
+              "h": 14,
+              "fill": "none",
+              "stroke": "currentColor"
+            }
+          },
+          {
+            "text": "",
+            "tag": "BUTTON",
+            "className": "pt-btn pt-btn--ghost pt-btn--sm pt-btn--icon",
+            "ariaLabel": "More",
+            "w": 28,
+            "h": 28,
+            "padding": "0px",
+            "gap": "6px",
+            "color": "rgb(84, 92, 103)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "1px solid rgba(0, 0, 0, 0)",
+            "borderRadius": "8px",
+            "fontFamily": "Onest, system-ui, sans-serif",
+            "fontSize": "12.5px",
+            "fontWeight": "600",
+            "lineHeight": "12.5px",
+            "icon": {
+              "w": 15,
+              "h": 15,
+              "fill": "currentColor",
+              "stroke": null
+            }
+          }
+        ]
+      },
+      {
+        "group": {
+          "text": "Open",
+          "tag": "DIV",
+          "className": "pt-row-acts",
+          "ariaLabel": null,
+          "w": 114,
+          "h": 32,
+          "padding": "0px",
+          "gap": "10px",
+          "color": "rgb(22, 24, 29)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px none rgb(22, 24, 29)",
+          "borderRadius": "0px",
+          "fontFamily": "\"Public Sans\", system-ui, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "lineHeight": "21px",
+          "icon": {
+            "w": 14,
+            "h": 14,
+            "fill": "none",
+            "stroke": "currentColor"
+          }
+        },
+        "buttons": [
+          {
+            "text": "Open",
+            "tag": "BUTTON",
+            "className": "pt-btn pt-btn--brand pt-btn--sm",
+            "ariaLabel": null,
+            "w": 76,
+            "h": 32,
+            "padding": "0px 11px",
+            "gap": "6px",
+            "color": "rgb(15, 110, 99)",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "1px solid rgb(15, 110, 99)",
+            "borderRadius": "8px",
+            "fontFamily": "Onest, system-ui, sans-serif",
+            "fontSize": "12.5px",
+            "fontWeight": "600",
+            "lineHeight": "12.5px",
+            "icon": {
+              "w": 14,
+              "h": 14,
+              "fill": "none",
+              "stroke": "currentColor"
+            }
+          },
+          {
+            "text": "",
+            "tag": "BUTTON",
+            "className": "pt-btn pt-btn--ghost pt-btn--sm pt-btn--icon",
+            "ariaLabel": "More",
+            "w": 28,
+            "h": 28,
+            "padding": "0px",
+            "gap": "6px",
+            "color": "rgb(84, 92, 103)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "1px solid rgba(0, 0, 0, 0)",
+            "borderRadius": "8px",
+            "fontFamily": "Onest, system-ui, sans-serif",
+            "fontSize": "12.5px",
+            "fontWeight": "600",
+            "lineHeight": "12.5px",
+            "icon": {
+              "w": 15,
+              "h": 15,
+              "fill": "currentColor",
+              "stroke": null
+            }
+          }
+        ]
+      },
+      {
+        "group": {
+          "text": "Continue",
+          "tag": "DIV",
+          "className": "pt-row-acts",
+          "ariaLabel": null,
+          "w": 133.6,
+          "h": 32,
+          "padding": "0px",
+          "gap": "10px",
+          "color": "rgb(22, 24, 29)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px none rgb(22, 24, 29)",
+          "borderRadius": "0px",
+          "fontFamily": "\"Public Sans\", system-ui, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "lineHeight": "21px",
+          "icon": {
+            "w": 14,
+            "h": 14,
+            "fill": "none",
+            "stroke": "currentColor"
+          }
+        },
+        "buttons": [
+          {
+            "text": "Continue",
+            "tag": "BUTTON",
+            "className": "pt-btn pt-btn--brand pt-btn--sm",
+            "ariaLabel": null,
+            "w": 97.4,
+            "h": 32,
+            "padding": "0px 11px",
+            "gap": "6px",
+            "color": "rgb(15, 110, 99)",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "1px solid rgb(15, 110, 99)",
+            "borderRadius": "8px",
+            "fontFamily": "Onest, system-ui, sans-serif",
+            "fontSize": "12.5px",
+            "fontWeight": "600",
+            "lineHeight": "12.5px",
+            "icon": {
+              "w": 14,
+              "h": 14,
+              "fill": "none",
+              "stroke": "currentColor"
+            }
+          },
+          {
+            "text": "",
+            "tag": "BUTTON",
+            "className": "pt-btn pt-btn--ghost pt-btn--sm pt-btn--icon",
+            "ariaLabel": "More",
+            "w": 26.2,
+            "h": 28,
+            "padding": "0px",
+            "gap": "6px",
+            "color": "rgb(84, 92, 103)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "1px solid rgba(0, 0, 0, 0)",
+            "borderRadius": "8px",
+            "fontFamily": "Onest, system-ui, sans-serif",
+            "fontSize": "12.5px",
+            "fontWeight": "600",
+            "lineHeight": "12.5px",
+            "icon": {
+              "w": 15,
+              "h": 15,
+              "fill": "currentColor",
+              "stroke": null
+            }
+          }
+        ]
+      },
+      {
+        "group": {
+          "text": "Open",
+          "tag": "DIV",
+          "className": "pt-row-acts",
+          "ariaLabel": null,
+          "w": 114,
+          "h": 32,
+          "padding": "0px",
+          "gap": "10px",
+          "color": "rgb(22, 24, 29)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px none rgb(22, 24, 29)",
+          "borderRadius": "0px",
+          "fontFamily": "\"Public Sans\", system-ui, sans-serif",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "lineHeight": "21px",
+          "icon": {
+            "w": 14,
+            "h": 14,
+            "fill": "none",
+            "stroke": "currentColor"
+          }
+        },
+        "buttons": [
+          {
+            "text": "Open",
+            "tag": "BUTTON",
+            "className": "pt-btn pt-btn--brand pt-btn--sm",
+            "ariaLabel": null,
+            "w": 76,
+            "h": 32,
+            "padding": "0px 11px",
+            "gap": "6px",
+            "color": "rgb(15, 110, 99)",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "border": "1px solid rgb(15, 110, 99)",
+            "borderRadius": "8px",
+            "fontFamily": "Onest, system-ui, sans-serif",
+            "fontSize": "12.5px",
+            "fontWeight": "600",
+            "lineHeight": "12.5px",
+            "icon": {
+              "w": 14,
+              "h": 14,
+              "fill": "none",
+              "stroke": "currentColor"
+            }
+          },
+          {
+            "text": "",
+            "tag": "BUTTON",
+            "className": "pt-btn pt-btn--ghost pt-btn--sm pt-btn--icon",
+            "ariaLabel": "More",
+            "w": 28,
+            "h": 28,
+            "padding": "0px",
+            "gap": "6px",
+            "color": "rgb(84, 92, 103)",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "border": "1px solid rgba(0, 0, 0, 0)",
+            "borderRadius": "8px",
+            "fontFamily": "Onest, system-ui, sans-serif",
+            "fontSize": "12.5px",
+            "fontWeight": "600",
+            "lineHeight": "12.5px",
+            "icon": {
+              "w": 15,
+              "h": 15,
+              "fill": "currentColor",
+              "stroke": null
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

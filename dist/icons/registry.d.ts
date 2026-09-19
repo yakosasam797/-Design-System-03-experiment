@@ -44,7 +44,7 @@ export declare const ICON_REGISTRY: {
         category: "Actions";
         screens: readonly ["vouchers", "tasks", "travellers", "documents", "finance", "script"];
         sizes: readonly [15];
-        strokeWidth: number;
+        fill: true;
         interactive: true;
         status: "approved";
         a11y: string;
