@@ -16,14 +16,7 @@ import { Avatar } from "../Avatar/Avatar";
 import { EmptyState } from "../EmptyState/EmptyState";
 import { Button } from "../Button/Button";
 import { Tooltip } from "../Tooltip/Tooltip";
-import {
-  IconCalendar,
-  IconClock,
-  IconHotel,
-  IconPeople,
-  IconPin,
-  IconUnassigned,
-} from "../../story-icons";
+import { Icon } from "../../icons";
 
 const meta: Meta<typeof DataSheet> = {
   title: "Components/DataSheet",
@@ -58,14 +51,14 @@ function BookingRows() {
           <Checkbox state="off" label="Select XYZ Family Dubai" />
         </DataSheetCell>
         <DataSheetCell>
-          <LeadCell icon={<IconPin />} title="XYZ Family · Dubai" subtitle="BK-2026-000003" />
+          <LeadCell icon={<Icon name="pin" size="md" />} title="XYZ Family · Dubai" subtitle="BK-2026-000003" />
         </DataSheetCell>
         <DataSheetCell>
           <StackCell>
-            <StackLine mono icon={<IconCalendar />}>
+            <StackLine mono icon={<Icon name="calendar" size="xs" />}>
               18–22 Aug
             </StackLine>
-            <StackLine muted icon={<IconPeople />}>
+            <StackLine muted icon={<Icon name="people" size="xs" />}>
               8d · 3 pax
             </StackLine>
           </StackCell>
@@ -76,14 +69,14 @@ function BookingRows() {
         <DataSheetCell>
           <LeadCell
             align="start"
-            icon={<IconHotel />}
+            icon={<Icon name="hotel" size="md" />}
             title={
               <Tooltip tip="Confirm hotel with ABC DMC">
                 <span className="ell">Confirm hotel with ABC DMC</span>
               </Tooltip>
             }
             subtitle={
-              <StackLine muted icon={<IconClock />}>
+              <StackLine muted icon={<Icon name="clock" size="xs" />}>
                 Today · 4 PM
               </StackLine>
             }
@@ -106,14 +99,14 @@ function BookingRows() {
           <Checkbox state="off" label="Select Sharma Family Goa" />
         </DataSheetCell>
         <DataSheetCell>
-          <LeadCell icon={<IconPin />} title="Sharma Family · Goa" subtitle="BK-2026-000004" />
+          <LeadCell icon={<Icon name="pin" size="md" />} title="Sharma Family · Goa" subtitle="BK-2026-000004" />
         </DataSheetCell>
         <DataSheetCell>
           <StackCell>
-            <StackLine mono icon={<IconCalendar />}>
+            <StackLine mono icon={<Icon name="calendar" size="xs" />}>
               18–22 Aug
             </StackLine>
-            <StackLine muted icon={<IconPeople />}>
+            <StackLine muted icon={<Icon name="people" size="xs" />}>
               8d · 2 pax
             </StackLine>
           </StackCell>
@@ -124,10 +117,10 @@ function BookingRows() {
         <DataSheetCell>
           <LeadCell
             align="start"
-            icon={<IconPin size={15} />}
+            icon={<Icon name="pin" size={15} />}
             title="Confirm water sports add-on"
             subtitle={
-              <StackLine muted icon={<IconClock />}>
+              <StackLine muted icon={<Icon name="clock" size="xs" />}>
                 12 Aug
               </StackLine>
             }
@@ -150,14 +143,14 @@ function BookingRows() {
           <Checkbox state="off" label="Select Patel Family Manali" />
         </DataSheetCell>
         <DataSheetCell>
-          <LeadCell icon={<IconPin />} title="Patel Family · Manali" subtitle="BK-2026-000006" />
+          <LeadCell icon={<Icon name="pin" size="md" />} title="Patel Family · Manali" subtitle="BK-2026-000006" />
         </DataSheetCell>
         <DataSheetCell>
           <StackCell>
-            <StackLine mono icon={<IconCalendar />}>
+            <StackLine mono icon={<Icon name="calendar" size="xs" />}>
               24–28 Aug
             </StackLine>
-            <StackLine muted icon={<IconPeople />}>
+            <StackLine muted icon={<Icon name="people" size="xs" />}>
               14d · 5 pax
             </StackLine>
           </StackCell>
@@ -166,8 +159,8 @@ function BookingRows() {
           <StatusChip tone="blocked">At risk</StatusChip>
         </DataSheetCell>
         <DataSheetCell>
-          <LeadCell align="start" icon={<IconPin />} title="Request missing documents" subtitle={
-            <StackLine muted icon={<IconClock />}>10 Aug</StackLine>
+          <LeadCell align="start" icon={<Icon name="pin" size="md" />} title="Request missing documents" subtitle={
+            <StackLine muted icon={<Icon name="clock" size="xs" />}>10 Aug</StackLine>
           } />
         </DataSheetCell>
         <DataSheetCell>
@@ -219,12 +212,7 @@ export const Empty: Story = {
       <EmptyState
         title="No bookings in this view"
         description="Try another stage or clear filters."
-        icon={
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
-            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-            <circle cx="12" cy="10" r="3" />
-          </svg>
-        }
+        icon={<Icon name="pin" size="lg" />}
       />
     </div>
   ),
@@ -257,17 +245,17 @@ export const LongContent: Story = {
           </DataSheetCell>
           <DataSheetCell>
             <LeadCell
-              icon={<IconPin />}
+              icon={<Icon name="pin" size="md" />}
               title="Extremely long booking title that should truncate inside the lead cell when space is limited"
               subtitle="BK-LONG-CONTENT-0001"
             />
           </DataSheetCell>
           <DataSheetCell>
             <StackCell>
-              <StackLine mono icon={<IconCalendar />}>
+              <StackLine mono icon={<Icon name="calendar" size="xs" />}>
                 18–22 Aug
               </StackLine>
-              <StackLine muted icon={<IconPeople />}>
+              <StackLine muted icon={<Icon name="people" size="xs" />}>
                 8d · 3 pax
               </StackLine>
             </StackCell>
@@ -278,10 +266,10 @@ export const LongContent: Story = {
           <DataSheetCell>
             <LeadCell
               align="start"
-              icon={<IconHotel />}
+              icon={<Icon name="hotel" size="md" />}
               title="Confirm hotel block with ABC DMC and request rooming list before Friday afternoon cutoff"
               subtitle={
-                <StackLine muted icon={<IconClock />}>
+                <StackLine muted icon={<Icon name="clock" size="xs" />}>
                   Today · 4 PM
                 </StackLine>
               }

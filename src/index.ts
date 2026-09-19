@@ -37,7 +37,19 @@ export { Pagination } from "./components/Pagination/Pagination";
 export type { PaginationProps } from "./components/Pagination/Pagination";
 
 export { EmptyState } from "./components/EmptyState/EmptyState";
-export type { EmptyStateProps } from "./components/EmptyState/EmptyState";
+export type { EmptyStateProps, EmptyStateVariant } from "./components/EmptyState/EmptyState";
+
+export { StatusSelect } from "./components/StatusSelect/StatusSelect";
+export type { StatusSelectProps, StatusSelectOption } from "./components/StatusSelect/StatusSelect";
+
+export { Modal } from "./components/Modal/Modal";
+export type { ModalProps } from "./components/Modal/Modal";
+
+export { TextField } from "./components/TextField/TextField";
+export type { TextFieldProps, TextAreaFieldProps } from "./components/TextField/TextField";
+
+export { Icon, ICON_NAMES, ICON_REGISTRY, getIconMeta, resolveIconName } from "./icons";
+export type { IconProps, IconName, IconSize, IconMeta, IconCategory } from "./icons";
 
 export {
   DataSheet,
@@ -66,3 +78,15 @@ export type { CreditsMeterProps } from "./components/CreditsMeter/CreditsMeter";
 
 export { ListPage, ListBulkBar } from "./patterns/ListPage/ListPage";
 export type { ListPageProps } from "./patterns/ListPage/ListPage";
+
+export { DetailPage } from "./patterns/DetailPage/DetailPage";
+export type { DetailPageProps } from "./patterns/DetailPage/DetailPage";
+
+export { SheetToolbar } from "./components/SheetToolbar/SheetToolbar";
+export type { SheetToolbarProps } from "./components/SheetToolbar/SheetToolbar";
+
+export { NotesDrawer } from "./components/NotesDrawer/NotesDrawer";
+export type { NotesDrawerProps, NotesFilterChip } from "./components/NotesDrawer/NotesDrawer";
+
+export { KpiStrip } from "./components/KpiStrip/KpiStrip";
+export type { KpiStripProps, KpiItem } from "./components/KpiStrip/KpiStrip";

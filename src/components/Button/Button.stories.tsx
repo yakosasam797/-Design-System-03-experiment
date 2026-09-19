@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "./Button";
-import { IconClear, IconExport, IconPlus, IconRefresh } from "../../story-icons";
+import { Icon } from "../../icons";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
@@ -15,12 +15,8 @@ export const Refresh: Story = {
   args: {
     variant: "brand",
     size: "sm",
-    children: (
-      <>
-        <IconRefresh />
-        Refresh
-      </>
-    ),
+    leadingIcon: <Icon name="refresh" size="sm" />,
+    children: "Refresh",
   },
 };
 
@@ -29,12 +25,8 @@ export const DirectBooking: Story = {
   args: {
     variant: "primary",
     size: "sm",
-    children: (
-      <>
-        <IconPlus />
-        Direct booking
-      </>
-    ),
+    leadingIcon: <Icon name="plus" size="sm" />,
+    children: "Direct booking",
   },
 };
 
@@ -52,12 +44,8 @@ export const Export: Story = {
   args: {
     variant: "brand",
     size: "sm",
-    children: (
-      <>
-        <IconExport />
-        Export
-      </>
-    ),
+    leadingIcon: <Icon name="export" size="sm" />,
+    children: "Export",
   },
 };
 
@@ -66,12 +54,8 @@ export const Clear: Story = {
   args: {
     variant: "ghost",
     size: "sm",
-    children: (
-      <>
-        <IconClear />
-        Clear
-      </>
-    ),
+    leadingIcon: <Icon name="clear" size="sm" />,
+    children: "Clear",
   },
 };
 
@@ -80,12 +64,8 @@ export const Disabled: Story = {
     variant: "primary",
     size: "sm",
     disabled: true,
-    children: (
-      <>
-        <IconPlus />
-        Direct booking
-      </>
-    ),
+    leadingIcon: <Icon name="plus" size="sm" />,
+    children: "Direct booking",
   },
 };
 
@@ -98,27 +78,43 @@ export const PrimaryMd: Story = {
   },
 };
 
+export const ToolbarUpload: Story = {
+  name: "Primary · toolbar 36 (Vouchers)",
+  args: {
+    variant: "primary",
+    size: "toolbar",
+    leadingIcon: <Icon name="export" size="md" />,
+    children: "Upload voucher",
+  },
+};
+
+export const WithLeadingIconProp: Story = {
+  name: "leadingIcon prop",
+  args: {
+    variant: "primary",
+    size: "sm",
+    leadingIcon: <Icon name="plus" size="sm" />,
+    children: "Direct booking",
+  },
+};
+
 export const ListCtas: Story = {
   name: "List CTA set",
   render: () => (
     <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
-      <Button variant="brand" size="sm">
-        <IconRefresh />
+      <Button variant="brand" size="sm" leadingIcon={<Icon name="refresh" size="sm" />}>
         Refresh
       </Button>
-      <Button variant="primary" size="sm">
-        <IconPlus />
+      <Button variant="primary" size="sm" leadingIcon={<Icon name="plus" size="sm" />}>
         Direct booking
       </Button>
       <Button variant="primary" size="sm">
         Upgrade
       </Button>
-      <Button variant="brand" size="sm">
-        <IconExport />
+      <Button variant="brand" size="sm" leadingIcon={<Icon name="export" size="sm" />}>
         Export
       </Button>
-      <Button variant="ghost" size="sm">
-        <IconClear />
+      <Button variant="ghost" size="sm" leadingIcon={<Icon name="clear" size="sm" />}>
         Clear
       </Button>
     </div>

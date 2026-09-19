@@ -180,12 +180,14 @@
   --panel: var(--color-bg-surface);
   --panel-ground: var(--color-bg-surface);
   --surface: var(--color-bg-surface);
+  /* I5: same hex as --info-bg / subtle elevation vs status-info role — keep both names */
   --surface-2: var(--color-bg-subtle);
   --surface-3: var(--color-bg-muted);
 
   --ink: var(--color-text-primary);
   --ink-2: var(--color-text-secondary);
   --ink-3: var(--color-text-muted);
+  /* I6: decorative / disabled chrome only — not body text (fails AA as copy) */
   --ink-4: var(--color-text-disabled);
 
   --line: var(--color-border-default);
@@ -240,12 +242,40 @@
   --surface-muted-strong: var(--color-bg-muted-strong);
   --teal-ring: var(--pt-teal-50);
 
-  /* Radius / motion (unchanged) */
+  /* Radius — soft-rect CTAs/chips 8; default controls 10; notes filter chips 999 (I3) */
   --radius-xs: 5px;
   --radius-sm: 8px;
   --radius-md: 10px;
   --radius-lg: 16px;
   --radius-pill: 999px;
+
+  /* Control heights (Gate 3 / Gate 1 CDP) */
+  --size-control-sm: 32px;
+  --size-control-toolbar: 36px;
+  --size-control-md: 38px;
+
+  /* Icon sizes */
+  --icon-size-2xs: 11px;
+  --icon-size-xs: 13px;
+  --icon-size-sm: 14px;
+  --icon-size-md: 15px;
+  --icon-size-nav: 17px;
+  --icon-size-lg: 20px;
+  --icon-stroke-default: 1.7;
+  --icon-stroke-emphasis: 1.9;
+  --icon-stroke-bold: 2;
+
+  /* Breakpoints (I11) */
+  --bp-shell: 1000px;
+  --bp-communication: 820px;
+
+  /* Layering */
+  --z-sticky: 25;
+  --z-chrome: 30;
+  --z-dropdown: 40;
+  --z-tooltip: 400;
+  --z-overlay: 500;
+
   --duration-fast: 120ms;
   --duration-shell: 220ms;
 
@@ -386,10 +416,11 @@
   --type-label-status-weight: 600;
   --type-label-status-line: 1;
 
+  /* I4 — Public Sans 12 / 600 / 0.12px (not Onest, not Mono) */
   --type-label-table-head-family: var(--font-sans);
   --type-label-table-head-size: 12px;
   --type-label-table-head-weight: 600;
-  --type-label-table-head-tracking: 0.01em;
+  --type-label-table-head-tracking: 0.12px;
 
   --type-label-channel-family: var(--font-sans);
   --type-label-channel-size: 11px;

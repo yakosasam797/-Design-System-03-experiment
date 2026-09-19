@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Icon } from "../../icons";
 import { Button } from "../Button/Button";
 import "./CreditsMeter.css";
 
@@ -13,12 +14,7 @@ export interface CreditsMeterProps {
   className?: string;
 }
 
-const defaultIcon = (
-  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <circle cx="9" cy="9" r="6" />
-    <path d="M15.5 3.3a6 6 0 0 1 0 11.4" />
-  </svg>
-);
+const defaultIcon = <Icon name="credits" size="md" />;
 
 export function CreditsMeter({
   remaining,

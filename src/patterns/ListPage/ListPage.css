@@ -41,14 +41,16 @@
   flex: none;
 }
 
+/* Prefer SheetToolbar in this slot (I2 toolbar CTAs = size toolbar / 36) */
 .pt-list-toolbar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
   margin-top: 24px;
   margin-bottom: 16px;
   flex: none;
+  min-width: 0;
+}
+
+.pt-list-toolbar > .pt-sheet-toolbar {
+  margin-bottom: 0;
 }
 
 .pt-list-sheet {

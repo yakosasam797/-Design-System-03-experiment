@@ -7,7 +7,15 @@ export default meta;
 type Story = StoryObj<typeof EmptyState>;
 
 export const Default: Story = {
-  args: { title: "No bookings in this view", description: "Try another stage or clear filters." },
+  args: { title: "No bookings in this view", description: "Try another stage or clear filters.", variant: "illustrated" },
+};
+export const Compact: Story = {
+  name: "Compact · notes empty",
+  args: {
+    variant: "compact",
+    title: "No notes match.",
+    description: "Try another filter or clear search.",
+  },
 };
 export const WithAction: Story = {
   args: {

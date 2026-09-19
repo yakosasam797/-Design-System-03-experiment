@@ -85,6 +85,7 @@
   }
 }
 
+/* I4 — table headers: Public Sans via --type-label-table-head-* */
 .pt-sheet__head .pt-sheet__cell {
   min-height: 40px;
   background: var(--side);

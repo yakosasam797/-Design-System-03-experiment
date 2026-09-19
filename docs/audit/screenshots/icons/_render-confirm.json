@@ -1,0 +1,48 @@
+{
+  "capturedAt": "2026-09-19T08:32:33.021Z",
+  "contexts": {
+    "ctx__sidebar": {
+      "svgs": 19,
+      "ok": true
+    },
+    "ctx__topbar": {
+      "svgs": 8,
+      "ok": true
+    },
+    "ctx__list-ctas": {
+      "svgs": 2,
+      "ok": true
+    },
+    "ctx__list-toolbar": {
+      "svgs": 3,
+      "ok": true
+    },
+    "ctx__list-row": {
+      "svgs": 8,
+      "ok": true
+    },
+    "ctx__list-pager": {
+      "svgs": 2,
+      "ok": true
+    },
+    "ctx__detail-header": {
+      "svgs": 5,
+      "ok": true
+    },
+    "ctx__overview-kpi": {
+      "svgs": 6,
+      "ok": true
+    },
+    "ctx__tasks": {
+      "svgs": 4,
+      "ok": true
+    },
+    "ctx__notes-drawer": {
+      "svgs": 8,
+      "ok": true
+    }
+  },
+  "visibleSvgCounts": {
+    "document": 98
+  }
+}

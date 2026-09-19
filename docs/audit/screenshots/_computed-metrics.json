@@ -1,0 +1,88 @@
+{
+  "capturedAt": "2026-09-19T07:00:15.501Z",
+  "sourceUrl": "http://localhost:8443/",
+  "viewports": {
+    "desktop": "1440x900",
+    "narrow": "390x844",
+    "communication": "820x900"
+  },
+  "tokens": {
+    "surface2": "#F1F4F7",
+    "infoBg": "#F1F4F7",
+    "ink4": "#8A909A",
+    "accent": "#0F6E63",
+    "pink": "#A5537E"
+  },
+  "controls": {
+    "btnSm": {
+      "h": 32,
+      "fontFamily": "Onest, sans-serif",
+      "fontSize": "12.5px",
+      "fontWeight": "600",
+      "letterSpacing": "normal",
+      "borderRadius": "8px",
+      "color": "rgb(15, 110, 99)",
+      "sampleText": "Refresh"
+    },
+    "stCap": {
+      "h": 32,
+      "fontFamily": "\"Public Sans\", system-ui, sans-serif",
+      "fontSize": "12.5px",
+      "fontWeight": "600",
+      "letterSpacing": "normal",
+      "borderRadius": "8px",
+      "color": "rgb(190, 59, 72)",
+      "sampleText": "At risk"
+    },
+    "stPick": {
+      "h": 32,
+      "fontFamily": "\"Public Sans\", system-ui, sans-serif",
+      "fontSize": "12.5px",
+      "fontWeight": "600",
+      "borderRadius": "8px"
+    },
+    "listSheetHeader": {
+      "h": 40,
+      "fontFamily": "\"Public Sans\", system-ui, sans-serif",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "letterSpacing": "0.12px",
+      "borderRadius": "0px",
+      "color": "rgb(62, 69, 80)",
+      "sampleText": "Booking"
+    },
+    "filterWrap": {
+      "h": 36,
+      "fontFamily": "\"Public Sans\", system-ui, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "borderRadius": "10px",
+      "color": "rgb(22, 24, 29)",
+      "sampleText": "All bookings\n        Mine\n        Unassi"
+    },
+    "ndFil": {
+      "h": 30,
+      "fontFamily": "\"Public Sans\", system-ui, sans-serif",
+      "fontSize": "12.5px",
+      "fontWeight": "600",
+      "borderRadius": "999px"
+    },
+    "uploadVoucher36": {
+      "h": 36,
+      "borderRadius": "10px",
+      "fontFamily": "Onest, sans-serif",
+      "fontSize": "13.5px"
+    },
+    "tabChip": {
+      "h": 18,
+      "fontFamily": "\"JetBrains Mono\", monospace",
+      "fontSize": "10.5px",
+      "fontWeight": "600",
+      "letterSpacing": "normal",
+      "borderRadius": "6px",
+      "color": "rgb(190, 59, 72)",
+      "sampleText": "3"
+    }
+  }
+}

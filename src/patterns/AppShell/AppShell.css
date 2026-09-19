@@ -234,6 +234,7 @@
   padding: 16px var(--page-pad) 0;
 }
 
+/* Matches --bp-shell (1000px); media queries cannot use custom props reliably */
 @media (max-width: 1000px) {
   .pt-frame {
     grid-template-columns: 1fr;

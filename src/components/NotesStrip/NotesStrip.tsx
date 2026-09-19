@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Icon } from "../../icons";
 import "./NotesStrip.css";
 
 export interface NotesStripProps {
@@ -12,12 +13,7 @@ export interface NotesStripProps {
   className?: string;
 }
 
-const defaultIcon = (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
-    <path d="M15 2v5h5" />
-  </svg>
-);
+const defaultIcon = <Icon name="fileText" size={16} />;
 
 export function NotesStrip({
   label,
@@ -44,10 +40,7 @@ export function NotesStrip({
           aria-label={addTip}
           onClick={onAdd}
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M12 5v14" />
-            <path d="M5 12h14" />
-          </svg>
+          <Icon name="plus" size={16} />
         </button>
       ) : null}
     </div>

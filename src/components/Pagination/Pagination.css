@@ -1,3 +1,5 @@
+/* Booking SoT: .foot / .pager / .pg in booking-redesign.html */
+
 .pt-foot {
   display: flex;
   align-items: center;
@@ -7,6 +9,8 @@
   min-width: 0;
   border-top: 1px solid var(--line);
   background: var(--panel-ground);
+  position: relative;
+  z-index: 1;
 }
 
 .pt-foot__range {
@@ -20,6 +24,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  flex: none;
 }
 
 .pt-pg {
@@ -27,7 +32,7 @@
   height: 30px;
   padding: 0 8px;
   border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
+  border-radius: 8px;
   background: var(--surface);
   color: var(--ink-2);
   font-family: var(--type-mono-range-family);
@@ -46,6 +51,10 @@
   background: var(--pink-soft);
   color: var(--pink-ink);
   border-color: var(--pink-line);
+}
+
+.pt-pg--active:hover:not(:disabled) {
+  background: var(--pink-soft);
 }
 
 .pt-pg:disabled {

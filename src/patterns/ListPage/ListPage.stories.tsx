@@ -25,21 +25,8 @@ import { Checkbox } from "../../components/Checkbox/Checkbox";
 import { Avatar } from "../../components/Avatar/Avatar";
 import { IconButton } from "../../components/IconButton/IconButton";
 import { Tooltip } from "../../components/Tooltip/Tooltip";
-import {
-  IconCalendar,
-  IconClear,
-  IconClock,
-  IconExport,
-  IconHotel,
-  IconPeople,
-  IconPin,
-  IconPlus,
-  IconRefresh,
-  IconSettings,
-  IconBell,
-  IconHelp,
-  IconUnassigned,
-} from "../../story-icons";
+import { SheetToolbar } from "../../components/SheetToolbar/SheetToolbar";
+import { Icon } from "../../icons";
 
 const stageTabs = [
   { id: "upcoming", label: "Upcoming", count: 3 },
@@ -57,39 +44,15 @@ export default meta;
 type Story = StoryObj<typeof ListPage>;
 
 function bookIcon() {
-  return (
-    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-    </svg>
-  );
+  return <Icon name="bookings" size="nav" />;
 }
 
 function NavFixture() {
   return (
     <nav aria-label="Primary" className="pt-sidenav">
       <NavItem label="Bookings" tip="Bookings" active icon={bookIcon()} />
-      <NavItem
-        label="Quotes"
-        tip="Quotes"
-        icon={
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M15 2H8.6A1.6 1.6 0 0 0 7 3.6v16.8A1.6 1.6 0 0 0 8.6 22h10.8a1.6 1.6 0 0 0 1.6-1.6V7.5Z" />
-            <path d="M14 2v6h6" />
-          </svg>
-        }
-      />
-      <NavItem
-        label="Vendors"
-        tip="Vendors"
-        icon={
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M3 9.5 4.5 4h15L21 9.5" />
-            <path d="M4 9.5V20h16V9.5" />
-            <path d="M3 9.5a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0" />
-          </svg>
-        }
-      />
+      <NavItem label="Quotes" tip="Quotes" icon={<Icon name="fileText2" size="nav" />} />
+      <NavItem label="Vendors" tip="Vendors" icon={<Icon name="vendors" size="nav" />} />
     </nav>
   );
 }
@@ -116,14 +79,14 @@ function BookingSheetBody({ long }: { long?: boolean }) {
           <Checkbox state="off" label="Select row" />
         </DataSheetCell>
         <DataSheetCell>
-          <LeadCell icon={<IconPin />} title={title} subtitle="BK-2026-000003" />
+          <LeadCell icon={<Icon name="pin" size="md" />} title={title} subtitle="BK-2026-000003" />
         </DataSheetCell>
         <DataSheetCell>
           <StackCell>
-            <StackLine mono icon={<IconCalendar />}>
+            <StackLine mono icon={<Icon name="calendar" size="xs" />}>
               18–22 Aug
             </StackLine>
-            <StackLine muted icon={<IconPeople />}>
+            <StackLine muted icon={<Icon name="people" size="xs" />}>
               8d · 3 pax
             </StackLine>
           </StackCell>
@@ -134,14 +97,14 @@ function BookingSheetBody({ long }: { long?: boolean }) {
         <DataSheetCell>
           <LeadCell
             align="start"
-            icon={<IconHotel />}
+            icon={<Icon name="hotel" size="md" />}
             title={
               <Tooltip tip="Confirm hotel with ABC DMC">
                 <span className="ell">Confirm hotel with ABC DMC</span>
               </Tooltip>
             }
             subtitle={
-              <StackLine muted icon={<IconClock />}>
+              <StackLine muted icon={<Icon name="clock" size="xs" />}>
                 Today · 4 PM
               </StackLine>
             }
@@ -164,14 +127,14 @@ function BookingSheetBody({ long }: { long?: boolean }) {
           <Checkbox state="off" label="Select Sharma" />
         </DataSheetCell>
         <DataSheetCell>
-          <LeadCell icon={<IconPin />} title="Sharma Family · Goa" subtitle="BK-2026-000004" />
+          <LeadCell icon={<Icon name="pin" size="md" />} title="Sharma Family · Goa" subtitle="BK-2026-000004" />
         </DataSheetCell>
         <DataSheetCell>
           <StackCell>
-            <StackLine mono icon={<IconCalendar />}>
+            <StackLine mono icon={<Icon name="calendar" size="xs" />}>
               18–22 Aug
             </StackLine>
-            <StackLine muted icon={<IconPeople />}>
+            <StackLine muted icon={<Icon name="people" size="xs" />}>
               8d · 2 pax
             </StackLine>
           </StackCell>
@@ -182,10 +145,10 @@ function BookingSheetBody({ long }: { long?: boolean }) {
         <DataSheetCell>
           <LeadCell
             align="start"
-            icon={<IconPin />}
+            icon={<Icon name="pin" size="md" />}
             title="Confirm water sports add-on"
             subtitle={
-              <StackLine muted icon={<IconClock />}>
+              <StackLine muted icon={<Icon name="clock" size="xs" />}>
                 12 Aug
               </StackLine>
             }
@@ -208,14 +171,14 @@ function BookingSheetBody({ long }: { long?: boolean }) {
           <Checkbox state="off" label="Select Patel" />
         </DataSheetCell>
         <DataSheetCell>
-          <LeadCell icon={<IconPin />} title="Patel Family · Manali" subtitle="BK-2026-000006" />
+          <LeadCell icon={<Icon name="pin" size="md" />} title="Patel Family · Manali" subtitle="BK-2026-000006" />
         </DataSheetCell>
         <DataSheetCell>
           <StackCell>
-            <StackLine mono icon={<IconCalendar />}>
+            <StackLine mono icon={<Icon name="calendar" size="xs" />}>
               24–28 Aug
             </StackLine>
-            <StackLine muted icon={<IconPeople />}>
+            <StackLine muted icon={<Icon name="people" size="xs" />}>
               14d · 5 pax
             </StackLine>
           </StackCell>
@@ -226,10 +189,10 @@ function BookingSheetBody({ long }: { long?: boolean }) {
         <DataSheetCell>
           <LeadCell
             align="start"
-            icon={<IconPin />}
+            icon={<Icon name="pin" size="md" />}
             title="Request missing documents"
             subtitle={
-              <StackLine muted icon={<IconClock />}>
+              <StackLine muted icon={<Icon name="clock" size="xs" />}>
                 10 Aug
               </StackLine>
             }
@@ -240,7 +203,7 @@ function BookingSheetBody({ long }: { long?: boolean }) {
         </DataSheetCell>
         <DataSheetCell>
           <OwnerCell>
-            <IconUnassigned />
+            <Icon name="user" size="md" />
             <span>Unassigned</span>
           </OwnerCell>
         </DataSheetCell>
@@ -256,38 +219,39 @@ function DemoList({
 }) {
   const [tab, setTab] = useState("upcoming");
   const [filter, setFilter] = useState("all");
-  const [page, setPage] = useState(1);
   const [selected, setSelected] = useState(mode === "data");
 
   const toolbar = (
-    <>
-      <SearchField
-        fullWidth
-        placeholder="Search booking, customer, or destination"
-        aria-label="Search bookings"
-        disabled={mode === "disabled"}
-      />
-      <FilterSelect
-        tip="Filter by owner"
-        options={[
-          { value: "all", label: "All bookings" },
-          { value: "mine", label: "Mine" },
-          { value: "unassigned", label: "Unassigned" },
-        ]}
-        value={filter}
-        onChange={setFilter}
-      />
-    </>
+    <SheetToolbar
+      search={
+        <SearchField
+          fullWidth
+          placeholder="Search booking, customer, or destination"
+          aria-label="Search bookings"
+          disabled={mode === "disabled"}
+        />
+      }
+      filters={
+        <FilterSelect
+          tip="Filter by owner"
+          options={[
+            { value: "all", label: "All bookings" },
+            { value: "mine", label: "Mine" },
+            { value: "unassigned", label: "Unassigned" },
+          ]}
+          value={filter}
+          onChange={setFilter}
+        />
+      }
+    />
   );
 
   const actions = (
     <>
-      <Button variant="brand" size="sm" disabled={mode === "disabled"}>
-        <IconRefresh />
+      <Button variant="brand" size="toolbar" disabled={mode === "disabled"} leadingIcon={<Icon name="refresh" />}>
         Refresh
       </Button>
-      <Button variant="primary" size="sm" disabled={mode === "disabled"}>
-        <IconPlus />
+      <Button variant="primary" size="toolbar" disabled={mode === "disabled"} leadingIcon={<Icon name="plus" />}>
         Direct booking
       </Button>
     </>
@@ -307,7 +271,7 @@ function DemoList({
         description="Composition recipe — reuse EmptyState + Button."
         action={
           <Button variant="brand" size="sm">
-            <IconRefresh />
+            <Icon name="refresh" size="sm" />
             Retry
           </Button>
         }
@@ -332,13 +296,13 @@ function DemoList({
       actions={
         <>
           <IconButton label="Settings">
-            <IconSettings />
+            <Icon name="settings" size="nav" />
           </IconButton>
           <IconButton label="Help">
-            <IconHelp />
+            <Icon name="help" size="nav" />
           </IconButton>
           <IconButton label="Notifications" alert>
-            <IconBell />
+            <Icon name="bell" size="nav" />
           </IconButton>
         </>
       }
@@ -356,11 +320,11 @@ function DemoList({
           selected && mode === "data" ? (
             <ListBulkBar label="2 bookings selected">
               <Button variant="brand" size="sm">
-                <IconExport />
+                <Icon name="export" size="sm" />
                 Export
               </Button>
               <Button variant="ghost" size="sm" onClick={() => setSelected(false)}>
-                <IconClear />
+                <Icon name="clear" size="sm" />
                 Clear
               </Button>
             </ListBulkBar>
@@ -370,9 +334,9 @@ function DemoList({
           mode === "data" || mode === "long" || mode === "disabled" ? (
             <Pagination
               rangeLabel="Showing 1–3 of 3"
-              page={page}
-              pageCount={3}
-              onPageChange={setPage}
+              page={1}
+              pageCount={1}
+              onPageChange={() => {}}
             />
           ) : null
         }

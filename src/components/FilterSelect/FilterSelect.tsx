@@ -1,5 +1,6 @@
 import { useEffect, useId, useRef, useState } from "react";
 import type { HTMLAttributes } from "react";
+import { Icon } from "../../icons";
 import "./FilterSelect.css";
 
 export interface FilterOption {
@@ -45,11 +46,7 @@ export function FilterSelect({
       data-tip={open ? undefined : tip}
       {...rest}
     >
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M3 5h18" />
-        <path d="M7 12h10" />
-        <path d="M10 19h4" />
-      </svg>
+      <Icon name="filter" size={15} />
       <button
         type="button"
         className="pt-filter-btn"
@@ -59,9 +56,7 @@ export function FilterSelect({
         onClick={() => setOpen((v) => !v)}
       >
         <span className="pt-filter-btn__label">{current}</span>
-        <svg className="pt-filter-caret" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <path d="m6 9 6 6 6-6" />
-        </svg>
+        <Icon name="chevronDown" size={13} className="pt-filter-caret" />
       </button>
       {open ? (
         <div className="pt-choice-menu" role="listbox" id={listId}>

@@ -1,0 +1,64 @@
+.pt-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay, 500);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(22, 24, 29, 0.45);
+}
+
+.pt-modal {
+  width: min(440px, 100%);
+  max-height: min(90vh, 720px);
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--overlayShadow);
+  overflow: hidden;
+}
+
+.pt-modal--wide {
+  width: min(640px, 100%);
+}
+
+.pt-modal__head {
+  padding: 20px 20px 12px;
+  border-bottom: 1px solid var(--line-2);
+}
+
+.pt-modal__eyebrow {
+  margin: 0 0 4px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-3);
+  letter-spacing: 0.02em;
+}
+
+.pt-modal__title {
+  margin: 0;
+  font-family: var(--type-heading-modal-family, var(--font-display));
+  font-size: var(--type-heading-modal-size, 18px);
+  font-weight: var(--type-heading-modal-weight, 700);
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.pt-modal__body {
+  padding: 16px 20px 8px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pt-modal__foot {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 20px 16px;
+  border-top: 1px solid var(--line-2);
+}

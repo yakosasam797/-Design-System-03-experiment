@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Tooltip } from "./Tooltip";
 import { IconButton } from "../IconButton/IconButton";
-import { IconSettings } from "../../story-icons";
+import { Icon } from "../../icons";
 
 const meta: Meta<typeof Tooltip> = {
   title: "Components/Tooltip",
@@ -14,7 +14,7 @@ export const OnIconButton: StoryObj = {
     <div style={{ padding: 48 }}>
       <Tooltip tip="Settings">
         <IconButton label="Settings">
-          <IconSettings />
+          <Icon name="settings" size="nav" />
         </IconButton>
       </Tooltip>
       <p style={{ fontSize: 12, color: "var(--ink-2)", marginTop: 12 }}>Hover the icon button</p>

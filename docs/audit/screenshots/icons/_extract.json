@@ -1,0 +1,2734 @@
+{
+  "capturedAt": "2026-09-19T08:27:53.506Z",
+  "source": "D:\\direction 03 experiment\\booking-redesign.html",
+  "totalSvgInstances": 446,
+  "uniqueGlyphs": 77,
+  "glyphs": [
+    {
+      "hash": "1d476cf3b2",
+      "fillMode": "stroke",
+      "paths": [
+        "p:m5 12 5 5L20 7"
+      ],
+      "count": 65,
+      "sizes": {
+        "11": 64,
+        "15": 1
+      },
+      "strokes": {
+        "3.2": 64,
+        "1.9": 1
+      },
+      "regions": {
+        "list": 8,
+        "overview": 6,
+        "vouchers": 6,
+        "tasks": 10,
+        "travellers": 4,
+        "documents": 7,
+        "finance": 10,
+        "activity": 8,
+        "notes": 2,
+        "script": 4
+      },
+      "lines": [
+        1383,
+        1388,
+        1400,
+        1412,
+        1424,
+        1436,
+        1448,
+        1460
+      ],
+      "labels": [
+        "Select all bookings",
+        "Open XYZ Family Dubai",
+        "Open Sharma Family Goa",
+        "Open Patel Family Manali",
+        "Open Kapoor Family Jaipur",
+        "Open Singh Family Paris",
+        "Open Iyer Family Kerala",
+        "Open Reddy Family Bali",
+        "Select all days",
+        "Select all vouchers",
+        "Select all open tasks",
+        "Select all completed tasks",
+        "Select all travellers",
+        "Select all documents",
+        "Select all instalments",
+        "Select all payables",
+        "Select all activity"
+      ],
+      "classes": [
+        "cbx",
+        "btn"
+      ],
+      "dominantSize": "11",
+      "dominantStroke": "3.2"
+    },
+    {
+      "hash": "b6e6e54fb3",
+      "fillMode": "stroke",
+      "paths": [
+        "r:3,4,18,18,2",
+        "p:M16 2v4M8 2v4M3 10h18"
+      ],
+      "count": 41,
+      "sizes": {
+        "13": 40,
+        "15": 1
+      },
+      "strokes": {
+        "1.8": 41
+      },
+      "regions": {
+        "list": 7,
+        "detail": 1,
+        "overview": 6,
+        "services": 5,
+        "tasks": 8,
+        "finance": 3,
+        "activity": 7,
+        "script": 4
+      },
+      "lines": [
+        1391,
+        1403,
+        1415,
+        1427,
+        1439,
+        1451,
+        1463,
+        1507
+      ],
+      "labels": [
+        "Booking advance",
+        "Second instalment",
+        "Final balance"
+      ],
+      "classes": [
+        "bk-line",
+        "rec-date",
+        "kpi-val",
+        "date-cell",
+        "svc-meta",
+        "act-when"
+      ],
+      "dominantSize": "13",
+      "dominantStroke": "1.8"
+    },
+    {
+      "hash": "93443c2e6d",
+      "fillMode": "stroke",
+      "paths": [
+        "c:5,12,1.6",
+        "c:12,12,1.6",
+        "c:19,12,1.6"
+      ],
+      "count": 33,
+      "sizes": {
+        "15": 33
+      },
+      "strokes": {
+        "null": 33
+      },
+      "regions": {
+        "vouchers": 5,
+        "tasks": 8,
+        "travellers": 3,
+        "documents": 6,
+        "finance": 8,
+        "script": 3
+      },
+      "lines": [
+        1690,
+        1699,
+        1708,
+        1717,
+        1726,
+        2070,
+        2078,
+        2086
+      ],
+      "labels": [
+        "More"
+      ],
+      "classes": [
+        "btn"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "null"
+    },
+    {
+      "hash": "51013faa53",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M15 3h6v6",
+        "p:M10 14 21 3",
+        "p:M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+      ],
+      "count": 20,
+      "sizes": {
+        "14": 20
+      },
+      "strokes": {
+        "1.9": 20
+      },
+      "regions": {
+        "vouchers": 2,
+        "tasks": 8,
+        "travellers": 3,
+        "finance": 5,
+        "script": 2
+      },
+      "lines": [
+        1690,
+        1708,
+        2070,
+        2078,
+        2086,
+        2094,
+        2102,
+        2136
+      ],
+      "labels": [
+        "Confirm the service to prepare its voucher",
+        "Assign a vendor and confirm the service"
+      ],
+      "classes": [
+        "btn"
+      ],
+      "dominantSize": "14",
+      "dominantStroke": "1.9"
+    },
+    {
+      "hash": "deb6db9a42",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2",
+        "c:9,7,4",
+        "p:M22 21v-2a4 4 0 0 0-3-3.87"
+      ],
+      "count": 18,
+      "sizes": {
+        "13": 7,
+        "15": 10,
+        "17": 1
+      },
+      "strokes": {
+        "1.7": 1,
+        "1.8": 16,
+        "1.9": 1
+      },
+      "regions": {
+        "shell": 1,
+        "list": 7,
+        "overview": 1,
+        "services": 6,
+        "tasks": 1,
+        "documents": 1,
+        "script": 1
+      },
+      "lines": [
+        1304,
+        1392,
+        1404,
+        1416,
+        1428,
+        1440,
+        1452,
+        1464
+      ],
+      "labels": [
+        "Team",
+        "Search documents"
+      ],
+      "classes": [
+        "nav-item",
+        "bk-line",
+        "kpi-val",
+        "sf-value",
+        "filter-wrap"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.8"
+    },
+    {
+      "hash": "4c908e7199",
+      "fillMode": "stroke",
+      "paths": [
+        "p:m9 18 6-6-6-6"
+      ],
+      "count": 13,
+      "sizes": {
+        "13": 13
+      },
+      "strokes": {
+        "2": 10,
+        "1.8": 3
+      },
+      "regions": {
+        "shell": 2,
+        "list": 1,
+        "overview": 1,
+        "vouchers": 1,
+        "tasks": 2,
+        "travellers": 1,
+        "documents": 1,
+        "finance": 2,
+        "activity": 1,
+        "script": 1
+      },
+      "lines": [
+        1332,
+        1334,
+        1489,
+        1649,
+        1748,
+        2110,
+        2160,
+        2228
+      ],
+      "labels": [
+        "Breadcrumb",
+        "Next page"
+      ],
+      "classes": [
+        "pg"
+      ],
+      "dominantSize": "13",
+      "dominantStroke": "2"
+    },
+    {
+      "hash": "19a4931df6",
+      "fillMode": "stroke",
+      "paths": [
+        "c:11,11,7.5",
+        "p:m21 21-4.3-4.3"
+      ],
+      "count": 13,
+      "sizes": {
+        "15": 2,
+        "16": 11
+      },
+      "strokes": {
+        "1.9": 12,
+        "1.8": 1
+      },
+      "regions": {
+        "shell": 1,
+        "list": 1,
+        "overview": 1,
+        "vouchers": 1,
+        "services": 1,
+        "tasks": 2,
+        "travellers": 1,
+        "documents": 1,
+        "finance": 2,
+        "activity": 1,
+        "notes": 1
+      },
+      "lines": [
+        1338,
+        1369,
+        1577,
+        1663,
+        1797,
+        2044,
+        2120,
+        2170
+      ],
+      "labels": [],
+      "classes": [
+        "search",
+        "kpi-val",
+        "nd-search"
+      ],
+      "dominantSize": "16",
+      "dominantStroke": "1.9"
+    },
+    {
+      "hash": "0e9693a53f",
+      "fillMode": "stroke",
+      "paths": [
+        "p:m22 2-7 20-4-9-9-4Z",
+        "p:M22 2 11 13"
+      ],
+      "count": 13,
+      "sizes": {
+        "14": 11,
+        "15": 2
+      },
+      "strokes": {
+        "1.9": 13
+      },
+      "regions": {
+        "vouchers": 1,
+        "services": 4,
+        "travellers": 1,
+        "documents": 5,
+        "communication": 1,
+        "script": 1
+      },
+      "lines": [
+        1738,
+        1832,
+        1868,
+        1903,
+        1938,
+        2219,
+        2257,
+        2296
+      ],
+      "labels": [
+        "Neha Kapoor",
+        "Requested 7 Aug · WhatsApp — awaiting file",
+        "Required for visa filing — not received",
+        "Waiting on guardian — awaiting file"
+      ],
+      "classes": [
+        "btn"
+      ],
+      "dominantSize": "14",
+      "dominantStroke": "1.9"
+    },
+    {
+      "hash": "7932b799d3",
+      "fillMode": "stroke",
+      "paths": [
+        "p:m15 18-6-6 6-6"
+      ],
+      "count": 11,
+      "sizes": {
+        "13": 10,
+        "16": 1
+      },
+      "strokes": {
+        "2": 10,
+        "1.9": 1
+      },
+      "regions": {
+        "shell": 1,
+        "list": 1,
+        "overview": 1,
+        "vouchers": 1,
+        "tasks": 2,
+        "travellers": 1,
+        "documents": 1,
+        "finance": 2,
+        "activity": 1
+      },
+      "lines": [
+        1329,
+        1487,
+        1647,
+        1746,
+        2108,
+        2158,
+        2226,
+        2330
+      ],
+      "labels": [
+        "Back to bookings",
+        "Previous page"
+      ],
+      "classes": [
+        "back-btn",
+        "pg"
+      ],
+      "dominantSize": "13",
+      "dominantStroke": "2"
+    },
+    {
+      "hash": "181b3f4e66",
+      "fillMode": "stroke",
+      "paths": [
+        "c:12,12,9",
+        "p:M12 7v5l3 2"
+      ],
+      "count": 11,
+      "sizes": {
+        "13": 11
+      },
+      "strokes": {
+        "1.8": 11
+      },
+      "regions": {
+        "list": 4,
+        "activity": 7
+      },
+      "lines": [
+        1395,
+        1407,
+        1419,
+        1431,
+        2564,
+        2571,
+        2578,
+        2585
+      ],
+      "labels": [
+        "Confirm hotel with ABC DMC",
+        "Confirm water sports add-on",
+        "Request missing documents",
+        "Confirm airport pickup window"
+      ],
+      "classes": [
+        "bk-line",
+        "act-time"
+      ],
+      "dominantSize": "13",
+      "dominantStroke": "1.8"
+    },
+    {
+      "hash": "6a5482377e",
+      "fillMode": "stroke",
+      "paths": [
+        "p:m6 9 6 6 6-6"
+      ],
+      "count": 10,
+      "sizes": {
+        "12": 7,
+        "13": 1,
+        "14": 1,
+        "15": 1
+      },
+      "strokes": {
+        "2": 2,
+        "1.9": 1,
+        "2.2": 7
+      },
+      "regions": {
+        "shell": 2,
+        "tasks": 5,
+        "notes": 1,
+        "script": 2
+      },
+      "lines": [
+        1272,
+        1345,
+        2069,
+        2077,
+        2085,
+        2093,
+        2101,
+        2709
+      ],
+      "labels": [
+        "Account, Vrushabh Jain",
+        "Task status"
+      ],
+      "classes": [],
+      "dominantSize": "12",
+      "dominantStroke": "2.2"
+    },
+    {
+      "hash": "e1bd7fbbbf",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M3 5h18",
+        "p:M7 12h10",
+        "p:M10 19h4"
+      ],
+      "count": 10,
+      "sizes": {
+        "15": 10
+      },
+      "strokes": {
+        "1.9": 10
+      },
+      "regions": {
+        "list": 1,
+        "vouchers": 1,
+        "services": 2,
+        "tasks": 1,
+        "travellers": 1,
+        "documents": 1,
+        "finance": 2,
+        "activity": 1
+      },
+      "lines": [
+        1373,
+        1667,
+        1801,
+        1811,
+        2048,
+        2174,
+        2249,
+        2355
+      ],
+      "labels": [
+        "Search bookings",
+        "Filter by voucher state",
+        "Search services and vendors",
+        "Filter by status",
+        "Search travellers",
+        "Filter by document type",
+        "Search instalments",
+        "Search supplier payables",
+        "Search activity"
+      ],
+      "classes": [
+        "filter-wrap"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.9"
+    },
+    {
+      "hash": "82521b13d7",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z",
+        "c:12,10,3"
+      ],
+      "count": 10,
+      "sizes": {
+        "15": 9,
+        "20": 1
+      },
+      "strokes": {
+        "1.7": 10
+      },
+      "regions": {
+        "list": 8,
+        "overview": 1,
+        "script": 1
+      },
+      "lines": [
+        1389,
+        1401,
+        1413,
+        1425,
+        1437,
+        1449,
+        1461,
+        1472
+      ],
+      "labels": [],
+      "classes": [
+        "cell-lead",
+        "ic"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "f0d34992ab",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M18 6 6 18M6 6l12 12"
+      ],
+      "count": 10,
+      "sizes": {
+        "14": 8,
+        "15": 1,
+        "16": 1
+      },
+      "strokes": {
+        "1.9": 10
+      },
+      "regions": {
+        "list": 1,
+        "vouchers": 1,
+        "travellers": 1,
+        "documents": 1,
+        "finance": 2,
+        "activity": 2,
+        "notes": 2
+      },
+      "lines": [
+        1481,
+        1739,
+        2220,
+        2324,
+        2403,
+        2496,
+        2618,
+        2638
+      ],
+      "labels": [
+        "Close"
+      ],
+      "classes": [
+        "btn",
+        "nd-close"
+      ],
+      "dominantSize": "14",
+      "dominantStroke": "1.9"
+    },
+    {
+      "hash": "b3d6cd2d46",
+      "fillMode": "stroke",
+      "paths": [
+        "c:12,12,9",
+        "p:M12 7v10"
+      ],
+      "count": 10,
+      "sizes": {
+        "15": 10
+      },
+      "strokes": {
+        "1.8": 10
+      },
+      "regions": {
+        "services": 6,
+        "tasks": 1,
+        "finance": 2,
+        "script": 1
+      },
+      "lines": [
+        1780,
+        1845,
+        1881,
+        1916,
+        1951,
+        1985,
+        2024,
+        2343
+      ],
+      "labels": [],
+      "classes": [
+        "kpi-val",
+        "sf-value"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.8"
+    },
+    {
+      "hash": "fd64b08cea",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M3 8a2 2 0 0 0 2-2h14a2 2 0 0 0 2 2v8a2 2 0 0 0-2 2H5a2 2 0 0 0-2-2Z",
+        "p:M8 8v8"
+      ],
+      "count": 10,
+      "sizes": {
+        "14": 6,
+        "15": 4
+      },
+      "strokes": {
+        "1.9": 6,
+        "1.8": 1,
+        "1.7": 3
+      },
+      "regions": {
+        "services": 5,
+        "tasks": 1,
+        "documents": 2,
+        "activity": 1,
+        "script": 1
+      },
+      "lines": [
+        1833,
+        1869,
+        1904,
+        1939,
+        1974,
+        2029,
+        2276,
+        2292
+      ],
+      "labels": [
+        "Voucher sent for Private Dubai city tour"
+      ],
+      "classes": [
+        "btn",
+        "kpi-val",
+        "cell-lead"
+      ],
+      "dominantSize": "14",
+      "dominantStroke": "1.9"
+    },
+    {
+      "hash": "71c2e66471",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z",
+        "p:M14 2v6h6"
+      ],
+      "count": 10,
+      "sizes": {
+        "14": 1,
+        "15": 9
+      },
+      "strokes": {
+        "1.8": 8,
+        "1.7": 2
+      },
+      "regions": {
+        "services": 5,
+        "tasks": 1,
+        "communication": 1,
+        "activity": 2,
+        "script": 1
+      },
+      "lines": [
+        1854,
+        1889,
+        1924,
+        1959,
+        1993,
+        2019,
+        2529,
+        2602
+      ],
+      "labels": [
+        "Document requested · passport · Arjun XYZ",
+        "Document verified · passport · Priya XYZ"
+      ],
+      "classes": [
+        "sf-value",
+        "kpi-val",
+        "btn",
+        "cell-lead"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.8"
+    },
+    {
+      "hash": "7ba3db2acc",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M9 11l3 3L22 4",
+        "p:M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
+      ],
+      "count": 9,
+      "sizes": {
+        "15": 9
+      },
+      "strokes": {
+        "1.7": 9
+      },
+      "regions": {
+        "tasks": 8,
+        "script": 1
+      },
+      "lines": [
+        2066,
+        2074,
+        2082,
+        2090,
+        2098,
+        2132,
+        2140,
+        2148
+      ],
+      "labels": [],
+      "classes": [
+        "cell-lead"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "a4d537bc4f",
+      "fillMode": "stroke",
+      "paths": [
+        "r:2,5,20,14,2",
+        "p:M2 10h20"
+      ],
+      "count": 9,
+      "sizes": {
+        "14": 4,
+        "15": 5
+      },
+      "strokes": {
+        "1.8": 1,
+        "1.9": 6,
+        "1.7": 2
+      },
+      "regions": {
+        "finance": 6,
+        "activity": 2,
+        "script": 1
+      },
+      "lines": [
+        2341,
+        2363,
+        2396,
+        2402,
+        2433,
+        2495,
+        2567,
+        2574
+      ],
+      "labels": [
+        "Recorded customer payment of ₹20,500 against booking advance",
+        "Recorded supplier payment of ₹16,000 to ABC DMC Dubai"
+      ],
+      "classes": [
+        "kpi-val",
+        "btn",
+        "cell-lead"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.9"
+    },
+    {
+      "hash": "ca91c34f3f",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M5 17H3V6a1 1 0 0 1 1-1h11v12h-2",
+        "p:M14 9h4l3 4v4h-2",
+        "c:7.5,17.5,2",
+        "c:16.5,17.5,2"
+      ],
+      "count": 8,
+      "sizes": {
+        "15": 8
+      },
+      "strokes": {
+        "1.7": 8
+      },
+      "regions": {
+        "list": 1,
+        "vouchers": 2,
+        "services": 2,
+        "finance": 2,
+        "script": 1
+      },
+      "lines": [
+        1431,
+        1704,
+        1713,
+        1861,
+        1966,
+        2453,
+        2483,
+        3680
+      ],
+      "labels": [],
+      "classes": [
+        "cell-lead",
+        "svc-main"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "b0799ecf6d",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z",
+        "c:12,12,3"
+      ],
+      "count": 8,
+      "sizes": {
+        "12": 1,
+        "14": 7
+      },
+      "strokes": {
+        "1.9": 8
+      },
+      "regions": {
+        "vouchers": 2,
+        "documents": 3,
+        "finance": 2,
+        "script": 1
+      },
+      "lines": [
+        1717,
+        1726,
+        2272,
+        2280,
+        2288,
+        2378,
+        2387,
+        3557
+      ],
+      "labels": [
+        "Verified 7 Aug · Neha",
+        "Received 8 Aug · WhatsApp",
+        "Verified 6 Aug · Rahul"
+      ],
+      "classes": [
+        "btn"
+      ],
+      "dominantSize": "14",
+      "dominantStroke": "1.9"
+    },
+    {
+      "hash": "72578c9a3d",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M12 5v14",
+        "p:M5 12h14"
+      ],
+      "count": 7,
+      "sizes": {
+        "14": 2,
+        "15": 4,
+        "16": 1
+      },
+      "strokes": {
+        "1.9": 6,
+        "1.7": 1
+      },
+      "regions": {
+        "shell": 1,
+        "list": 1,
+        "services": 1,
+        "tasks": 1,
+        "travellers": 1,
+        "finance": 1,
+        "script": 1
+      },
+      "lines": [
+        1282,
+        1356,
+        1764,
+        2056,
+        2182,
+        2362,
+        3733
+      ],
+      "labels": [
+        "Write a note"
+      ],
+      "classes": [
+        "notes-add",
+        "btn",
+        "cell-lead"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.9"
+    },
+    {
+      "hash": "c75b827c5c",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M6 3h12",
+        "p:M6 8h12",
+        "p:m6 13 8.5 8",
+        "p:M6 13h3",
+        "p:M9 13c6.667 0 6.667-10 0-10"
+      ],
+      "count": 7,
+      "sizes": {
+        "15": 7
+      },
+      "strokes": {
+        "1.8": 7
+      },
+      "regions": {
+        "services": 5,
+        "finance": 1,
+        "script": 1
+      },
+      "lines": [
+        1850,
+        1885,
+        1920,
+        1955,
+        1989,
+        2342,
+        3707
+      ],
+      "labels": [],
+      "classes": [
+        "sf-value",
+        "kpi-val"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.8"
+    },
+    {
+      "hash": "03aa882dfd",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z",
+        "c:12,13,3"
+      ],
+      "count": 5,
+      "sizes": {
+        "15": 5
+      },
+      "strokes": {
+        "1.7": 5
+      },
+      "regions": {
+        "list": 1,
+        "vouchers": 1,
+        "services": 1,
+        "finance": 1,
+        "script": 1
+      },
+      "lines": [
+        1407,
+        1722,
+        1896,
+        2463,
+        3682
+      ],
+      "labels": [],
+      "classes": [
+        "cell-lead",
+        "svc-main"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "6e8245f891",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4",
+        "p:M7 10l5 5 5-5",
+        "p:M12 15V3"
+      ],
+      "count": 5,
+      "sizes": {
+        "14": 5
+      },
+      "strokes": {
+        "1.9": 5
+      },
+      "regions": {
+        "list": 1,
+        "vouchers": 1,
+        "documents": 1,
+        "activity": 2
+      },
+      "lines": [
+        1480,
+        1737,
+        2323,
+        2617,
+        2636
+      ],
+      "labels": [],
+      "classes": [
+        "btn"
+      ],
+      "dominantSize": "14",
+      "dominantStroke": "1.9"
+    },
+    {
+      "hash": "3f34ef1e6b",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"
+      ],
+      "count": 4,
+      "sizes": {
+        "15": 4
+      },
+      "strokes": {
+        "1.7": 3,
+        "1.8": 1
+      },
+      "regions": {
+        "list": 1,
+        "services": 1,
+        "tasks": 1,
+        "script": 1
+      },
+      "lines": [
+        1395,
+        1825,
+        2009,
+        3679
+      ],
+      "labels": [],
+      "classes": [
+        "cell-lead",
+        "svc-main",
+        "kpi-val"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "f3d9b521b0",
+      "fillMode": "stroke",
+      "paths": [
+        "r:4,3,16,18,2",
+        "c:12,10,2.5",
+        "p:M8.5 17a3.5 3.5 0 0 1 7 0"
+      ],
+      "count": 4,
+      "sizes": {
+        "15": 4
+      },
+      "strokes": {
+        "1.7": 4
+      },
+      "regions": {
+        "vouchers": 1,
+        "services": 1,
+        "finance": 1,
+        "script": 1
+      },
+      "lines": [
+        1695,
+        1931,
+        2473,
+        3681
+      ],
+      "labels": [],
+      "classes": [
+        "cell-lead",
+        "svc-main"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "fca325ea71",
+      "fillMode": "stroke",
+      "paths": [
+        "r:2,6,20,12,2",
+        "c:12,12,2.2",
+        "p:M6 12h.01M18 12h.01"
+      ],
+      "count": 4,
+      "sizes": {
+        "15": 4
+      },
+      "strokes": {
+        "1.7": 4
+      },
+      "regions": {
+        "finance": 3,
+        "script": 1
+      },
+      "lines": [
+        2373,
+        2382,
+        2391,
+        3773
+      ],
+      "labels": [],
+      "classes": [
+        "cell-lead"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "27e3d70223",
+      "fillMode": "stroke",
+      "paths": [
+        "r:2,7,20,14,2",
+        "p:M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"
+      ],
+      "count": 4,
+      "sizes": {
+        "15": 4
+      },
+      "strokes": {
+        "1.7": 4
+      },
+      "regions": {
+        "finance": 4
+      },
+      "lines": [
+        2444,
+        2454,
+        2464,
+        2474
+      ],
+      "labels": [
+        "Tamara Hotel · Deluxe room",
+        "Dubai Airport → Tamara Hotel",
+        "Private Dubai city tour",
+        "UAE visa assistance"
+      ],
+      "classes": [
+        "person-cell"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "ffd300acc3",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"
+      ],
+      "count": 3,
+      "sizes": {
+        "15": 3
+      },
+      "strokes": {
+        "1.7": 3
+      },
+      "regions": {
+        "overview": 3
+      },
+      "lines": [
+        1562,
+        1603,
+        1635
+      ],
+      "labels": [],
+      "classes": [
+        "kpi-val",
+        "cell-lead"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "80f28aec57",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"
+      ],
+      "count": 3,
+      "sizes": {
+        "14": 1,
+        "15": 2
+      },
+      "strokes": {
+        "1.9": 1,
+        "1.8": 1,
+        "1.7": 1
+      },
+      "regions": {
+        "overview": 1,
+        "services": 1,
+        "activity": 1
+      },
+      "lines": [
+        1591,
+        1770,
+        2595
+      ],
+      "labels": [
+        "Supplier confirmation received for UAE visa assistance"
+      ],
+      "classes": [
+        "btn",
+        "kpi-val",
+        "cell-lead"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.9"
+    },
+    {
+      "hash": "70fbc8222f",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4",
+        "p:m17 8-5-5-5 5",
+        "p:M12 3v12"
+      ],
+      "count": 3,
+      "sizes": {
+        "14": 1,
+        "15": 2
+      },
+      "strokes": {
+        "1.9": 3
+      },
+      "regions": {
+        "vouchers": 2,
+        "documents": 1
+      },
+      "lines": [
+        1675,
+        1699,
+        2258
+      ],
+      "labels": [
+        "Upload the supplier voucher"
+      ],
+      "classes": [
+        "btn"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.9"
+    },
+    {
+      "hash": "5c0cc228a5",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+      ],
+      "count": 3,
+      "sizes": {
+        "15": 3
+      },
+      "strokes": {
+        "1.7": 3
+      },
+      "regions": {
+        "travellers": 2,
+        "script": 1
+      },
+      "lines": [
+        2193,
+        2200,
+        3794
+      ],
+      "labels": [],
+      "classes": [
+        "phone-cell"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "8174722087",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20",
+        "c:12.5,9.5,2.2",
+        "p:M9.5 15h6"
+      ],
+      "count": 3,
+      "sizes": {
+        "15": 3
+      },
+      "strokes": {
+        "1.7": 3
+      },
+      "regions": {
+        "documents": 3
+      },
+      "lines": [
+        2268,
+        2284,
+        2300
+      ],
+      "labels": [],
+      "classes": [
+        "cell-lead"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "fa07e99762",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z",
+        "p:M15 2v5h5"
+      ],
+      "count": 2,
+      "sizes": {
+        "15": 1,
+        "16": 1
+      },
+      "strokes": {
+        "1.8": 2
+      },
+      "regions": {
+        "shell": 1,
+        "script": 1
+      },
+      "lines": [
+        1277,
+        3555
+      ],
+      "labels": [
+        "Notes"
+      ],
+      "classes": [
+        "notes-main",
+        "att-title"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.8"
+    },
+    {
+      "hash": "58906953e1",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M3 3v18h18",
+        "p:M7 15l3-4 3 3 4-6"
+      ],
+      "count": 2,
+      "sizes": {
+        "15": 1,
+        "17": 1
+      },
+      "strokes": {
+        "1.7": 1,
+        "1.8": 1
+      },
+      "regions": {
+        "shell": 1,
+        "services": 1
+      },
+      "lines": [
+        1306,
+        1785
+      ],
+      "labels": [
+        "Reports"
+      ],
+      "classes": [
+        "nav-item",
+        "kpi-val"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "e6e56d374a",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2",
+        "c:9,7,4",
+        "p:M17 8l5 5M22 8l-5 5"
+      ],
+      "count": 2,
+      "sizes": {
+        "15": 2
+      },
+      "strokes": {
+        "1.7": 2
+      },
+      "regions": {
+        "list": 2
+      },
+      "lines": [
+        1421,
+        1469
+      ],
+      "labels": [],
+      "classes": [
+        "bk-owner"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "7b0f34c36a",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M22 11.08V12a10 10 0 1 1-5.93-9.14",
+        "p:m9 11 3 3L22 4"
+      ],
+      "count": 2,
+      "sizes": {
+        "15": 2
+      },
+      "strokes": {
+        "1.7": 2
+      },
+      "regions": {
+        "list": 2
+      },
+      "lines": [
+        1443,
+        1455
+      ],
+      "labels": [],
+      "classes": [
+        "cell-lead"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "befe9c1a0a",
+      "fillMode": "stroke",
+      "paths": [
+        "c:12,12,4",
+        "p:M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+      ],
+      "count": 2,
+      "sizes": {
+        "15": 2
+      },
+      "strokes": {
+        "1.7": 2
+      },
+      "regions": {
+        "overview": 2
+      },
+      "lines": [
+        1619,
+        1627
+      ],
+      "labels": [],
+      "classes": [
+        "cell-lead"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "c0119c943f",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2",
+        "c:9,7,4",
+        "p:M19 8v6M16 11h6"
+      ],
+      "count": 2,
+      "sizes": {
+        "14": 2
+      },
+      "strokes": {
+        "1.9": 2
+      },
+      "regions": {
+        "services": 1,
+        "script": 1
+      },
+      "lines": [
+        1973,
+        3701
+      ],
+      "labels": [
+        "Neha Kapoor"
+      ],
+      "classes": [
+        "btn"
+      ],
+      "dominantSize": "14",
+      "dominantStroke": "1.9"
+    },
+    {
+      "hash": "a7be85e6b9",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M4 8.5C4 6.6 5.6 5 7.5 5h13.8c4.2 0 7.6 3.4 7.6 7.6 0 4.2-3.4 7.6-7.6 7.6h-6.1l-8 6.4c-1.4 1.1-3.2.1-3.2-1.6V8.5Z",
+        "p:M11 12.4h9.4"
+      ],
+      "count": 1,
+      "sizes": {
+        "17": 1
+      },
+      "strokes": {
+        "null": 1
+      },
+      "regions": {
+        "shell": 1
+      },
+      "lines": [
+        1269
+      ],
+      "labels": [],
+      "classes": [
+        "brand-mark"
+      ],
+      "dominantSize": "17",
+      "dominantStroke": "null"
+    },
+    {
+      "hash": "ab6c022585",
+      "fillMode": "stroke",
+      "paths": [
+        "r:3,3,7,7,1.5",
+        "r:14,3,7,7,1.5",
+        "r:3,14,7,7,1.5",
+        "r:14,14,7,7,1.5"
+      ],
+      "count": 1,
+      "sizes": {
+        "17": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "shell": 1
+      },
+      "lines": [
+        1288
+      ],
+      "labels": [
+        "Home"
+      ],
+      "classes": [
+        "nav-item"
+      ],
+      "dominantSize": "17",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "6cb2a7dfd8",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M22 12h-6l-2 3h-4l-2-3H2",
+        "p:M5.5 6.5 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.5-5.5A2 2 0 0 0 16.8 5H7.2a2 2 0 0 0-1.7 1.5z"
+      ],
+      "count": 1,
+      "sizes": {
+        "17": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "shell": 1
+      },
+      "lines": [
+        1289
+      ],
+      "labels": [
+        "All inbox"
+      ],
+      "classes": [
+        "nav-item"
+      ],
+      "dominantSize": "17",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "9f6b4c5665",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M4 22h16a2 2 0 0 0 2-2V4a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v16a2 2 0 0 1-2 2 2 2 0 0 1-2-2V9h4",
+        "p:M8 7h8M8 11h8M8 15h5"
+      ],
+      "count": 1,
+      "sizes": {
+        "17": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "shell": 1
+      },
+      "lines": [
+        1290
+      ],
+      "labels": [
+        "News"
+      ],
+      "classes": [
+        "nav-item"
+      ],
+      "dominantSize": "17",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "a6030780e5",
+      "fillMode": "stroke",
+      "paths": [
+        "r:3,3,18,18,2",
+        "p:m9 12 2 2 4-4"
+      ],
+      "count": 1,
+      "sizes": {
+        "17": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "shell": 1
+      },
+      "lines": [
+        1291
+      ],
+      "labels": [
+        "All tasks"
+      ],
+      "classes": [
+        "nav-item"
+      ],
+      "dominantSize": "17",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "1dde5a8a51",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M15 2H8.6A1.6 1.6 0 0 0 7 3.6v16.8A1.6 1.6 0 0 0 8.6 22h10.8a1.6 1.6 0 0 0 1.6-1.6V7.5Z",
+        "p:M14 2v6h6"
+      ],
+      "count": 1,
+      "sizes": {
+        "17": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "shell": 1
+      },
+      "lines": [
+        1294
+      ],
+      "labels": [
+        "Queries"
+      ],
+      "classes": [
+        "nav-item"
+      ],
+      "dominantSize": "17",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "1137766ade",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z",
+        "p:m3.3 7 8.7 5 8.7-5",
+        "p:M12 22V12"
+      ],
+      "count": 1,
+      "sizes": {
+        "17": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "shell": 1
+      },
+      "lines": [
+        1295
+      ],
+      "labels": [
+        "Packages"
+      ],
+      "classes": [
+        "nav-item"
+      ],
+      "dominantSize": "17",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "581a17f726",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z",
+        "p:M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"
+      ],
+      "count": 1,
+      "sizes": {
+        "17": 1
+      },
+      "strokes": {
+        "1.9": 1
+      },
+      "regions": {
+        "shell": 1
+      },
+      "lines": [
+        1296
+      ],
+      "labels": [
+        "Bookings"
+      ],
+      "classes": [
+        "nav-item"
+      ],
+      "dominantSize": "17",
+      "dominantStroke": "1.9"
+    },
+    {
+      "hash": "06a4e0a9b4",
+      "fillMode": "stroke",
+      "paths": [
+        "c:12,12,10",
+        "c:12,10,3",
+        "p:M6.2 19a6 6 0 0 1 11.6 0"
+      ],
+      "count": 1,
+      "sizes": {
+        "17": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "shell": 1
+      },
+      "lines": [
+        1299
+      ],
+      "labels": [
+        "Customers"
+      ],
+      "classes": [
+        "nav-item"
+      ],
+      "dominantSize": "17",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "af7e826730",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M3 9.5 4.5 4h15L21 9.5",
+        "p:M4 9.5V20h16V9.5",
+        "p:M3 9.5a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"
+      ],
+      "count": 1,
+      "sizes": {
+        "17": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "shell": 1
+      },
+      "lines": [
+        1300
+      ],
+      "labels": [
+        "Vendors"
+      ],
+      "classes": [
+        "nav-item"
+      ],
+      "dominantSize": "17",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "52c4e24aca",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M3 21h18",
+        "p:M5 21V10l7-5 7 5v11",
+        "p:M9 21v-6h6v6"
+      ],
+      "count": 1,
+      "sizes": {
+        "17": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "shell": 1
+      },
+      "lines": [
+        1303
+      ],
+      "labels": [
+        "All finances"
+      ],
+      "classes": [
+        "nav-item"
+      ],
+      "dominantSize": "17",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "c1b70cc900",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M13 2 3 14h9l-1 8 10-12h-9z"
+      ],
+      "count": 1,
+      "sizes": {
+        "17": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "shell": 1
+      },
+      "lines": [
+        1305
+      ],
+      "labels": [
+        "Automations"
+      ],
+      "classes": [
+        "nav-item"
+      ],
+      "dominantSize": "17",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "a6989a6eff",
+      "fillMode": "stroke",
+      "paths": [
+        "c:9,9,6",
+        "p:M15.5 3.3a6 6 0 0 1 0 11.4"
+      ],
+      "count": 1,
+      "sizes": {
+        "15": 1
+      },
+      "strokes": {
+        "1.8": 1
+      },
+      "regions": {
+        "shell": 1
+      },
+      "lines": [
+        1311
+      ],
+      "labels": [
+        "720 of 1,000 credits remaining this cycle"
+      ],
+      "classes": [
+        "ic"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.8"
+    },
+    {
+      "hash": "4a0f85bf4c",
+      "fillMode": "stroke",
+      "paths": [
+        "p:m11 17-5-5 5-5",
+        "p:m18 17-5-5 5-5"
+      ],
+      "count": 1,
+      "sizes": {
+        "16": 1
+      },
+      "strokes": {
+        "1.8": 1
+      },
+      "regions": {
+        "shell": 1
+      },
+      "lines": [
+        1319
+      ],
+      "labels": [
+        "Collapse sidebar"
+      ],
+      "classes": [
+        "side-collapse"
+      ],
+      "dominantSize": "16",
+      "dominantStroke": "1.8"
+    },
+    {
+      "hash": "14f7d95f54",
+      "fillMode": "stroke",
+      "paths": [
+        "c:12,12,3",
+        "p:M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6 1.65 1.65 0 0 0 10 3.09V3a2 2 0 0 1 4 0v.09A1.65 1.65 0 0 0 15 4.6a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.14.31.4.55.72.66"
+      ],
+      "count": 1,
+      "sizes": {
+        "17": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "shell": 1
+      },
+      "lines": [
+        1341
+      ],
+      "labels": [
+        "Search the workspace"
+      ],
+      "classes": [
+        "icon-btn"
+      ],
+      "dominantSize": "17",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "8efa0aa605",
+      "fillMode": "stroke",
+      "paths": [
+        "c:12,12,10",
+        "p:M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3",
+        "p:M12 17h.01"
+      ],
+      "count": 1,
+      "sizes": {
+        "17": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "shell": 1
+      },
+      "lines": [
+        1342
+      ],
+      "labels": [
+        "Help and support"
+      ],
+      "classes": [
+        "icon-btn"
+      ],
+      "dominantSize": "17",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "17eea647c7",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"
+      ],
+      "count": 1,
+      "sizes": {
+        "17": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "shell": 1
+      },
+      "lines": [
+        1343
+      ],
+      "labels": [
+        "Call logs"
+      ],
+      "classes": [
+        "icon-btn"
+      ],
+      "dominantSize": "17",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "ef922553c0",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9",
+        "p:M10.3 21a1.94 1.94 0 0 0 3.4 0"
+      ],
+      "count": 1,
+      "sizes": {
+        "17": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "shell": 1
+      },
+      "lines": [
+        1344
+      ],
+      "labels": [
+        "Notifications, 3 unread"
+      ],
+      "classes": [
+        "icon-btn"
+      ],
+      "dominantSize": "17",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "68df06c463",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M21 12a9 9 0 1 1-2.64-6.36",
+        "p:M21 3v6h-6"
+      ],
+      "count": 1,
+      "sizes": {
+        "14": 1
+      },
+      "strokes": {
+        "1.9": 1
+      },
+      "regions": {
+        "list": 1
+      },
+      "lines": [
+        1355
+      ],
+      "labels": [],
+      "classes": [
+        "btn"
+      ],
+      "dominantSize": "14",
+      "dominantStroke": "1.9"
+    },
+    {
+      "hash": "d8d349d0a1",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
+      ],
+      "count": 1,
+      "sizes": {
+        "15": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "list": 1
+      },
+      "lines": [
+        1419
+      ],
+      "labels": [],
+      "classes": [
+        "cell-lead"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "d7f9229228",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8",
+        "p:M3 3v5h5"
+      ],
+      "count": 1,
+      "sizes": {
+        "15": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "list": 1
+      },
+      "lines": [
+        1467
+      ],
+      "labels": [],
+      "classes": [
+        "cell-lead"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "9b9f441eec",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+      ],
+      "count": 1,
+      "sizes": {
+        "12": 1
+      },
+      "strokes": {
+        "1.9": 1
+      },
+      "regions": {
+        "detail": 1
+      },
+      "lines": [
+        1510
+      ],
+      "labels": [
+        "Booking reference"
+      ],
+      "classes": [
+        "bk-ref"
+      ],
+      "dominantSize": "12",
+      "dominantStroke": "1.9"
+    },
+    {
+      "hash": "2ca23be34c",
+      "fillMode": "stroke",
+      "paths": [
+        "r:9,9,13,13,2",
+        "p:M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+      ],
+      "count": 1,
+      "sizes": {
+        "12": 1
+      },
+      "strokes": {
+        "1.9": 1
+      },
+      "regions": {
+        "detail": 1
+      },
+      "lines": [
+        1512
+      ],
+      "labels": [
+        "Copy booking ID"
+      ],
+      "classes": [
+        "id-copy"
+      ],
+      "dominantSize": "12",
+      "dominantStroke": "1.9"
+    },
+    {
+      "hash": "bb9708fcf9",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M20 6 9 17l-5-5"
+      ],
+      "count": 1,
+      "sizes": {
+        "12": 1
+      },
+      "strokes": {
+        "2.2": 1
+      },
+      "regions": {
+        "detail": 1
+      },
+      "lines": [
+        1513
+      ],
+      "labels": [],
+      "classes": [],
+      "dominantSize": "12",
+      "dominantStroke": "2.2"
+    },
+    {
+      "hash": "20bb14081d",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M12 20h9",
+        "p:M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"
+      ],
+      "count": 1,
+      "sizes": {
+        "13": 1
+      },
+      "strokes": {
+        "1.9": 1
+      },
+      "regions": {
+        "detail": 1
+      },
+      "lines": [
+        1525
+      ],
+      "labels": [
+        "Edit booking"
+      ],
+      "classes": [
+        "btn"
+      ],
+      "dominantSize": "13",
+      "dominantStroke": "1.9"
+    },
+    {
+      "hash": "435263368b",
+      "fillMode": "stroke",
+      "paths": [
+        "c:12,8,5",
+        "p:M20 21a8 8 0 0 0-16 0"
+      ],
+      "count": 1,
+      "sizes": {
+        "15": 1
+      },
+      "strokes": {
+        "1.8": 1
+      },
+      "regions": {
+        "overview": 1
+      },
+      "lines": [
+        1567
+      ],
+      "labels": [],
+      "classes": [
+        "kpi-val"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.8"
+    },
+    {
+      "hash": "ee90f5d551",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z",
+        "p:M14 2v6h6M9 15l2 2 4-4"
+      ],
+      "count": 1,
+      "sizes": {
+        "15": 1
+      },
+      "strokes": {
+        "1.8": 1
+      },
+      "regions": {
+        "overview": 1
+      },
+      "lines": [
+        1582
+      ],
+      "labels": [],
+      "classes": [
+        "kpi-val"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.8"
+    },
+    {
+      "hash": "400d5122a3",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M2 20V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12",
+        "p:M2 20h20M6 6V4h6v2M9 12h.01M14 12h4M14 16h4"
+      ],
+      "count": 1,
+      "sizes": {
+        "15": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "vouchers": 1
+      },
+      "lines": [
+        1686
+      ],
+      "labels": [],
+      "classes": [
+        "cell-lead"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "06fc570276",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+      ],
+      "count": 1,
+      "sizes": {
+        "15": 1
+      },
+      "strokes": {
+        "1.8": 1
+      },
+      "regions": {
+        "tasks": 1
+      },
+      "lines": [
+        2034
+      ],
+      "labels": [],
+      "classes": [
+        "kpi-val"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.8"
+    },
+    {
+      "hash": "33ad2bb7a9",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z",
+        "p:M14 2v6h6",
+        "c:12,14.5,2.2"
+      ],
+      "count": 1,
+      "sizes": {
+        "15": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "documents": 1
+      },
+      "lines": [
+        2308
+      ],
+      "labels": [],
+      "classes": [
+        "cell-lead"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "618fccf4e3",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M3 21h18",
+        "p:M5 21V7l7-4 7 4v14",
+        "p:M9 21v-6h6v6"
+      ],
+      "count": 1,
+      "sizes": {
+        "15": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "finance": 1
+      },
+      "lines": [
+        2443
+      ],
+      "labels": [],
+      "classes": [
+        "cell-lead"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "765fcd5d8f",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z",
+        "p:M12 9v4M12 17h.01"
+      ],
+      "count": 1,
+      "sizes": {
+        "15": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "finance": 1
+      },
+      "lines": [
+        2484
+      ],
+      "labels": [
+        "Tamara Hotel → Dubai Airport"
+      ],
+      "classes": [
+        "person-cell"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "b8d2b08ecb",
+      "fillMode": "stroke",
+      "paths": [
+        "p:m21.4 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"
+      ],
+      "count": 1,
+      "sizes": {
+        "15": 1
+      },
+      "strokes": {
+        "1.8": 1
+      },
+      "regions": {
+        "communication": 1
+      },
+      "lines": [
+        2528
+      ],
+      "labels": [
+        "Attach a file"
+      ],
+      "classes": [
+        "btn"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.8"
+    },
+    {
+      "hash": "c5228477e1",
+      "fillMode": "stroke",
+      "paths": [
+        "p:m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+      ],
+      "count": 1,
+      "sizes": {
+        "15": 1
+      },
+      "strokes": {
+        "1.7": 1
+      },
+      "regions": {
+        "activity": 1
+      },
+      "lines": [
+        2581
+      ],
+      "labels": [
+        "Booking BK-2026-000003 created from query Q-1042"
+      ],
+      "classes": [
+        "cell-lead"
+      ],
+      "dominantSize": "15",
+      "dominantStroke": "1.7"
+    },
+    {
+      "hash": "12b473b9ee",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z",
+        "p:M14 2v4a1 1 0 0 0 1 1h4M12 18v-6M9 15h6"
+      ],
+      "count": 1,
+      "sizes": {
+        "14": 1
+      },
+      "strokes": {
+        "1.9": 1
+      },
+      "regions": {
+        "activity": 1
+      },
+      "lines": [
+        2637
+      ],
+      "labels": [],
+      "classes": [
+        "btn"
+      ],
+      "dominantSize": "14",
+      "dominantStroke": "1.9"
+    },
+    {
+      "hash": "839eb137a6",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M14 4v6l3 3v2h-5v5l-1 1-1-1v-5H4v-2l3-3V4H6V2h10v2z"
+      ],
+      "count": 1,
+      "sizes": {
+        "14": 1
+      },
+      "strokes": {
+        "null": 1
+      },
+      "regions": {
+        "script": 1
+      },
+      "lines": [
+        3403
+      ],
+      "labels": [],
+      "classes": [
+        "nd-note-pin"
+      ],
+      "dominantSize": "14",
+      "dominantStroke": "null"
+    },
+    {
+      "hash": "02f23ae846",
+      "fillMode": "stroke",
+      "paths": [
+        "p:M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z",
+        "p:M14 2v4a1 1 0 0 0 1 1h4"
+      ],
+      "count": 1,
+      "sizes": {
+        "12": 1
+      },
+      "strokes": {
+        "1.9": 1
+      },
+      "regions": {
+        "script": 1
+      },
+      "lines": [
+        3557
+      ],
+      "labels": [],
+      "classes": [
+        "btn"
+      ],
+      "dominantSize": "12",
+      "dominantStroke": "1.9"
+    }
+  ],
+  "instancesSample": [
+    {
+      "line": 1269,
+      "region": "shell",
+      "width": 17,
+      "height": 17,
+      "strokeWidth": null,
+      "viewBox": "0 0 32 32",
+      "ariaHidden": null,
+      "fillMode": "stroke",
+      "hash": "a7be85e6b9",
+      "pathCount": 2,
+      "paths": [
+        "p:M4 8.5C4 6.6 5.6 5 7.5 5h13.8c4.2 0 7.6 3.4 7.6 7.6 0 4.2-3.4 7.6-7.6 7.6h-6.1l-8 6.4c-1.4 1.1-3.2.1-3.2-1.6V8.5Z",
+        "p:M11 12.4h9.4"
+      ],
+      "nearbyClass": "brand-mark",
+      "nearbyLabel": null,
+      "nearbyTab": null,
+      "svgPreview": "<svg width=\"17\" height=\"17\" viewBox=\"0 0 32 32\" fill=\"none\"><path d=\"M4 8.5C4 6.6 5.6 5 7.5 5h13.8c4.2 0 7.6 3.4 7.6 7.6 0 4.2-3.4 7.6-7.6 7.6h-6.1l-8 6.4c-1.4 1.1-3.2.1-3.2-1.6V8.5Z\" fill=\"var(--on-b"
+    },
+    {
+      "line": 1272,
+      "region": "shell",
+      "width": 15,
+      "height": 15,
+      "strokeWidth": 1.9,
+      "viewBox": "0 0 24 24",
+      "ariaHidden": null,
+      "fillMode": "stroke",
+      "hash": "6a5482377e",
+      "pathCount": 1,
+      "paths": [
+        "p:m6 9 6 6 6-6"
+      ],
+      "nearbyClass": null,
+      "nearbyLabel": null,
+      "nearbyTab": null,
+      "svgPreview": "<svg class=\"brand-caret\" width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg>"
+    },
+    {
+      "line": 1277,
+      "region": "shell",
+      "width": 16,
+      "height": 16,
+      "strokeWidth": 1.8,
+      "viewBox": "0 0 24 24",
+      "ariaHidden": null,
+      "fillMode": "stroke",
+      "hash": "fa07e99762",
+      "pathCount": 2,
+      "paths": [
+        "p:M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z",
+        "p:M15 2v5h5"
+      ],
+      "nearbyClass": "notes-main",
+      "nearbyLabel": "Notes",
+      "nearbyTab": null,
+      "svgPreview": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2"
+    },
+    {
+      "line": 1282,
+      "region": "shell",
+      "width": 16,
+      "height": 16,
+      "strokeWidth": 1.9,
+      "viewBox": "0 0 24 24",
+      "ariaHidden": null,
+      "fillMode": "stroke",
+      "hash": "72578c9a3d",
+      "pathCount": 2,
+      "paths": [
+        "p:M12 5v14",
+        "p:M5 12h14"
+      ],
+      "nearbyClass": "notes-add",
+      "nearbyLabel": "Write a note",
+      "nearbyTab": null,
+      "svgPreview": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 5v14\"/><path d=\"M5 12h14\"/></svg>"
+    },
+    {
+      "line": 1288,
+      "region": "shell",
+      "width": 17,
+      "height": 17,
+      "strokeWidth": 1.7,
+      "viewBox": "0 0 24 24",
+      "ariaHidden": null,
+      "fillMode": "stroke",
+      "hash": "ab6c022585",
+      "pathCount": 4,
+      "paths": [
+        "r:3,3,7,7,1.5",
+        "r:14,3,7,7,1.5",
+        "r:3,14,7,7,1.5",
+        "r:14,14,7,7,1.5"
+      ],
+      "nearbyClass": "nav-item",
+      "nearbyLabel": "Home",
+      "nearbyTab": null,
+      "svgPreview": "<svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"7\" rx=\"1.5\"/><re"
+    }
+  ]
+}

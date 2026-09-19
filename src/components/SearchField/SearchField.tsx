@@ -1,4 +1,5 @@
 import type { InputHTMLAttributes } from "react";
+import { Icon } from "../../icons";
 import "./SearchField.css";
 
 export interface SearchFieldProps extends Omit<InputHTMLAttributes<HTMLInputElement>, "type"> {
@@ -14,10 +15,7 @@ export function SearchField({
 }: SearchFieldProps) {
   return (
     <div className={`pt-search ${fullWidth ? "pt-search--full" : ""} ${className}`.trim()}>
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <circle cx="11" cy="11" r="7.5" />
-        <path d="m21 21-4.3-4.3" />
-      </svg>
+      <Icon name="search" size={16} />
       <input type="search" placeholder={placeholder} aria-label={ariaLabel} {...rest} />
     </div>
   );

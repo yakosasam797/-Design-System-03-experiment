@@ -1,11 +1,16 @@
 import type { HTMLAttributes, ReactNode } from "react";
+import { Icon } from "../../icons";
 import "./EmptyState.css";
+
+export type EmptyStateVariant = "illustrated" | "compact";
 
 export interface EmptyStateProps extends HTMLAttributes<HTMLDivElement> {
   title: string;
   description?: string;
   icon?: ReactNode;
   action?: ReactNode;
+  /** illustrated = list empty card; compact = notes/filter empty */
+  variant?: EmptyStateVariant;
 }
 
 export function EmptyState({
@@ -13,19 +18,23 @@ export function EmptyState({
   description,
   icon,
   action,
+  variant = "illustrated",
   className = "",
   ...rest
 }: EmptyStateProps) {
   return (
-    <div className={`pt-empty ${className}`.trim()} {...rest}>
-      {icon ? <div className="pt-empty__ic">{icon}</div> : (
-        <div className="pt-empty__ic" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-            <circle cx="12" cy="10" r="3" />
-          </svg>
-        </div>
-      )}
+    <div className={`pt-empty pt-empty--${variant} ${className}`.trim()} {...rest}>
+      {variant === "illustrated" ? (
+        icon ? (
+          <div className="pt-empty__ic">{icon}</div>
+        ) : (
+          <div className="pt-empty__ic" aria-hidden="true">
+            <Icon name="pin" size="lg" />
+          </div>
+        )
+      ) : icon ? (
+        <div className="pt-empty__ic">{icon}</div>
+      ) : null}
       <h4>{title}</h4>
       {description ? <p>{description}</p> : null}
       {action ? <div className="pt-empty__action">{action}</div> : null}

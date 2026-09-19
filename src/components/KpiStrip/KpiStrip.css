@@ -1,0 +1,88 @@
+.pt-kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  min-width: 0;
+}
+
+.pt-kpi {
+  appearance: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  color: inherit;
+  cursor: default;
+  min-width: 0;
+  font: inherit;
+}
+
+button.pt-kpi {
+  cursor: pointer;
+}
+
+button.pt-kpi:hover {
+  background: var(--pink-soft);
+}
+
+.pt-kpi__ic {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: var(--surface-2);
+  color: var(--ink-2);
+}
+
+.pt-kpi--person .pt-kpi__ic {
+  background: var(--pink-soft);
+  color: var(--pink);
+}
+.pt-kpi--work .pt-kpi__ic {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.pt-kpi--warn .pt-kpi__ic {
+  background: var(--warn-bg);
+  color: var(--warn);
+}
+.pt-kpi--danger .pt-kpi__ic {
+  background: var(--bad-bg);
+  color: var(--bad);
+}
+.pt-kpi--ok .pt-kpi__ic {
+  background: var(--ok-bg);
+  color: var(--ok);
+}
+
+.pt-kpi__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.pt-kpi__label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.pt-kpi__value {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

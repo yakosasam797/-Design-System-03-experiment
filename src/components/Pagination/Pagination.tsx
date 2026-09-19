@@ -1,13 +1,20 @@
 import type { ButtonHTMLAttributes, HTMLAttributes, ReactNode } from "react";
+import { Icon } from "../../icons";
 import "./Pagination.css";
 
 export interface PaginationProps extends HTMLAttributes<HTMLDivElement> {
+  /** Range text, e.g. "Showing 1–3 of 3" — must match page math */
   rangeLabel: string;
   page: number;
   pageCount: number;
   onPageChange: (page: number) => void;
 }
 
+/**
+ * Sheet footer pager matching Booking `.foot` / `.pager` / `.pg`.
+ * Booking screens always render Prev + current page numbers + Next.
+ * No ellipsis — Booking does not implement truncated page lists.
+ */
 export function Pagination({
   rangeLabel,
   page,
@@ -16,42 +23,45 @@ export function Pagination({
   className = "",
   ...rest
 }: PaginationProps) {
-  const pages = Array.from({ length: pageCount }, (_, i) => i + 1);
+  const safeCount = Math.max(1, pageCount);
+  const safePage = Math.min(Math.max(1, page), safeCount);
+  const pages = Array.from({ length: safeCount }, (_, i) => i + 1);
+
   return (
     <div className={`pt-foot ${className}`.trim()} {...rest}>
       <span className="pt-foot__range">{rangeLabel}</span>
       <div className="pt-pager">
         <PageButton
-          disabled={page <= 1}
+          disabled={safePage <= 1}
           aria-label="Previous page"
-          onClick={() => onPageChange(page - 1)}
+          onClick={() => onPageChange(safePage - 1)}
         >
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="m15 18-6-6 6-6" />
-          </svg>
+          <Chevron direction="prev" />
         </PageButton>
         {pages.map((p) => (
           <PageButton
             key={p}
-            active={p === page}
-            aria-current={p === page ? "page" : undefined}
+            active={p === safePage}
+            aria-current={p === safePage ? "page" : undefined}
             onClick={() => onPageChange(p)}
           >
             {p}
           </PageButton>
         ))}
         <PageButton
-          disabled={page >= pageCount}
+          disabled={safePage >= safeCount}
           aria-label="Next page"
-          onClick={() => onPageChange(page + 1)}
+          onClick={() => onPageChange(safePage + 1)}
         >
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="m9 18 6-6-6-6" />
-          </svg>
+          <Chevron direction="next" />
         </PageButton>
       </div>
     </div>
   );
+}
+
+function Chevron({ direction }: { direction: "prev" | "next" }) {
+  return <Icon name={direction === "prev" ? "chevronLeft" : "chevronRight"} size={13} />;
 }
 
 interface PageButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

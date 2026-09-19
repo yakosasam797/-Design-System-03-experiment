@@ -1,6 +1,7 @@
 import { useState, type ReactNode } from "react";
 import { SkipLink } from "../../components/SkipLink/SkipLink";
 import { SidebarNav, type NavGroupData } from "../../components/SidebarNav/SidebarNav";
+import { Icon } from "../../icons";
 import "./AppShell.css";
 
 export interface AppShellProps {
@@ -102,20 +103,7 @@ export function AppShell({
             aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
             onClick={() => setCollapsed(!collapsed)}
           >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <path d="m11 17-5-5 5-5" />
-              <path d="m18 17-5-5 5-5" />
-            </svg>
+            <Icon name="collapse" size={16} />
             <span className="pt-side-collapse__txt">Collapse</span>
           </button>
         </div>

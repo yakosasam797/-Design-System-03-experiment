@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { IconButton } from "./IconButton";
-import { IconBack, IconBell, IconHelp, IconSettings } from "../../story-icons";
+import { Icon } from "../../icons";
 
 const meta: Meta<typeof IconButton> = { title: "Components/IconButton", component: IconButton };
 export default meta;
@@ -8,14 +8,14 @@ export default meta;
 export const Settings: StoryObj = {
   args: {
     label: "Settings",
-    children: <IconSettings />,
+    children: <Icon name="settings" size="nav" />,
   },
 };
 
 export const Help: StoryObj = {
   args: {
     label: "Help",
-    children: <IconHelp />,
+    children: <Icon name="help" size="nav" />,
   },
 };
 
@@ -23,14 +23,14 @@ export const Notifications: StoryObj = {
   args: {
     label: "Notifications",
     alert: true,
-    children: <IconBell />,
+    children: <Icon name="bell" size="nav" />,
   },
 };
 
 export const Back: StoryObj = {
   args: {
     label: "Back",
-    children: <IconBack />,
+    children: <Icon name="chevronLeft" size={16} />,
   },
 };
 
@@ -38,13 +38,13 @@ export const TopbarSet: StoryObj = {
   render: () => (
     <div style={{ display: "flex", gap: 8 }}>
       <IconButton label="Settings">
-        <IconSettings />
+        <Icon name="settings" size="nav" />
       </IconButton>
       <IconButton label="Help">
-        <IconHelp />
+        <Icon name="help" size="nav" />
       </IconButton>
       <IconButton label="Notifications" alert>
-        <IconBell />
+        <Icon name="bell" size="nav" />
       </IconButton>
     </div>
   ),
