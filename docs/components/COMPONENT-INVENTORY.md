@@ -104,7 +104,9 @@ For each item: purpose · API sketch · variants · DS status · **Booking scree
 - **Do not** hardcode Booking columns in the package.
 
 ### Pagination
-- **Screens:** Sheet footers List/Detail sheets.
+- **Purpose:** Sheet footer: range text + compact pager (Prev · current page · Next).
+- **Screens:** List and Detail sheet feet. Booking never renders a 1–N page strip.
+- **Canonical story:** Components/Pagination → Booking canonical. Test states are not product presets.
 
 ### TabBar / Tab
 - **Purpose:** Stage tabs + detail sections + overflow More.

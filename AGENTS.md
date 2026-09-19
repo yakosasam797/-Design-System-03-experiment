@@ -70,15 +70,31 @@ import { Button, RowActions, Icon } from "@paryatech/design-system";
 
 Storybook: **Components/Button → Table row actions (Booking)**.
 
-## Pagination data
+## Pagination (Booking canonical)
 
-`Pagination` already supports one or many pages. Do not invent extra records to force a second page.
+Storybook: **Components/Pagination → Booking canonical**.
 
-- Booking list recipe: 3 items → `Showing 1–3 of 3`, `pageCount={1}`
-- 10-row list at page size 10 → `Showing 1–10 of 10`, `pageCount={1}`
-- Use `pageCountFor` + `rangeLabel` so the label matches the buttons
-- `TwoPages` / `MultiplePages` stories are capability demos, not product recipes
-- Booking has no ellipsis pager — do not add one
+```tsx
+import { Pagination, pageCountFor, rangeLabel } from "@paryatech/design-system";
+
+<Pagination
+  rangeLabel={rangeLabel(page, pageSize, total)}
+  page={page}
+  pageCount={pageCountFor(total, pageSize)}
+  onPageChange={setPage}
+/>
+```
+
+Booking chrome is **compact**: result-count on the left; Previous; **only the current page number**; Next.
+
+- Do **not** copy **Components/Pagination/Test states** (`MultiplePages`, `TwoPages`, First/Middle/Last, …). Those are interaction examples. They must not determine Booking appearance.
+- Do not paint a 1–N page-number strip because the dataset has more than one page. Booking does not.
+- The numbered control shows the current page (2, 3, …). It is not hardcoded to `1`.
+- Previous is disabled on page 1; Next is disabled on the last page.
+- Use `pageCountFor` + `rangeLabel` so the label matches the page. Do not invent extra records to demo paging.
+- No ellipsis — Booking has none.
+
+Product implementations must use their documented module-specific preset, not a visually similar test story.
 
 ## AppShell usage
 
@@ -108,8 +124,10 @@ Storybook: **Components/Button → Table row actions (Booking)**.
 - [ ] Imports for AppShell / Sidebar / Topbar resolve from the package
 - [ ] Table View / Open / Continue use `Button variant="brand" size="sm"` + required leading icon
 - [ ] Table More uses `Button iconOnly` inside `RowActions`, not Topbar `IconButton`
+- [ ] Pagination uses `@paryatech/design-system` `Pagination` with the Booking canonical preset (compact: Prev · current page · Next)
 - [ ] Pagination totals match the product reference (do not invent rows to demo paging)
 - [ ] Range text comes from `rangeLabel` (no extra noun)
+- [ ] Test-state stories (`MultiplePages`, etc.) were not copied into the product screen
 
 Run `node scripts/check-local-shell.mjs <consumer-root>` to flag product-level shell clones. Nested panel navigation is allowed.
 

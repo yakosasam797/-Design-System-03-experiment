@@ -8,9 +8,10 @@ export interface PaginationProps extends HTMLAttributes<HTMLDivElement> {
     onPageChange: (page: number) => void;
 }
 /**
- * Sheet footer pager matching Booking `.foot` / `.pager` / `.pg`.
- * Booking screens always render Prev + current page numbers + Next.
- * No ellipsis — Booking does not implement truncated page lists.
+ * Booking sheet footer: range on the left, compact pager on the right.
+ * Compact chrome is Prev · **current page** · Next. Booking never paints
+ * a 1–N page-number strip. The numbered control is the current page, not a
+ * hardcoded "1".
  */
 export declare function Pagination({ rangeLabel, page, pageCount, onPageChange, className, ...rest }: PaginationProps): import("react").JSX.Element;
 export default Pagination;

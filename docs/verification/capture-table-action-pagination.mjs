@@ -115,7 +115,7 @@ try {
 
 for (const [id, name] of [
   ["components-pagination--ten-items-single-page", "story-pagination-10"],
-  ["components-pagination--two-pages", "story-pagination-11"],
+  ["components-pagination-test-states--two-pages", "story-pagination-11"],
   ["components-button--table-row-actions", "story-table-row-actions"],
 ]) {
   try {

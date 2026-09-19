@@ -133,9 +133,9 @@ CSS structure was largely already aligned; the behavioural/visual failure was **
 ```bash
 npm test
 npm run storybook
-# Components/Pagination → BookingSinglePage
+# Components/Pagination → Booking canonical
 node docs/audit/capture-pagination.mjs
 node docs/audit/compare-pagination.mjs
 ```
 
-**Complete when:** Storybook `BookingSinglePage` shows Prev✗ · **1** · Next✗ with `Showing 1–3 of 3` — matching Booking list footer screenshots above.
+**Complete when:** Storybook `Booking canonical` shows Prev✗ · **current page** · Next✗ with `Showing 1–3 of 3` — matching Booking list footer. Compact chrome is the default; `MultiplePages` and other **Test states** must not be copied into Booking screens.

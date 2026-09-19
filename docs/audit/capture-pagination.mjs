@@ -207,14 +207,14 @@ for (const tab of DETAIL_TABS) {
 // Storybook stories
 const storyIds = [
   "components-pagination--booking-single-page",
-  "components-pagination--default",
-  "components-pagination--first-page",
-  "components-pagination--middle-page",
-  "components-pagination--last-page",
-  "components-pagination--multiple-pages",
-  "components-pagination--disabled-boundaries",
-  "components-pagination--narrow-viewport",
-  "components-pagination--first-page-disabled-prev",
+  "components-pagination--ten-items-single-page",
+  "components-pagination-test-states--two-pages",
+  "components-pagination-test-states--first-page",
+  "components-pagination-test-states--middle-page",
+  "components-pagination-test-states--last-page",
+  "components-pagination-test-states--multiple-pages",
+  "components-pagination-test-states--disabled-boundaries",
+  "components-pagination-test-states--narrow-viewport",
 ];
 
 for (const id of storyIds) {

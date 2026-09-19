@@ -1396,7 +1396,7 @@ function Ve({
   className: r = "",
   ...o
 }) {
-  const l = Math.max(1, s), d = Math.min(Math.max(1, t), l), h = Array.from({ length: l }, (p, v) => v + 1);
+  const l = Math.max(1, s), d = Math.min(Math.max(1, t), l);
   return /* @__PURE__ */ n("div", { className: `pt-foot ${r}`.trim(), ...o, children: [
     /* @__PURE__ */ e("span", { className: "pt-foot__range", children: a }),
     /* @__PURE__ */ n("div", { className: "pt-pager", children: [
@@ -1409,16 +1409,7 @@ function Ve({
           children: /* @__PURE__ */ e(H, { direction: "prev" })
         }
       ),
-      h.map((p) => /* @__PURE__ */ e(
-        W,
-        {
-          active: p === d,
-          "aria-current": p === d ? "page" : void 0,
-          onClick: () => i(p),
-          children: p
-        },
-        p
-      )),
+      /* @__PURE__ */ e(W, { active: !0, "aria-current": "page", children: d }),
       /* @__PURE__ */ e(
         W,
         {
