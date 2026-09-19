@@ -66,8 +66,34 @@ export type { DataSheetProps } from "./components/DataSheet/DataSheet";
 
 export { AppShell } from "./patterns/AppShell/AppShell";
 export type { AppShellProps } from "./patterns/AppShell/AppShell";
+export type {
+  AppShellAccount,
+  AppShellBreadcrumb,
+  AppShellCredits,
+  AppShellNotes,
+  AppShellSearch,
+  AppShellVariant,
+} from "./patterns/AppShell/types";
 
-export { SidebarNav, NavGroup, NavItem } from "./components/SidebarNav/SidebarNav";
+export { Sidebar, SidebarFooter } from "./patterns/AppShell/Sidebar";
+export type { SidebarProps } from "./patterns/AppShell/Sidebar";
+
+export { Topbar } from "./patterns/AppShell/Topbar";
+export type { TopbarProps } from "./patterns/AppShell/Topbar";
+
+export { BackButton } from "./components/BackButton/BackButton";
+export type { BackButtonProps } from "./components/BackButton/BackButton";
+
+export { Breadcrumbs } from "./components/Breadcrumbs/Breadcrumbs";
+export type { BreadcrumbsProps, BreadcrumbItem } from "./components/Breadcrumbs/Breadcrumbs";
+
+export { AccountMenu } from "./components/AccountMenu/AccountMenu";
+export type { AccountMenuProps } from "./components/AccountMenu/AccountMenu";
+
+export { TopbarActions } from "./components/TopbarActions/TopbarActions";
+export type { TopbarActionsProps } from "./components/TopbarActions/TopbarActions";
+
+export { SidebarNav, NavGroup, NavItem, NavGroup as SidebarSection, NavItem as SidebarItem } from "./components/SidebarNav/SidebarNav";
 export type { SidebarNavProps, NavGroupProps, NavItemProps, NavGroupData, NavItemData } from "./components/SidebarNav/SidebarNav";
 
 export { NotesStrip } from "./components/NotesStrip/NotesStrip";

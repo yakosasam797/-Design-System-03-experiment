@@ -187,25 +187,16 @@
   min-width: 0;
 }
 
-.pt-crumbs {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 7px;
-  font-family: var(--type-body-copy-family);
-  font-size: var(--type-body-copy-size);
-  font-weight: var(--type-body-copy-weight);
-  line-height: var(--type-body-copy-line);
-  color: var(--ink);
-  min-width: 0;
-  flex: 1 1 auto;
-  overflow: hidden;
+.pt-topbar .pt-search,
+.pt-topbar .pt-search--full {
+  flex: 0 1 340px;
+  max-width: 380px;
 }
 
 .pt-topbar__actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   margin-left: auto;
   flex: none;
 }
@@ -234,6 +225,20 @@
   padding: 16px var(--page-pad) 0;
 }
 
+@media (min-width: 1440px) {
+  .pt-frame {
+    padding: 12px;
+    gap: 12px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .pt-frame {
+    padding: 14px;
+    gap: 14px;
+  }
+}
+
 /* Matches --bp-shell (1000px); media queries cannot use custom props reliably */
 @media (max-width: 1000px) {
   .pt-frame {
@@ -252,6 +257,32 @@
     border: none;
     box-shadow: none;
     height: 100vh;
+  }
+}
+
+@media (max-width: 900px) {
+  .pt-topbar {
+    padding: 8px 10px;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .pt-topbar .pt-search,
+  .pt-topbar .pt-search--full {
+    max-width: none;
+    flex: 1 1 180px;
+  }
+}
+
+@container shell (max-width: 900px) {
+  .pt-topbar {
+    padding: 8px 10px;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .pt-topbar .pt-search,
+  .pt-topbar .pt-search--full {
+    max-width: none;
+    flex: 1 1 180px;
   }
 }
 

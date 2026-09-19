@@ -13,10 +13,6 @@ import { FilterSelect } from "../../components/FilterSelect/FilterSelect";
 import { Icon } from "../../icons";
 import { NotesDrawer } from "../../components/NotesDrawer/NotesDrawer";
 import { TextField } from "../../components/TextField/TextField";
-import { IconButton } from "../../components/IconButton/IconButton";
-import { NotesStrip } from "../../components/NotesStrip/NotesStrip";
-import { CreditsMeter } from "../../components/CreditsMeter/CreditsMeter";
-import { NavItem } from "../../components/SidebarNav/SidebarNav";
 
 const detailTabs = [
   { id: "overview", label: "Overview" },
@@ -49,36 +45,33 @@ function DetailRecipe() {
   return (
     <>
       <AppShell
-        crumbs={
-          <>
-            <span>Operations</span>
-            <span>/</span>
-            <span>Bookings</span>
-            <span>/</span>
-            <strong>XYZ Family · Dubai</strong>
-          </>
-        }
-        search={<SearchField placeholder="Search anything" style={{ flex: "0 1 280px", maxWidth: 380 }} />}
-        actions={
-          <>
-            <IconButton label="Settings">
-              <Icon name="settings" />
-            </IconButton>
-            <IconButton label="Help">
-              <Icon name="help" />
-            </IconButton>
-            <IconButton label="Notifications" alert>
-              <Icon name="bell" />
-            </IconButton>
-          </>
-        }
-        notes={<NotesStrip label="Booking notes" badge={3} onOpen={() => setNotesOpen(true)} />}
-        nav={
-          <nav aria-label="Primary" className="pt-sidenav">
-            <NavItem label="Bookings" tip="Bookings" active icon={bookIcon()} />
-          </nav>
-        }
-        sidebarFooter={<CreditsMeter remaining={720} total={1000} />}
+        variant="detail"
+        breadcrumbs={[
+          { label: "Operations", href: "#" },
+          { label: "Bookings", href: "#" },
+          { label: "XYZ Family · Dubai" },
+        ]}
+        onBack={() => undefined}
+        backLabel="Back to bookings"
+        notes={{
+          label: "Booking notes",
+          badge: 3,
+          onOpen: () => setNotesOpen(true),
+          onAdd: () => {
+            setNotesMode("compose");
+            setNotesOpen(true);
+          },
+        }}
+        navGroups={[
+          {
+            id: "sales",
+            label: "Sales",
+            items: [{ id: "bookings", label: "Bookings", tip: "Bookings", active: true, icon: bookIcon() }],
+          },
+        ]}
+        credits={{ remaining: 720, total: 1000 }}
+        account={{ name: "Vrushabh Jain", initials: "VJ", tone: "pink" }}
+        notificationsAlert
       >
         <DetailPage
           title="XYZ Family · Dubai"

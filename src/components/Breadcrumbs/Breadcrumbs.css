@@ -1,0 +1,48 @@
+.pt-crumbs {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--type-body-copy-family);
+  font-size: var(--type-body-copy-size);
+  font-weight: var(--type-body-copy-weight);
+  line-height: var(--type-body-copy-line);
+  color: var(--ink);
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.pt-crumbs svg {
+  color: var(--ink-3);
+  flex: none;
+}
+
+.pt-crumb {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--ink);
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  min-width: 0;
+}
+
+a.pt-crumb:hover,
+button.pt-crumb:hover {
+  color: var(--ink);
+}
+
+.pt-crumb--current {
+  font-weight: var(--type-body-copy-strong-weight);
+  cursor: default;
+}
+
+.pt-crumb:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}

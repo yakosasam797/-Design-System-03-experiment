@@ -11,16 +11,32 @@ npm install react@^19 react-dom@^19
 
 ```tsx
 import "@paryatech/design-system/styles.css";
-import { Button, AppShell, ListPage, SidebarNav } from "@paryatech/design-system";
+import { AppShell, ListPage } from "@paryatech/design-system";
 
 export function Example() {
   return (
-    <Button variant="primary" size="sm">
-      Save
-    </Button>
+    <AppShell
+      variant="list"
+      navGroups={[
+        {
+          id: "sales",
+          label: "Sales",
+          items: [{ id: "bookings", label: "Bookings", active: true, icon: null }],
+        },
+      ]}
+      breadcrumbs={[
+        { label: "Operations", href: "#" },
+        { label: "Bookings" },
+      ]}
+      account={{ name: "Ada West", initials: "AW", tone: "pink" }}
+    >
+      <ListPage title="Bookings">{/* module content */}</ListPage>
+    </AppShell>
   );
 }
 ```
+
+Do not recreate Sidebar, Topbar, or AppShell in the product. `variant="detail"` adds the BackButton. There is no role switcher in the shell.
 
 ### Tokens-only (e.g. HTML `srcDoc` inject)
 

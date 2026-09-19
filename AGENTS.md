@@ -18,15 +18,55 @@ npm install github:yakosasam797/-Design-System-03-experiment
 
 ```ts
 import "@paryatech/design-system/styles.css";
-// or tokens.css + typography.css for token-only inject
-import { Button, AppShell, ListPage } from "@paryatech/design-system";
+import { AppShell, ListPage } from "@paryatech/design-system";
 ```
 
 4. Prefer package exports over copying source into the consumer.
-5. Pass **module-supplied** nav via `AppShell` `navGroups` / `nav` slots — never hardcode product routes inside this package.
+5. Pass **module-supplied** nav via `AppShell` `navGroups` — never hardcode product routes inside this package.
 6. Do not invent new hex colours; use tokens in `tokens.css`.
 7. Soft-rect `--radius-md` (10px) for actionable controls; pills only for status chips.
 8. Teal = work; pink = place/person. Do not invert.
+
+## Mandatory: canonical AppShell
+
+Inspect Storybook **Patterns/AppShell** before building any full page.
+
+1. Every full ParyatechOS screen must use the exported `AppShell` unless an explicitly approved exception exists.
+2. Never create local components named `Sidebar`, `Topbar`, `HeaderShell`, `NavigationShell`, or `AppShell` when this package is available.
+3. Never infer shell controls from business roles or page content.
+4. Do not add Owner/Admin/Member controls. They are not part of the approved Direction 03 shell.
+5. Use `variant="detail"` (BackButton visible) on record pages and `variant="list"` (BackButton hidden) on list pages. Breadcrumbs are always required.
+6. Product modules may supply navigation data, breadcrumbs, back handler, search, account identity, and page content. They may not override shell width, height, type, colour, padding, radii, icon sizes, or active-item paint.
+7. If the shell cannot support a required layout, report a design-system gap. Do not rebuild it locally.
+8. Ignore Direction 01 extraction docs (dark 268px sidebar, role switcher). Direction 03 Booking + these stories are the source of truth.
+9. Before handoff, prove that `AppShell`, `Sidebar`, and `Topbar` imports resolve from `@paryatech/design-system`.
+
+```tsx
+<AppShell
+  variant="list" // or "detail"
+  navGroups={moduleNav}
+  breadcrumbs={[{ label: "Operations", href: "..." }, { label: "Bookings" }]}
+  onBack={variant === "detail" ? goToList : undefined}
+  account={{ name, initials, tone: "pink" }}
+  credits={{ remaining, total }}
+>
+  {page}
+</AppShell>
+```
+
+### Agent checklist
+
+- [ ] Shared AppShell imported from `@paryatech/design-system`
+- [ ] Shared Sidebar used (no local Sidebar / NavigationShell)
+- [ ] Shared Topbar used (no local Topbar / HeaderShell)
+- [ ] Correct shell configuration selected (`list` or `detail`)
+- [ ] No invented shell controls
+- [ ] Correct back/breadcrumb behaviour
+- [ ] No local shell styling
+- [ ] Visual comparison vs Booking shell completed
+- [ ] Imports for AppShell / Sidebar / Topbar resolve from the package
+
+Run `node scripts/check-local-shell.mjs <consumer-root>` to flag product-level shell clones. Nested panel navigation is allowed.
 
 ## Working inside this repository
 

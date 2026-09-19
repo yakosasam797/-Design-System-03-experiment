@@ -45,7 +45,9 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "check:local-shell": "node scripts/check-local-shell.mjs",
+    "capture:app-shell": "node scripts/capture-app-shell-parity.mjs"
   },
   "peerDependencies": {
     "react": "^19.0.0",

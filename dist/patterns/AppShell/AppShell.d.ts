@@ -1,37 +1,40 @@
 import { type ReactNode } from "react";
 import { type NavGroupData } from "../../components/SidebarNav/SidebarNav";
+import type { AppShellAccount, AppShellBreadcrumb, AppShellCredits, AppShellNotes, AppShellSearch, AppShellVariant } from "./types";
 import "./AppShell.css";
+export type { AppShellAccount, AppShellBreadcrumb, AppShellCredits, AppShellNotes, AppShellSearch, AppShellVariant, } from "./types";
 export interface AppShellProps {
+    variant?: AppShellVariant;
     brandName?: string;
     brandMark?: ReactNode;
-    /** Optional caret / app-switcher control next to brand name */
-    brandAction?: ReactNode;
+    /** Decorative caret by default (Booking). Pass `null` to hide. Not an app switcher. */
+    brandAction?: ReactNode | null;
     skipHref?: string;
     skipLabel?: string;
-    /** Sidebar nav content (slot). Ignored when `navGroups` is provided. */
     nav?: ReactNode;
-    /** Structured nav — preferred over hardcoding routes in the package */
     navGroups?: NavGroupData[];
-    /** Optional notes strip (hidden when listMode) */
-    notes?: ReactNode;
-    /** Sidebar footer (e.g. CreditsMeter + Upgrade) */
+    notes?: ReactNode | AppShellNotes;
     sidebarFooter?: ReactNode;
-    /** Topbar leading (e.g. back IconButton) */
+    credits?: AppShellCredits;
     leading?: ReactNode;
-    /** Breadcrumb slot — consuming module provides content */
+    breadcrumbs?: AppShellBreadcrumb[];
     crumbs?: ReactNode;
-    /** Search slot */
-    search?: ReactNode;
-    /** Right actions (icon buttons, account) */
+    onBack?: () => void;
+    backLabel?: string;
+    search?: ReactNode | AppShellSearch;
     actions?: ReactNode;
-    /** Main workspace content */
+    account?: AppShellAccount;
+    onSettings?: () => void;
+    onHelp?: () => void;
+    onCallLogs?: () => void;
+    onNotifications?: () => void;
+    notificationsAlert?: boolean;
     children: ReactNode;
-    /** Hides notes strip (Booking list-mode behaviour) */
+    /** @deprecated Use `variant="list"`. Hides notes; hides BackButton. */
     listMode?: boolean;
     defaultCollapsed?: boolean;
-    /** Controlled collapsed state */
     collapsed?: boolean;
     onCollapsedChange?: (collapsed: boolean) => void;
 }
-export declare function AppShell({ brandName, brandMark, brandAction, skipHref, skipLabel, nav, navGroups, notes, sidebarFooter, leading, crumbs, search, actions, children, listMode, defaultCollapsed, collapsed: collapsedProp, onCollapsedChange, }: AppShellProps): import("react").JSX.Element;
+export declare function AppShell({ variant, brandName, brandMark, brandAction, skipHref, skipLabel, nav, navGroups, notes, sidebarFooter, credits, leading, breadcrumbs, crumbs, onBack, backLabel, search, actions, account, onSettings, onHelp, onCallLogs, onNotifications, notificationsAlert, children, listMode, defaultCollapsed, collapsed: collapsedProp, onCollapsedChange, }: AppShellProps): import("react").JSX.Element;
 export default AppShell;

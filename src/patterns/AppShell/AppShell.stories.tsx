@@ -1,227 +1,365 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { AppShell } from "./AppShell";
-import { SearchField } from "../../components/SearchField/SearchField";
-import { IconButton } from "../../components/IconButton/IconButton";
-import { NotesStrip } from "../../components/NotesStrip/NotesStrip";
-import { CreditsMeter } from "../../components/CreditsMeter/CreditsMeter";
-import type { NavGroupData } from "../../components/SidebarNav/SidebarNav";
-import { Icon } from "../../icons";
+import {
+  SHELL_IMPORT_WARNING,
+  detailBreadcrumbs,
+  exampleAccount,
+  exampleCredits,
+  exampleNav,
+  exampleNotes,
+  listBreadcrumbs,
+} from "./shellFixture";
 
 const meta: Meta<typeof AppShell> = {
   title: "Patterns/AppShell",
   component: AppShell,
-  parameters: { layout: "fullscreen" },
+  parameters: {
+    layout: "fullscreen",
+    docs: {
+      description: {
+        component: `${SHELL_IMPORT_WARNING}
+
+Canonical ParyatechOS chrome. Modules pass navigation data, breadcrumbs, back handler, search, and account identity. They must not restyle Sidebar width, Topbar height, colours, radii, or the action cluster.
+
+Approved configurations come from Booking Direction 03 only: list (no back, two crumbs, notes hidden) and detail (back + three crumbs, notes visible). Collapse and narrow viewport are the same shell, not extra products. There is no Owner/Admin/Member control and no AppSwitcher.`,
+      },
+    },
+  },
 };
 export default meta;
 type Story = StoryObj<typeof AppShell>;
 
-/** Example module nav — not a shipped Booking route table */
-const exampleNav: NavGroupData[] = [
-  {
-    id: "workspace",
-    label: "Workspace",
-    items: [
-      { id: "home", label: "Home", tip: "Home", icon: <Icon name="layoutGrid" size="nav" /> },
-      { id: "inbox", label: "All inbox", tip: "All inbox", icon: <Icon name="inbox" size="nav" /> },
-      { id: "news", label: "News", tip: "News", icon: <Icon name="news" size="nav" /> },
-      { id: "tasks", label: "All tasks", tip: "All tasks", badge: 4, icon: <Icon name="tasksNav" size="nav" /> },
-    ],
-  },
-  {
-    id: "sales",
-    label: "Sales",
-    items: [
-      { id: "queries", label: "Queries", tip: "Queries", icon: <Icon name="fileText2" size="nav" /> },
-      { id: "packages", label: "Packages", tip: "Packages", icon: <Icon name="package" size="nav" /> },
-      {
-        id: "bookings",
-        label: "Bookings",
-        tip: "Bookings",
-        active: true,
-        icon: <Icon name="bookings" size="nav" />,
-      },
-    ],
-  },
-  {
-    id: "crm",
-    label: "CRM",
-    items: [
-      { id: "customers", label: "Customers", tip: "Customers", icon: <Icon name="customers" size="nav" /> },
-      { id: "vendors", label: "Vendors", tip: "Vendors", icon: <Icon name="vendors" size="nav" /> },
-    ],
-  },
-  {
-    id: "ops",
-    label: "Operations",
-    items: [
-      { id: "finances", label: "All finances", tip: "All finances", icon: <Icon name="finances" size="nav" /> },
-      { id: "team", label: "Team", tip: "Team", icon: <Icon name="team" size="nav" /> },
-      { id: "automations", label: "Automations", tip: "Automations", icon: <Icon name="zap" size="nav" /> },
-      {
-        id: "reports",
-        label: "Quarterly performance reports and forecasts",
-        tip: "Quarterly performance reports and forecasts",
-        icon: <Icon name="chart" size="nav" />,
-      },
-    ],
-  },
-];
+const docs = (when: string, whenNot: string, source: string) => ({
+  docs: {
+    description: {
+      story: `${SHELL_IMPORT_WARNING}
 
-const brandCaret = <Icon name="chevronDown" size={15} />;
+**When to use:** ${when}
+**When not to use:** ${whenNot}
+**Modules may configure:** navGroups, active item, breadcrumb labels/links, onBack, search handlers, account identity, notification alert, page children.
+**Modules must never restyle:** sidebar dimensions, topbar height, type, shell colour, padding, radii, icon sizes, active-item paint, search flex, action cluster.
+**Responsive:** ≤1000px sidebar hides; ≤900px topbar wraps and search grows.
+**Accessibility:** skip link, collapse aria-expanded, back and icon-button names, breadcrumb nav, account name.
+**Booking source:** ${source}`,
+    },
+  },
+});
 
-function shellChrome(extra?: { notes?: boolean; listMode?: boolean }) {
-  return {
-    brandAction: brandCaret,
-    listMode: extra?.listMode ?? false,
-    notes: extra?.notes === false ? undefined : (
-      <NotesStrip label="Module notes" badge={2} onOpen={() => undefined} onAdd={() => undefined} />
-    ),
-    navGroups: exampleNav,
-    sidebarFooter: <CreditsMeter remaining={720} total={1000} />,
-    crumbs: (
-      <>
-        <span>Operations</span>
-        <span>/</span>
-        <strong>Bookings</strong>
-      </>
-    ),
-    search: <SearchField placeholder="Search anything" style={{ flex: "0 1 280px", maxWidth: 380 }} />,
-    actions: (
-      <>
-        <IconButton label="Settings">
-          <Icon name="settings" size="nav" />
-        </IconButton>
-        <IconButton label="Help">
-          <Icon name="help" size="nav" />
-        </IconButton>
-        <IconButton label="Notifications" alert>
-          <Icon name="bell" size="nav" />
-        </IconButton>
-      </>
-    ),
-  };
+function Page({ title, body }: { title: string; body: string }) {
+  return (
+    <div style={{ padding: 8 }}>
+      <h1 className="pt-title type-heading-page" style={{ margin: 0 }}>
+        {title}
+      </h1>
+      <p className="pt-muted" style={{ marginTop: 8 }}>
+        {body}
+      </p>
+    </div>
+  );
 }
 
-export const Expanded: Story = {
-  name: "Expanded",
-  parameters: {
-    docs: {
-      description: {
-        story:
-          "Default desktop sidebar: full labels + groups for wayfinding. Nav data is supplied by the module (`navGroups`) — not hardcoded in the package.",
-      },
-    },
-  },
-  render: () => (
-    <AppShell {...shellChrome({ listMode: true })} listMode>
-      <div style={{ padding: 8 }}>
-        <h1 className="pt-title type-heading-page" style={{ margin: 0 }}>
-          Expanded sidebar
-        </h1>
-        <p className="pt-muted" style={{ marginTop: 8 }}>
-          listMode hides notes. Pass `navGroups` from the consuming module.
-        </p>
-      </div>
-    </AppShell>
+export const BookingListShell: Story = {
+  name: "BookingListShell",
+  parameters: docs(
+    "Module list pages (Booking list, Vendors list).",
+    "Record pages — use BookingDetailShell.",
+    "view-list · shell__list__desktop",
   ),
-};
-
-export const Collapsed: Story = {
-  name: "Collapsed",
-  parameters: {
-    docs: {
-      description: {
-        story: "Icon-rail: hide labels/groups; right-anchored tips on hover/focus replace labels.",
-      },
-    },
-  },
-  render: () => (
-    <AppShell {...shellChrome({ listMode: true })} listMode defaultCollapsed>
-      <p style={{ padding: 16 }}>Collapsed icon-rail — hover nav icons for tips.</p>
-    </AppShell>
-  ),
-};
-
-export const ActiveItem: Story = {
-  name: "Active item",
-  render: () => (
-    <AppShell {...shellChrome({ listMode: true })} listMode>
-      <p style={{ padding: 16 }}>Bookings is `active` with pink-soft selection (`aria-current="page"`).</p>
-    </AppShell>
-  ),
-};
-
-export const HoverFocus: Story = {
-  name: "Hover / focus",
-  render: () => (
-    <AppShell {...shellChrome({ listMode: true })} listMode>
-      <p style={{ padding: 16 }}>Tab into nav items — focus-visible uses `--focus` ring. Hover uses `--side-hover`.</p>
-    </AppShell>
-  ),
-};
-
-export const LongLabels: Story = {
-  name: "Long labels",
-  render: () => (
-    <AppShell {...shellChrome({ listMode: true })} listMode>
-      <p style={{ padding: 16 }}>
-        Operations → “Quarterly performance…” truncates with ellipsis; collapsed tip shows the full string.
-      </p>
-    </AppShell>
-  ),
-};
-
-export const MultipleGroups: Story = {
-  name: "Multiple navigation groups",
-  render: () => (
-    <AppShell {...shellChrome({ listMode: true })} listMode>
-      <p style={{ padding: 16 }}>Four groups (Workspace / Sales / CRM / Operations) via `navGroups` data.</p>
-    </AppShell>
-  ),
-};
-
-export const WithNotificationCount: Story = {
-  name: "With notification count",
   render: () => (
     <AppShell
-      {...shellChrome()}
-      listMode={false}
-      notes={<NotesStrip label="Module notes" badge={2} onOpen={() => undefined} onAdd={() => undefined} />}
+      variant="list"
+      navGroups={exampleNav}
+      breadcrumbs={listBreadcrumbs}
+      credits={exampleCredits}
+      account={exampleAccount}
+      notificationsAlert
     >
-      <p style={{ padding: 16 }}>Notes badge + All tasks item badge. Notes strip shown (not listMode).</p>
+      <Page title="Bookings" body="List configuration: BackButton hidden, two-level crumbs, notes hidden." />
     </AppShell>
   ),
 };
 
-export const ApplicationShellExample: Story = {
-  name: "Application-shell example",
+export const BookingDetailShell: Story = {
+  name: "BookingDetailShell",
+  parameters: docs(
+    "Record pages. Always includes BackButton and three-level crumbs.",
+    "List pages. Do not add a role switcher.",
+    "view-detail · detail__overview__desktop",
+  ),
   render: () => (
-    <AppShell {...shellChrome({ listMode: true })} listMode>
-      <div style={{ padding: 8 }}>
-        <h1 className="pt-title" style={{ fontSize: "var(--type-heading-page-size)", margin: 0 }}>
-          Bookings
-        </h1>
-        <p className="pt-muted" style={{ marginTop: 8 }}>
-          Full frame: sidebar + topbar (crumbs / search / actions) + page content.
-        </p>
-      </div>
+    <AppShell
+      variant="detail"
+      navGroups={exampleNav}
+      notes={exampleNotes}
+      breadcrumbs={detailBreadcrumbs}
+      onBack={() => undefined}
+      backLabel="Back to bookings"
+      credits={exampleCredits}
+      account={exampleAccount}
+      notificationsAlert
+    >
+      <Page title="XYZ Family · Dubai" body="Detail configuration: back + crumbs + notes + account." />
+    </AppShell>
+  ),
+};
+
+export const WithBackButton: Story = {
+  name: "WithBackButton",
+  parameters: docs(
+    "Any record that has a parent list. Booking always pairs this with breadcrumbs.",
+    "List pages — BackButton is display-none there.",
+    "showView('detail') · .back-btn",
+  ),
+  render: () => (
+    <AppShell
+      variant="detail"
+      navGroups={exampleNav}
+      notes={exampleNotes}
+      breadcrumbs={detailBreadcrumbs}
+      onBack={() => undefined}
+      backLabel="Back to bookings"
+      credits={exampleCredits}
+      account={exampleAccount}
+    >
+      <Page title="BackButton" body="36×36 soft-rect chevron. Do not substitute a local icon button." />
+    </AppShell>
+  ),
+};
+
+export const WithBreadcrumbs: Story = {
+  name: "WithBreadcrumbs",
+  parameters: docs(
+    "Every Booking view. List = two levels; detail = three.",
+    "Do not replace with a page title in the Topbar.",
+    ".crumbs · renderCrumbs()",
+  ),
+  render: () => (
+    <AppShell
+      variant="list"
+      navGroups={exampleNav}
+      breadcrumbs={listBreadcrumbs}
+      credits={exampleCredits}
+      account={exampleAccount}
+    >
+      <Page title="Breadcrumbs" body="Chevron separators. Last crumb is current (strong). Slots are not a second breadcrumb system." />
+    </AppShell>
+  ),
+};
+
+export const ExpandedSidebar: Story = {
+  name: "ExpandedSidebar",
+  parameters: docs(
+    "Default desktop.",
+    "Do not rebuild a 268px dark rail from Direction 01 docs.",
+    "shell__list__desktop",
+  ),
+  render: () => (
+    <AppShell
+      variant="list"
+      navGroups={exampleNav}
+      breadcrumbs={listBreadcrumbs}
+      credits={exampleCredits}
+      account={exampleAccount}
+    >
+      <Page title="Expanded sidebar" body="250px inset rail on --ground. Raised --side, 16px radius." />
+    </AppShell>
+  ),
+};
+
+export const CollapsedSidebar: Story = {
+  name: "CollapsedSidebar",
+  parameters: docs(
+    "User-collapsed icon rail. Same component, collapsed prop.",
+    "Not a different product shell.",
+    "shell__collapsed__desktop",
+  ),
+  render: () => (
+    <AppShell
+      variant="list"
+      navGroups={exampleNav}
+      breadcrumbs={listBreadcrumbs}
+      credits={exampleCredits}
+      account={exampleAccount}
+      defaultCollapsed
+    >
+      <Page title="Collapsed sidebar" body="66px icon-rail. Hover/focus tips on the right." />
+    </AppShell>
+  ),
+};
+
+export const ActiveNavigationItem: Story = {
+  name: "ActiveNavigationItem",
+  parameters: docs(
+    "Set active on the current module item via navGroups.",
+    "Do not paint a local selected state.",
+    ".nav-item.active",
+  ),
+  render: () => (
+    <AppShell
+      variant="list"
+      navGroups={exampleNav}
+      breadcrumbs={listBreadcrumbs}
+      credits={exampleCredits}
+      account={exampleAccount}
+    >
+      <Page title="Active item" body="Bookings uses pink-soft selection and aria-current=page." />
+    </AppShell>
+  ),
+};
+
+export const LongNavigationLabels: Story = {
+  name: "LongNavigationLabels",
+  parameters: docs(
+    "Labels that exceed the rail. Truncate with ellipsis; full string in collapsed tip.",
+    "Do not wrap nav labels onto two lines.",
+    "Operations → long Reports label in stories",
+  ),
+  render: () => (
+    <AppShell
+      variant="list"
+      navGroups={exampleNav.map((group) =>
+        group.id !== "ops"
+          ? group
+          : {
+              ...group,
+              items: group.items.map((item) =>
+                item.id === "reports"
+                  ? {
+                      ...item,
+                      label: "Quarterly performance reports and forecasts",
+                      tip: "Quarterly performance reports and forecasts",
+                    }
+                  : item,
+              ),
+            },
+      )}
+      breadcrumbs={listBreadcrumbs}
+      credits={exampleCredits}
+      account={exampleAccount}
+    >
+      <Page title="Long labels" body="“Quarterly performance reports…” truncates." />
+    </AppShell>
+  ),
+};
+
+export const WithCounts: Story = {
+  name: "WithCounts",
+  parameters: docs(
+    "Notes badge and optional nav item badges.",
+    "Do not invent a notification count in the Topbar besides the bell alert dot.",
+    "Booking notes badge 2; All tasks has no Booking count — story shows the kit capability.",
+  ),
+  render: () => (
+    <AppShell
+      variant="detail"
+      navGroups={exampleNav}
+      notes={exampleNotes}
+      breadcrumbs={detailBreadcrumbs}
+      onBack={() => undefined}
+      backLabel="Back to bookings"
+      credits={exampleCredits}
+      account={exampleAccount}
+      notificationsAlert
+    >
+      <Page title="Counts" body="Notes badge + All tasks item badge + notification alert." />
+    </AppShell>
+  ),
+};
+
+export const WithUsagePanel: Story = {
+  name: "WithUsagePanel",
+  parameters: docs(
+    "Credits meter + Upgrade in the sidebar footer. Always present in Booking.",
+    "Do not move credits into the Topbar.",
+    ".credit in .side-foot",
+  ),
+  render: () => (
+    <AppShell
+      variant="list"
+      navGroups={exampleNav}
+      breadcrumbs={listBreadcrumbs}
+      credits={exampleCredits}
+      account={exampleAccount}
+    >
+      <Page title="Usage panel" body="720 / 1,000 credits. Collapsed state keeps the icon." />
     </AppShell>
   ),
 };
 
 export const NarrowViewport: Story = {
-  name: "Narrow viewport",
+  name: "NarrowViewport",
   parameters: {
     viewport: { defaultViewport: "mobile1" },
-    docs: {
-      description: {
-        story: "≤1000px: sidebar `display:none`; workspace full-bleed (Booking behaviour until a mobile nav exists).",
-      },
-    },
+    ...docs(
+      "Viewports ≤1000px. Sidebar hides until a mobile nav exists.",
+      "Do not invent a hamburger in the product.",
+      "shell__list__narrow",
+    ),
   },
   render: () => (
-    <AppShell {...shellChrome({ listMode: true })} listMode>
-      <p style={{ padding: 16 }}>Resize below 1000px — sidebar hides.</p>
+    <AppShell
+      variant="list"
+      navGroups={exampleNav}
+      breadcrumbs={listBreadcrumbs}
+      credits={exampleCredits}
+      account={exampleAccount}
+    >
+      <Page title="Narrow viewport" body="Sidebar display:none. Workspace full-bleed." />
+    </AppShell>
+  ),
+};
+
+export const KeyboardFocus: Story = {
+  name: "KeyboardFocus",
+  parameters: docs(
+    "Tab through skip link, nav items, collapse, back, search, icon buttons, account.",
+    "Do not remove focus rings.",
+    "button:focus-visible / .nav-item:focus-visible",
+  ),
+  render: () => (
+    <AppShell
+      variant="detail"
+      navGroups={exampleNav}
+      notes={exampleNotes}
+      breadcrumbs={detailBreadcrumbs}
+      onBack={() => undefined}
+      backLabel="Back to bookings"
+      credits={exampleCredits}
+      account={exampleAccount}
+    >
+      <Page title="Keyboard focus" body="Tab into nav and topbar. Focus-visible uses --focus." />
+    </AppShell>
+  ),
+};
+
+export const OverflowingNavigation: Story = {
+  name: "OverflowingNavigation",
+  parameters: docs(
+    "More groups than the rail height. Side scroll, not a second inner scrollbar on the page.",
+    "Do not shrink item height to fit.",
+    ".side-scroll overflow-y auto",
+  ),
+  render: () => (
+    <AppShell
+      variant="list"
+      navGroups={[
+        ...exampleNav,
+        {
+          id: "more",
+          label: "More",
+          items: Array.from({ length: 12 }, (_, i) => ({
+            id: `extra-${i}`,
+            label: `Extra destination ${i + 1}`,
+            tip: `Extra destination ${i + 1}`,
+            icon: <Icon name="layoutGrid" size="nav" />,
+          })),
+        },
+      ]}
+      breadcrumbs={listBreadcrumbs}
+      credits={exampleCredits}
+      account={exampleAccount}
+    >
+      <Page title="Overflowing navigation" body="Sidebar body scrolls. Footer and brand stay pinned." />
     </AppShell>
   ),
 };

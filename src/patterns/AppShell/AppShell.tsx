@@ -1,43 +1,73 @@
-import { useState, type ReactNode } from "react";
+import { isValidElement, useState, type ReactNode } from "react";
 import { SkipLink } from "../../components/SkipLink/SkipLink";
 import { SidebarNav, type NavGroupData } from "../../components/SidebarNav/SidebarNav";
-import { Icon } from "../../icons";
+import { NotesStrip } from "../../components/NotesStrip/NotesStrip";
+import { CreditsMeter } from "../../components/CreditsMeter/CreditsMeter";
+import { Sidebar } from "./Sidebar";
+import { Topbar } from "./Topbar";
+import type {
+  AppShellAccount,
+  AppShellBreadcrumb,
+  AppShellCredits,
+  AppShellNotes,
+  AppShellSearch,
+  AppShellVariant,
+} from "./types";
 import "./AppShell.css";
 
+export type {
+  AppShellAccount,
+  AppShellBreadcrumb,
+  AppShellCredits,
+  AppShellNotes,
+  AppShellSearch,
+  AppShellVariant,
+} from "./types";
+
 export interface AppShellProps {
+  variant?: AppShellVariant;
   brandName?: string;
   brandMark?: ReactNode;
-  /** Optional caret / app-switcher control next to brand name */
-  brandAction?: ReactNode;
+  /** Decorative caret by default (Booking). Pass `null` to hide. Not an app switcher. */
+  brandAction?: ReactNode | null;
   skipHref?: string;
   skipLabel?: string;
-  /** Sidebar nav content (slot). Ignored when `navGroups` is provided. */
   nav?: ReactNode;
-  /** Structured nav — preferred over hardcoding routes in the package */
   navGroups?: NavGroupData[];
-  /** Optional notes strip (hidden when listMode) */
-  notes?: ReactNode;
-  /** Sidebar footer (e.g. CreditsMeter + Upgrade) */
+  notes?: ReactNode | AppShellNotes;
   sidebarFooter?: ReactNode;
-  /** Topbar leading (e.g. back IconButton) */
+  credits?: AppShellCredits;
   leading?: ReactNode;
-  /** Breadcrumb slot — consuming module provides content */
+  breadcrumbs?: AppShellBreadcrumb[];
   crumbs?: ReactNode;
-  /** Search slot */
-  search?: ReactNode;
-  /** Right actions (icon buttons, account) */
+  onBack?: () => void;
+  backLabel?: string;
+  search?: ReactNode | AppShellSearch;
   actions?: ReactNode;
-  /** Main workspace content */
+  account?: AppShellAccount;
+  onSettings?: () => void;
+  onHelp?: () => void;
+  onCallLogs?: () => void;
+  onNotifications?: () => void;
+  notificationsAlert?: boolean;
   children: ReactNode;
-  /** Hides notes strip (Booking list-mode behaviour) */
+  /** @deprecated Use `variant="list"`. Hides notes; hides BackButton. */
   listMode?: boolean;
   defaultCollapsed?: boolean;
-  /** Controlled collapsed state */
   collapsed?: boolean;
   onCollapsedChange?: (collapsed: boolean) => void;
 }
 
+function isElementLike(value: unknown): boolean {
+  return isValidElement(value) || Array.isArray(value) || typeof value === "string";
+}
+
+function isNotesConfig(value: AppShellProps["notes"]): value is AppShellNotes {
+  return !!value && typeof value === "object" && !isElementLike(value) && "label" in value;
+}
+
 export function AppShell({
+  variant,
   brandName = "paryatech",
   brandMark,
   brandAction,
@@ -47,16 +77,28 @@ export function AppShell({
   navGroups,
   notes,
   sidebarFooter,
+  credits,
   leading,
+  breadcrumbs,
   crumbs,
+  onBack,
+  backLabel,
   search,
   actions,
+  account,
+  onSettings,
+  onHelp,
+  onCallLogs,
+  onNotifications,
+  notificationsAlert = false,
   children,
-  listMode = false,
+  listMode,
   defaultCollapsed = false,
   collapsed: collapsedProp,
   onCollapsedChange,
 }: AppShellProps) {
+  const resolvedVariant: AppShellVariant = variant ?? (listMode ? "list" : "detail");
+  const isList = resolvedVariant === "list";
   const [uncontrolled, setUncontrolled] = useState(defaultCollapsed);
   const collapsed = collapsedProp ?? uncontrolled;
   const setCollapsed = (next: boolean) => {
@@ -66,60 +108,58 @@ export function AppShell({
 
   const navContent = navGroups ? <SidebarNav groups={navGroups} /> : nav;
 
+  const notesNode = isNotesConfig(notes) ? (
+    <NotesStrip
+      label={notes.label}
+      badge={notes.badge}
+      onOpen={notes.onOpen}
+      onAdd={notes.onAdd}
+      tip={notes.tip}
+      addTip={notes.addTip}
+    />
+  ) : (
+    notes
+  );
+
+  const footerNode = sidebarFooter ?? (credits ? <CreditsMeter {...credits} /> : null);
+
   return (
     <div
-      className={`pt-frame ${collapsed ? "pt-frame--collapsed" : ""} ${listMode ? "pt-frame--list" : ""}`}
+      className={`pt-frame ${collapsed ? "pt-frame--collapsed" : ""} ${isList ? "pt-frame--list" : ""}`}
+      data-shell-variant={resolvedVariant}
     >
       <SkipLink href={skipHref}>{skipLabel}</SkipLink>
 
-      <aside className="pt-side" aria-label="Sidebar">
-        <div className="pt-side__top">
-          <span className="pt-brand-mark">
-            {brandMark ?? (
-              <svg width="17" height="17" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-                <path
-                  d="M4 8.5C4 6.6 5.6 5 7.5 5h13.8c4.2 0 7.6 3.4 7.6 7.6 0 4.2-3.4 7.6-7.6 7.6h-6.1l-8 6.4c-1.4 1.1-3.2.1-3.2-1.6V8.5Z"
-                  fill="var(--on-brand)"
-                />
-                <path d="M11 12.4h9.4" stroke="var(--accent)" strokeWidth="2.4" strokeLinecap="round" />
-              </svg>
-            )}
-          </span>
-          <span className="pt-brand-name">{brandName}</span>
-          {brandAction ? <span className="pt-brand-action">{brandAction}</span> : null}
-        </div>
-
-        {!listMode && notes ? <div className="pt-side__notes">{notes}</div> : null}
-
-        <div className="pt-side__scroll">{navContent}</div>
-
-        <div className="pt-side__foot">
-          {sidebarFooter}
-          <button
-            type="button"
-            className="pt-side-collapse"
-            data-tip={collapsed ? "Expand sidebar" : "Collapse sidebar"}
-            aria-expanded={!collapsed}
-            aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
-            onClick={() => setCollapsed(!collapsed)}
-          >
-            <Icon name="collapse" size={16} />
-            <span className="pt-side-collapse__txt">Collapse</span>
-          </button>
-        </div>
-      </aside>
+      <Sidebar
+        brandName={brandName}
+        brandMark={brandMark}
+        brandAction={brandAction}
+        notes={notesNode}
+        listMode={isList}
+        footer={footerNode}
+        collapsed={collapsed}
+        onToggleCollapsed={() => setCollapsed(!collapsed)}
+      >
+        {navContent}
+      </Sidebar>
 
       <main className="pt-workspace">
-        <div className="pt-topbar">
-          {leading}
-          {crumbs ? (
-            <nav className="pt-crumbs" aria-label="Breadcrumb">
-              {crumbs}
-            </nav>
-          ) : null}
-          {search}
-          <div className="pt-topbar__actions">{actions}</div>
-        </div>
+        <Topbar
+          showBack={!isList}
+          onBack={onBack}
+          backLabel={backLabel ?? "Back"}
+          leading={leading}
+          breadcrumbs={breadcrumbs}
+          crumbs={crumbs}
+          search={search ?? { placeholder: "Search anything" }}
+          actions={actions}
+          account={account}
+          onSettings={onSettings}
+          onHelp={onHelp}
+          onCallLogs={onCallLogs}
+          onNotifications={onNotifications}
+          notificationsAlert={notificationsAlert}
+        />
         <div className="pt-scroll">
           <div className="pt-content" id="main">
             {children}

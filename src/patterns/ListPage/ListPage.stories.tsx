@@ -7,8 +7,6 @@ import { SearchField } from "../../components/SearchField/SearchField";
 import { FilterSelect } from "../../components/FilterSelect/FilterSelect";
 import { Pagination } from "../../components/Pagination/Pagination";
 import { EmptyState } from "../../components/EmptyState/EmptyState";
-import { NavItem } from "../../components/SidebarNav/SidebarNav";
-import { CreditsMeter } from "../../components/CreditsMeter/CreditsMeter";
 import {
   DataSheet,
   DataSheetHeader,
@@ -23,7 +21,6 @@ import {
 import { StatusChip } from "../../components/StatusChip/StatusChip";
 import { Checkbox } from "../../components/Checkbox/Checkbox";
 import { Avatar } from "../../components/Avatar/Avatar";
-import { IconButton } from "../../components/IconButton/IconButton";
 import { Tooltip } from "../../components/Tooltip/Tooltip";
 import { SheetToolbar } from "../../components/SheetToolbar/SheetToolbar";
 import { Icon } from "../../icons";
@@ -45,16 +42,6 @@ type Story = StoryObj<typeof ListPage>;
 
 function bookIcon() {
   return <Icon name="bookings" size="nav" />;
-}
-
-function NavFixture() {
-  return (
-    <nav aria-label="Primary" className="pt-sidenav">
-      <NavItem label="Bookings" tip="Bookings" active icon={bookIcon()} />
-      <NavItem label="Quotes" tip="Quotes" icon={<Icon name="fileText2" size="nav" />} />
-      <NavItem label="Vendors" tip="Vendors" icon={<Icon name="vendors" size="nav" />} />
-    </nav>
-  );
 }
 
 function BookingSheetBody({ long }: { long?: boolean }) {
@@ -283,31 +270,26 @@ function DemoList({
 
   return (
     <AppShell
-      listMode
+      variant="list"
       skipHref="#main"
-      crumbs={
-        <>
-          <span>Operations</span>
-          <span>/</span>
-          <strong>Bookings</strong>
-        </>
-      }
-      search={<SearchField placeholder="Search anything" style={{ flex: "0 1 280px", maxWidth: 380 }} />}
-      actions={
-        <>
-          <IconButton label="Settings">
-            <Icon name="settings" size="nav" />
-          </IconButton>
-          <IconButton label="Help">
-            <Icon name="help" size="nav" />
-          </IconButton>
-          <IconButton label="Notifications" alert>
-            <Icon name="bell" size="nav" />
-          </IconButton>
-        </>
-      }
-      nav={<NavFixture />}
-      sidebarFooter={<CreditsMeter remaining={720} total={1000} />}
+      navGroups={[
+        {
+          id: "sales",
+          label: "Sales",
+          items: [
+            { id: "bookings", label: "Bookings", tip: "Bookings", active: true, icon: bookIcon() },
+            { id: "quotes", label: "Quotes", tip: "Quotes", icon: <Icon name="fileText2" size="nav" /> },
+            { id: "vendors", label: "Vendors", tip: "Vendors", icon: <Icon name="vendors" size="nav" /> },
+          ],
+        },
+      ]}
+      breadcrumbs={[
+        { label: "Operations", href: "#" },
+        { label: "Bookings" },
+      ]}
+      credits={{ remaining: 720, total: 1000 }}
+      account={{ name: "Vrushabh Jain", initials: "VJ", tone: "pink" }}
+      notificationsAlert
     >
       <ListPage
         title="Bookings"

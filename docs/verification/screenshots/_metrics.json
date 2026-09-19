@@ -1,0 +1,346 @@
+{
+  "booking-list": {
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "framePad": "12px",
+    "frameGap": "12px",
+    "frameBg": "rgb(228, 224, 219)",
+    "side": {
+      "w": 250,
+      "h": 876,
+      "x": 12,
+      "y": 12
+    },
+    "sideRadius": "16px",
+    "sideBg": "rgb(252, 251, 250)",
+    "sideBorder": "1px solid rgb(228, 231, 236)",
+    "topbar": {
+      "w": 1152,
+      "h": 57,
+      "x": 275,
+      "y": 13
+    },
+    "topbarBg": "rgb(255, 255, 255)",
+    "topbarBorder": "1px solid rgb(228, 231, 236)",
+    "topbarPad": "10px 16px",
+    "search": {
+      "w": 340,
+      "h": 36,
+      "x": 818,
+      "y": 23
+    },
+    "searchMax": "380px",
+    "searchFlex": "0 1 340px",
+    "backDisplay": "none",
+    "back": {
+      "w": 0,
+      "h": 0,
+      "x": 0,
+      "y": 0
+    },
+    "acct": {
+      "w": 59,
+      "h": 36,
+      "x": 1352,
+      "y": 23
+    },
+    "acctRadius": "10px",
+    "brand": "paryatech",
+    "activeBg": "rgb(251, 238, 244)",
+    "roleSwitcher": false
+  },
+  "story-list": {
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "framePad": "12px",
+    "frameGap": "12px",
+    "frameBg": "rgb(228, 224, 219)",
+    "side": {
+      "w": 250,
+      "h": 876,
+      "x": 12,
+      "y": 12
+    },
+    "sideRadius": "16px",
+    "sideBg": "rgb(252, 251, 250)",
+    "sideBorder": "1px solid rgb(228, 231, 236)",
+    "topbar": {
+      "w": 1152,
+      "h": 57,
+      "x": 275,
+      "y": 13
+    },
+    "topbarBg": "rgb(255, 255, 255)",
+    "topbarBorder": "1px solid rgb(228, 231, 236)",
+    "topbarPad": "10px 16px",
+    "search": {
+      "w": 340,
+      "h": 36,
+      "x": 818,
+      "y": 23
+    },
+    "searchMax": "380px",
+    "searchFlex": "0 1 340px",
+    "backDisplay": "missing",
+    "back": null,
+    "acct": {
+      "w": 59,
+      "h": 36,
+      "x": 1352,
+      "y": 23
+    },
+    "acctRadius": "10px",
+    "brand": "paryatech",
+    "activeBg": "rgb(251, 238, 244)",
+    "roleSwitcher": false
+  },
+  "vendor-list": {
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "framePad": "12px",
+    "frameGap": "12px",
+    "frameBg": "rgb(228, 224, 219)",
+    "side": {
+      "w": 250,
+      "h": 876,
+      "x": 12,
+      "y": 12
+    },
+    "sideRadius": "16px",
+    "sideBg": "rgb(252, 251, 250)",
+    "sideBorder": "1px solid rgb(228, 231, 236)",
+    "topbar": {
+      "w": 1152,
+      "h": 57,
+      "x": 275,
+      "y": 13
+    },
+    "topbarBg": "rgb(255, 255, 255)",
+    "topbarBorder": "1px solid rgb(228, 231, 236)",
+    "topbarPad": "10px 16px",
+    "search": {
+      "w": 340,
+      "h": 36,
+      "x": 818,
+      "y": 23
+    },
+    "searchMax": "380px",
+    "searchFlex": "0 1 340px",
+    "backDisplay": "missing",
+    "back": null,
+    "acct": {
+      "w": 59,
+      "h": 36,
+      "x": 1352,
+      "y": 23
+    },
+    "acctRadius": "10px",
+    "brand": "paryatech",
+    "activeBg": "rgb(251, 238, 244)",
+    "roleSwitcher": false
+  },
+  "story-detail": {
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "framePad": "12px",
+    "frameGap": "12px",
+    "frameBg": "rgb(228, 224, 219)",
+    "side": {
+      "w": 250,
+      "h": 876,
+      "x": 12,
+      "y": 12
+    },
+    "sideRadius": "16px",
+    "sideBg": "rgb(252, 251, 250)",
+    "sideBorder": "1px solid rgb(228, 231, 236)",
+    "topbar": {
+      "w": 1152,
+      "h": 57,
+      "x": 275,
+      "y": 13
+    },
+    "topbarBg": "rgb(255, 255, 255)",
+    "topbarBorder": "1px solid rgb(228, 231, 236)",
+    "topbarPad": "10px 16px",
+    "search": {
+      "w": 340,
+      "h": 36,
+      "x": 818,
+      "y": 23
+    },
+    "searchMax": "380px",
+    "searchFlex": "0 1 340px",
+    "backDisplay": "grid",
+    "back": {
+      "w": 36,
+      "h": 36,
+      "x": 291,
+      "y": 23
+    },
+    "acct": {
+      "w": 59,
+      "h": 36,
+      "x": 1352,
+      "y": 23
+    },
+    "acctRadius": "10px",
+    "brand": "paryatech",
+    "activeBg": "rgb(251, 238, 244)",
+    "roleSwitcher": false
+  },
+  "story-collapsed": {
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "framePad": "12px",
+    "frameGap": "12px",
+    "frameBg": "rgb(228, 224, 219)",
+    "side": {
+      "w": 66,
+      "h": 876,
+      "x": 12,
+      "y": 12
+    },
+    "sideRadius": "16px",
+    "sideBg": "rgb(252, 251, 250)",
+    "sideBorder": "1px solid rgb(228, 231, 236)",
+    "topbar": {
+      "w": 1336,
+      "h": 57,
+      "x": 91,
+      "y": 13
+    },
+    "topbarBg": "rgb(255, 255, 255)",
+    "topbarBorder": "1px solid rgb(228, 231, 236)",
+    "topbarPad": "10px 16px",
+    "search": {
+      "w": 340,
+      "h": 36,
+      "x": 818,
+      "y": 23
+    },
+    "searchMax": "380px",
+    "searchFlex": "0 1 340px",
+    "backDisplay": "missing",
+    "back": null,
+    "acct": {
+      "w": 59,
+      "h": 36,
+      "x": 1352,
+      "y": 23
+    },
+    "acctRadius": "10px",
+    "brand": "paryatech",
+    "activeBg": "rgb(251, 238, 244)",
+    "roleSwitcher": false
+  },
+  "booking-detail": {
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "framePad": "12px",
+    "frameGap": "12px",
+    "frameBg": "rgb(228, 224, 219)",
+    "side": {
+      "w": 250,
+      "h": 876,
+      "x": 12,
+      "y": 12
+    },
+    "sideRadius": "16px",
+    "sideBg": "rgb(252, 251, 250)",
+    "sideBorder": "1px solid rgb(228, 231, 236)",
+    "topbar": {
+      "w": 1152,
+      "h": 57,
+      "x": 275,
+      "y": 13
+    },
+    "topbarBg": "rgb(255, 255, 255)",
+    "topbarBorder": "1px solid rgb(228, 231, 236)",
+    "topbarPad": "10px 16px",
+    "search": {
+      "w": 340,
+      "h": 36,
+      "x": 818,
+      "y": 23
+    },
+    "searchMax": "380px",
+    "searchFlex": "0 1 340px",
+    "backDisplay": "grid",
+    "back": {
+      "w": 36,
+      "h": 36,
+      "x": 291,
+      "y": 23
+    },
+    "acct": {
+      "w": 59,
+      "h": 36,
+      "x": 1352,
+      "y": 23
+    },
+    "acctRadius": "10px",
+    "brand": "paryatech",
+    "activeBg": "rgb(251, 238, 244)",
+    "roleSwitcher": false
+  },
+  "vendor-detail": {
+    "viewport": {
+      "w": 1440,
+      "h": 900
+    },
+    "framePad": "12px",
+    "frameGap": "12px",
+    "frameBg": "rgb(228, 224, 219)",
+    "side": {
+      "w": 250,
+      "h": 876,
+      "x": 12,
+      "y": 12
+    },
+    "sideRadius": "16px",
+    "sideBg": "rgb(252, 251, 250)",
+    "sideBorder": "1px solid rgb(228, 231, 236)",
+    "topbar": {
+      "w": 1152,
+      "h": 57,
+      "x": 275,
+      "y": 13
+    },
+    "topbarBg": "rgb(255, 255, 255)",
+    "topbarBorder": "1px solid rgb(228, 231, 236)",
+    "topbarPad": "10px 16px",
+    "search": {
+      "w": 340,
+      "h": 36,
+      "x": 818,
+      "y": 23
+    },
+    "searchMax": "380px",
+    "searchFlex": "0 1 340px",
+    "backDisplay": "missing",
+    "back": null,
+    "acct": {
+      "w": 59,
+      "h": 36,
+      "x": 1352,
+      "y": 23
+    },
+    "acctRadius": "10px",
+    "brand": "paryatech",
+    "activeBg": "rgb(251, 238, 244)",
+    "roleSwitcher": false
+  }
+}

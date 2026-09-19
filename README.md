@@ -74,7 +74,7 @@ No local font files are required. Icons are inline SVG in components (no icon fo
 | Inputs | `SearchField`, `FilterSelect`, `Checkbox` |
 | Data | `DataSheet` (+ header/row/cell helpers), `TabBar`, `Pagination`, `Avatar` |
 | A11y | `SkipLink` |
-| Shell | `AppShell`, `SidebarNav`, `NavGroup`, `NavItem`, `NotesStrip`, `CreditsMeter` |
+| Shell | `AppShell`, `Sidebar`, `SidebarFooter`, `SidebarNav`, `SidebarSection`/`NavGroup`, `SidebarItem`/`NavItem`, `Topbar`, `BackButton`, `Breadcrumbs`, `TopbarActions`, `AccountMenu`, `NotesStrip`, `CreditsMeter` |
 | Patterns | `ListPage`, `ListBulkBar` |
 
 ## Tokens
