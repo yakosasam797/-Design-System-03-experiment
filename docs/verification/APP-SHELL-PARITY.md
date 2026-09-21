@@ -22,7 +22,7 @@ Canonical chrome matches across Booking, Storybook AppShell, and the corrected v
 | Search 340×36, max 380 | Match |
 | Account 59×36, radius 10 | Match |
 | Active nav pink-soft | Match |
-| Role switcher absent | Match |
+| Topbar persona/role chrome absent | Match |
 | Back hidden on list / 36×36 on detail | Match |
 | Collapsed rail 66px | Match (Storybook) |
 
@@ -47,12 +47,12 @@ Search | 340×36, max 380, flex `0 1 340px` | same | same | none | Topbar CSS ow
 Back arrow list | `display:none` | unmounted | unmounted | none (visual) | list vs detail variant | `variant="list"` | Yes
 Back arrow detail | 36×36 at 291,23 | 36×36 at 291,23 | 36×36 grid | none | BackButton component | `variant="detail"` | Yes
 Breadcrumbs | chevron, last strong | same component | CRM › Vendors (module labels) | labels differ by module | allowed | data props | Yes
-Topbar actions | settings, help, call logs, bell | same | same | none | TopbarActions owned by kit | RoleSwitcher removed | Yes
+Topbar actions | settings, help, call logs, bell | same | same | none | TopbarActions owned by kit | — | Yes
 Profile/account | 59×36 radius 10 pink | same | same (AM vs VJ identity) | identity is module data | AccountMenu | — | Yes
 Main-content offset | workspace x 275 | 275 | 275 | none | grid 250 + gap 12 + pad 12 | — | Yes
 Collapsed state | 66px rail | 66px | same CSS | none | — | — | Yes
 Narrow ≤1000 | sidebar `display:none` | CSS present | CSS present | not recaptured at 390 this run | media query in AppShell.css | unit test asserts rule | Yes (CSS)
-Owner/Admin/Member | absent | absent | absent | none | invented consumer control | deleted RoleSwitcher | Yes
+Topbar persona/role chrome | absent | absent | absent | none | not part of Direction 03 | — | Yes
 
 ---
 

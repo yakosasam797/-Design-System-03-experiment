@@ -9,7 +9,7 @@ export interface TopbarActionsProps {
   onCallLogs?: () => void;
   onNotifications?: () => void;
   notificationsAlert?: boolean;
-  /** Escape hatch for kit stories only — product modules must not inject role switchers here. */
+  /** Kit stories only. Product modules must not inject extra Topbar chrome here. */
   children?: ReactNode;
 }
 

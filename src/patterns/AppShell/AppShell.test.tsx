@@ -73,7 +73,7 @@ describe("AppShell list vs detail", () => {
     expect(screen.getByLabelText("Breadcrumb")).toHaveTextContent("XYZ Family · Dubai");
   });
 
-  it("does not render invented Owner/Admin/Member chrome", () => {
+  it("does not render Topbar persona or role switcher chrome", () => {
     render(
       <AppShell
         variant="detail"

@@ -36,7 +36,7 @@ export function Example() {
 }
 ```
 
-Do not recreate Sidebar, Topbar, or AppShell in the product. `variant="detail"` adds the BackButton. There is no role switcher in the shell.
+Do not recreate Sidebar, Topbar, or AppShell in the product. `variant="detail"` adds the BackButton. Topbar is search + kit actions + account only (Booking Direction 03). See [`docs/SHELL-SOURCE-OF-TRUTH.md`](../SHELL-SOURCE-OF-TRUTH.md).
 
 ### Tokens-only (e.g. HTML `srcDoc` inject)
 

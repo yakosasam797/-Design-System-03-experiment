@@ -98,6 +98,8 @@ import { TopBar } from "@paryatech/ui/top-bar";
 
 Prefer `AppShell` for full ParyatechOS screens. Do not restyle shell chrome locally.
 
+**Shell SoT:** Booking Direction 03 only — see [`docs/SHELL-SOURCE-OF-TRUTH.md`](docs/SHELL-SOURCE-OF-TRUTH.md) and Storybook **BookingListShell** / **BookingDetailShell**. Topbar is search + kit actions + account; never persona/role switchers.
+
 ## shadcn-style registry (copy source)
 
 Registry JSON reuses the same `src/` files (no forks):

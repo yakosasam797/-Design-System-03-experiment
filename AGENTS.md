@@ -2,6 +2,16 @@
 
 Instructions for coding agents (Cursor, Claude Code, Codex, etc.) working **in** this repository or **consuming** it from another project.
 
+## Source of truth (non-negotiable)
+
+**Booking Direction 03 shell only.** That is the sole approved Sidebar + Topbar + AppShell language.
+
+- Storybook: **Patterns/AppShell → BookingListShell** and **BookingDetailShell**
+- Doc: [`docs/SHELL-SOURCE-OF-TRUTH.md`](docs/SHELL-SOURCE-OF-TRUTH.md)
+- Fixture: `src/patterns/AppShell/shellFixture.tsx` (`exampleNav` ends Operations with **Reports**)
+
+There is no second shell “direction” in this package. Do not reconstruct older explorations, dark rails, or Topbar persona/role switches from memory, screenshots of other modules, or Storybook interaction demos.
+
 ## What this package is
 
 Independent design-system package. Install from GitHub — **do not** require a sibling Booking / product repo.
@@ -32,13 +42,13 @@ import { AppShell, ListPage } from "@paryatech/ui";
 Inspect Storybook **Patterns/AppShell** before building any full page.
 
 1. Every full ParyatechOS screen must use the exported `AppShell` unless an explicitly approved exception exists.
-2. Never create local components named `Sidebar`, `Topbar`, `HeaderShell`, `NavigationShell`, or `AppShell` when this package is available.
+2. Never create local components named `Sidebar`, `Topbar`, `HeaderShell`, `NavigationShell`, `RoleSwitcher`, or `AppShell` when this package is available.
 3. Never infer shell controls from business roles or page content.
-4. Do not add Owner/Admin/Member controls. They are not part of the approved Direction 03 shell.
+4. **Topbar chrome is fixed:** search + settings + help + call logs + notifications + account. Do **not** add persona, role, or plan switchers to the Topbar.
 5. Use `variant="detail"` (BackButton visible) on record pages and `variant="list"` (BackButton hidden) on list pages. Breadcrumbs are always required.
 6. Product modules may supply navigation data, breadcrumbs, back handler, search, account identity, and page content. They may not override shell width, height, type, colour, padding, radii, icon sizes, or active-item paint.
 7. If the shell cannot support a required layout, report a design-system gap. Do not rebuild it locally.
-8. Ignore Direction 01 extraction docs (dark 268px sidebar, role switcher). Direction 03 Booking + these stories are the source of truth.
+8. Do **not** copy Storybook test stories (long-label truncation, pagination test states, etc.) into product UI.
 9. Before handoff, prove that `AppShell`, `Sidebar`, and `Topbar` imports resolve from `@paryatech/ui`.
 
 ## Table row actions
@@ -115,30 +125,31 @@ Product implementations must use their documented module-specific preset, not a 
 
 - [ ] Shared AppShell imported from `@paryatech/ui`
 - [ ] Shared Sidebar used (no local Sidebar / NavigationShell)
-- [ ] Shared Topbar used (no local Topbar / HeaderShell)
+- [ ] Shared Topbar used (no local Topbar / HeaderShell / RoleSwitcher)
+- [ ] Topbar has no persona/role switcher — only search, kit actions, account
 - [ ] Correct shell configuration selected (`list` or `detail`)
 - [ ] No invented shell controls
 - [ ] Correct back/breadcrumb behaviour
 - [ ] No local shell styling
-- [ ] Visual comparison vs Booking shell completed
+- [ ] Visual comparison vs BookingListShell / BookingDetailShell completed
 - [ ] Imports for AppShell / Sidebar / Topbar resolve from the package
 - [ ] Table View / Open / Continue use `Button variant="brand" size="sm"` + required leading icon
 - [ ] Table More uses `Button iconOnly` inside `RowActions`, not Topbar `IconButton`
 - [ ] Pagination uses `@paryatech/ui` `Pagination` with the Booking canonical preset (compact: Prev · current page · Next)
 - [ ] Pagination totals match the product reference (do not invent rows to demo paging)
 - [ ] Range text comes from `rangeLabel` (no extra noun)
-- [ ] Test-state stories (`MultiplePages`, etc.) were not copied into the product screen
+- [ ] Test-state stories (`MultiplePages`, long-label demos, etc.) were not copied into the product screen
 
-Run `node scripts/check-local-shell.mjs <consumer-root>` to flag product-level shell clones. Nested panel navigation is allowed.
+Run `node scripts/check-local-shell.mjs <consumer-root>` to flag product-level shell clones and forbidden Topbar role chrome. Nested panel navigation is allowed.
 
 ## Working inside this repository
 
-- Source of truth for visuals is documented Booking List **parity history** (see `VISUAL-PARITY-FAILURE-REPORT.md`, `COLOR-SYSTEM-PLAN.md`). That product is **not** a runtime dependency.
+- Source of truth for visuals is Booking Direction 03 parity (see `docs/SHELL-SOURCE-OF-TRUTH.md`, `COLOR-SYSTEM-PLAN.md`). That product is **not** a runtime dependency.
 - Tokens live in `src/tokens/tokens.css` (+ `typography.css`). Components must use CSS variables / `--type-*` roles.
 - Patterns (`AppShell`, `ListPage`) compose components; do not re-implement Button chrome inside patterns.
 - Loading / error: composition stories only — no dedicated Loading/Error components in this pilot.
-- Before claiming a visual change is done: build (`npm run build`) and check Storybook (`npm run storybook`).
-- Run `npm run build` before committing when `src/` changed so committed `dist/` stays in sync for git consumers.
+- Before claiming a visual change is done: build (`pnpm build`) and check Storybook (`pnpm storybook`).
+- Run `pnpm build` before committing when `src/` changed so committed `dist/` stays in sync for git consumers.
 
 ## Layout
 
@@ -149,6 +160,7 @@ Run `node scripts/check-local-shell.mjs <consumer-root>` to flag product-level s
 | `src/patterns` | AppShell, ListPage |
 | `src/foundations` | Storybook foundations (Colorography, Typography) |
 | `docs/usage` | Human install / token docs |
+| `docs/SHELL-SOURCE-OF-TRUTH.md` | Shell chrome SoT |
 | `dist` | Built JS/CSS/types shipped to consumers |
 
 ## Forbidden
@@ -157,12 +169,13 @@ Run `node scripts/check-local-shell.mjs <consumer-root>` to flag product-level s
 - Documenting `file:../Design-System-03-experiment` as the primary install path for other projects.
 - Coupling package build/runtime to a Booking repository checkout.
 - Publishing to npm unless a human explicitly requests it.
+- Any Topbar persona/role switcher or dark full-height sidebar rail in this kit or in consumers of this kit.
 
 ## Verification checklist (agents)
 
 After changing the package:
 
-1. `npm run build` succeeds.
-2. Exports resolve: `.`, `./tokens.css`, `./typography.css`, `./styles.css`.
+1. `pnpm build` succeeds.
+2. Exports resolve: `.`, `./tokens.css`, `./typography.css`, `./styles.css`, and kebab subpaths.
 3. Storybook starts.
 4. A fresh consumer can `pnpm add github:yakosasam797/-Design-System-03-experiment` and import components without any Booking checkout.

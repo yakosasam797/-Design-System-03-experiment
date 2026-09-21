@@ -21,7 +21,7 @@ const meta: Meta<typeof AppShell> = {
 
 Canonical ParyatechOS chrome. Modules pass navigation data, breadcrumbs, back handler, search, and account identity. They must not restyle Sidebar width, Topbar height, colours, radii, or the action cluster.
 
-Approved configurations come from Booking Direction 03 only: list (no back, two crumbs, notes hidden) and detail (back + three crumbs, notes visible). Collapse and narrow viewport are the same shell, not extra products. There is no Owner/Admin/Member control and no AppSwitcher.`,
+Approved configurations come from Booking Direction 03 only: list (no back, two crumbs, notes hidden) and detail (back + three crumbs, notes visible). Collapse and narrow viewport are the same shell, not extra products. Topbar is search + kit actions + account only — never persona/role switchers.`,
       },
     },
   },
@@ -83,7 +83,7 @@ export const BookingDetailShell: Story = {
   name: "BookingDetailShell",
   parameters: docs(
     "Record pages. Always includes BackButton and three-level crumbs.",
-    "List pages. Do not add a role switcher.",
+    "List pages — use BookingListShell.",
     "view-detail · detail__overview__desktop",
   ),
   render: () => (
@@ -150,7 +150,7 @@ export const ExpandedSidebar: Story = {
   name: "ExpandedSidebar",
   parameters: docs(
     "Default desktop.",
-    "Do not rebuild a 268px dark rail from Direction 01 docs.",
+    "Do not invent a dark full-height sidebar rail.",
     "shell__list__desktop",
   ),
   render: () => (
@@ -210,9 +210,9 @@ export const ActiveNavigationItem: Story = {
 export const LongNavigationLabels: Story = {
   name: "LongNavigationLabels",
   parameters: docs(
-    "Labels that exceed the rail. Truncate with ellipsis; full string in collapsed tip.",
-    "Do not wrap nav labels onto two lines.",
-    "Operations → long Reports label in stories",
+    "Kit-only truncation probe. Labels that exceed the rail truncate with ellipsis; full string in collapsed tip.",
+    "Do not copy this label into product nav. Product Operations nav must keep Booking labels (Reports).",
+    "Storybook interaction demo — not a product preset",
   ),
   render: () => (
     <AppShell
@@ -226,8 +226,8 @@ export const LongNavigationLabels: Story = {
                 item.id === "reports"
                   ? {
                       ...item,
-                      label: "Quarterly performance reports and forecasts",
-                      tip: "Quarterly performance reports and forecasts",
+                      label: "Truncation probe label that exceeds the rail width",
+                      tip: "Truncation probe label that exceeds the rail width",
                     }
                   : item,
               ),
@@ -237,7 +237,10 @@ export const LongNavigationLabels: Story = {
       credits={exampleCredits}
       account={exampleAccount}
     >
-      <Page title="Long labels" body="“Quarterly performance reports…” truncates." />
+      <Page
+        title="Long labels"
+        body="Kit truncation demo only. Product nav must use Booking labels (Reports), not this string."
+      />
     </AppShell>
   ),
 };

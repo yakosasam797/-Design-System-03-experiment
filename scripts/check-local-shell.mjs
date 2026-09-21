@@ -31,6 +31,7 @@ const bannedExact = new Set([
   "TopBar",
   "HeaderShell",
   "NavigationShell",
+  "RoleSwitcher",
 ]);
 
 const shellDirs = new Set(["shell", "layout", "layouts", "app", "chrome"]);
@@ -43,6 +44,22 @@ const skipDir = new Set([
   "storybook-static",
   "_design-source",
 ]);
+
+/** Forbidden Topbar chrome — not part of Booking Direction 03. */
+const forbiddenChrome = [
+  {
+    re: /\bRoleSwitcher\b/,
+    reason: "RoleSwitcher is forbidden — Topbar uses kit TopbarActions only (Direction 03)",
+  },
+  {
+    re: /\bOwner\b[\s\S]{0,80}\bAdmin\b[\s\S]{0,80}\bMember\b/,
+    reason: "Topbar persona/role switcher chrome is forbidden (Booking Direction 03 only)",
+  },
+  {
+    re: /\['Owner',\s*'Admin',\s*'Member'\]|\["Owner",\s*"Admin",\s*"Member"\]/,
+    reason: "Topbar persona/role switcher chrome is forbidden (Booking Direction 03 only)",
+  },
+];
 
 const hits = [];
 
@@ -79,7 +96,10 @@ function inspect(file) {
   const inShellDir = parts.some((p) => shellDirs.has(p.toLowerCase()));
 
   if (bannedExact.has(base)) {
-    hits.push({ file: rel, reason: `local ${base} file — import AppShell/Topbar from @paryatech/ui` });
+    hits.push({
+      file: rel,
+      reason: `local ${base} file — import AppShell/Topbar from @paryatech/ui (Direction 03 shell only)`,
+    });
     return;
   }
   if (base === "Sidebar" && inShellDir) {
@@ -88,10 +108,17 @@ function inspect(file) {
   }
 
   const src = readFileSync(file, "utf8");
+  for (const rule of forbiddenChrome) {
+    if (rule.re.test(src)) {
+      hits.push({ file: rel, reason: rule.reason });
+      return;
+    }
+  }
+
   if (src.includes("from \"@paryatech/ui\"") || src.includes("from '@paryatech/ui'")) {
     return;
   }
-  const definesShell = /export\s+(function|const)\s+(AppShell|Topbar|TopBar|HeaderShell|NavigationShell)\b/.test(
+  const definesShell = /export\s+(function|const)\s+(AppShell|Topbar|TopBar|HeaderShell|NavigationShell|RoleSwitcher)\b/.test(
     src,
   );
   if (definesShell) {
