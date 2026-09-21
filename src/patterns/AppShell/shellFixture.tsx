@@ -3,9 +3,9 @@ import { Icon } from "../../icons";
 import type { AppShellAccount, AppShellBreadcrumb, AppShellCredits, AppShellNotes } from "./types";
 
 /** Do not recreate Sidebar, Topbar or AppShell inside a product module.
- * Import the canonical components from @paryatech/design-system. */
+ * Import the canonical components from @paryatech/ui. */
 export const SHELL_IMPORT_WARNING =
-  "Do not recreate Sidebar, Topbar or AppShell inside a product module. Import the canonical components from @paryatech/design-system.";
+  "Do not recreate Sidebar, Topbar or AppShell inside a product module. Import the canonical components from @paryatech/ui.";
 
 export const exampleNav: NavGroupData[] = [
   {

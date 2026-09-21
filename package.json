@@ -1,9 +1,9 @@
 {
-  "name": "@paryatech/design-system",
-  "version": "0.1.0",
+  "name": "@paryatech/ui",
+  "version": "0.2.0",
   "private": false,
   "type": "module",
-  "description": "Paryatech design system — tokens, UI components, and list patterns",
+  "description": "Paryatech UI — Booking-matched design tokens, components, and shell patterns",
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
@@ -22,32 +22,140 @@
       "import": "./dist/index.js",
       "default": "./dist/index.js"
     },
+    "./styles.css": "./dist/styles.css",
     "./tokens.css": "./src/tokens/tokens.css",
     "./typography.css": "./src/tokens/typography.css",
-    "./styles.css": "./dist/design-system.css",
+    "./button": {
+      "types": "./dist/entries/button.d.ts",
+      "import": "./dist/entries/button.js",
+      "default": "./dist/entries/button.js"
+    },
+    "./icon-button": {
+      "types": "./dist/entries/icon-button.d.ts",
+      "import": "./dist/entries/icon-button.js",
+      "default": "./dist/entries/icon-button.js"
+    },
+    "./sidebar": {
+      "types": "./dist/entries/sidebar.d.ts",
+      "import": "./dist/entries/sidebar.js",
+      "default": "./dist/entries/sidebar.js"
+    },
+    "./top-bar": {
+      "types": "./dist/entries/top-bar.d.ts",
+      "import": "./dist/entries/top-bar.js",
+      "default": "./dist/entries/top-bar.js"
+    },
+    "./app-shell": {
+      "types": "./dist/entries/app-shell.d.ts",
+      "import": "./dist/entries/app-shell.js",
+      "default": "./dist/entries/app-shell.js"
+    },
+    "./data-sheet": {
+      "types": "./dist/entries/data-sheet.d.ts",
+      "import": "./dist/entries/data-sheet.js",
+      "default": "./dist/entries/data-sheet.js"
+    },
+    "./pagination": {
+      "types": "./dist/entries/pagination.d.ts",
+      "import": "./dist/entries/pagination.js",
+      "default": "./dist/entries/pagination.js"
+    },
+    "./search-field": {
+      "types": "./dist/entries/search-field.d.ts",
+      "import": "./dist/entries/search-field.js",
+      "default": "./dist/entries/search-field.js"
+    },
+    "./filter-select": {
+      "types": "./dist/entries/filter-select.d.ts",
+      "import": "./dist/entries/filter-select.js",
+      "default": "./dist/entries/filter-select.js"
+    },
+    "./text-field": {
+      "types": "./dist/entries/text-field.d.ts",
+      "import": "./dist/entries/text-field.js",
+      "default": "./dist/entries/text-field.js"
+    },
+    "./checkbox": {
+      "types": "./dist/entries/checkbox.d.ts",
+      "import": "./dist/entries/checkbox.js",
+      "default": "./dist/entries/checkbox.js"
+    },
+    "./status-chip": {
+      "types": "./dist/entries/status-chip.d.ts",
+      "import": "./dist/entries/status-chip.js",
+      "default": "./dist/entries/status-chip.js"
+    },
+    "./status-select": {
+      "types": "./dist/entries/status-select.d.ts",
+      "import": "./dist/entries/status-select.js",
+      "default": "./dist/entries/status-select.js"
+    },
+    "./tab-bar": {
+      "types": "./dist/entries/tab-bar.d.ts",
+      "import": "./dist/entries/tab-bar.js",
+      "default": "./dist/entries/tab-bar.js"
+    },
+    "./modal": {
+      "types": "./dist/entries/modal.d.ts",
+      "import": "./dist/entries/modal.js",
+      "default": "./dist/entries/modal.js"
+    },
+    "./tooltip": {
+      "types": "./dist/entries/tooltip.d.ts",
+      "import": "./dist/entries/tooltip.js",
+      "default": "./dist/entries/tooltip.js"
+    },
+    "./avatar": {
+      "types": "./dist/entries/avatar.d.ts",
+      "import": "./dist/entries/avatar.js",
+      "default": "./dist/entries/avatar.js"
+    },
+    "./empty-state": {
+      "types": "./dist/entries/empty-state.d.ts",
+      "import": "./dist/entries/empty-state.js",
+      "default": "./dist/entries/empty-state.js"
+    },
+    "./list-page": {
+      "types": "./dist/entries/list-page.d.ts",
+      "import": "./dist/entries/list-page.js",
+      "default": "./dist/entries/list-page.js"
+    },
+    "./detail-page": {
+      "types": "./dist/entries/detail-page.d.ts",
+      "import": "./dist/entries/detail-page.js",
+      "default": "./dist/entries/detail-page.js"
+    },
+    "./icon": {
+      "types": "./dist/entries/icon.d.ts",
+      "import": "./dist/entries/icon.js",
+      "default": "./dist/entries/icon.js"
+    },
     "./package.json": "./package.json"
   },
   "files": [
     "dist",
     "src/tokens",
+    "registry",
     "README.md",
     "AGENTS.md",
     "docs/usage"
   ],
   "sideEffects": [
-    "**/*.css",
-    "./dist/index.js"
+    "**/*.css"
   ],
   "scripts": {
     "build": "vite build && tsc --emitDeclarationOnly",
     "prepare": "npm run build",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint src",
     "dev": "storybook dev -p 6006",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "vitest run",
     "test:watch": "vitest",
     "check:local-shell": "node scripts/check-local-shell.mjs",
-    "capture:app-shell": "node scripts/capture-app-shell-parity.mjs"
+    "capture:app-shell": "node scripts/capture-app-shell-parity.mjs",
+    "generate:registry": "node scripts/generate-registry.mjs"
   },
   "peerDependencies": {
     "react": "^19.0.0",
@@ -65,6 +173,7 @@
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^4.3.4",
     "jsdom": "^26.1.0",
+    "oxlint": "^1.0.0",
     "playwright": "^1.63.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

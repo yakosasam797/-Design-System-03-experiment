@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Reports product-level AppShell / Sidebar / Topbar duplication in a consumer
- * that already depends on @paryatech/design-system.
+ * that already depends on @paryatech/ui.
  *
  * Does not flag nested panel navigation (e.g. features/.../SectionNav.tsx).
  *
@@ -20,8 +20,8 @@ if (!existsSync(pkgPath)) {
 
 const pkg = JSON.parse(readFileSync(pkgPath, "utf8"));
 const deps = { ...pkg.dependencies, ...pkg.devDependencies };
-if (!deps["@paryatech/design-system"]) {
-  console.log("No @paryatech/design-system dependency — skip.");
+if (!deps["@paryatech/ui"]) {
+  console.log("No @paryatech/ui dependency — skip.");
   process.exit(0);
 }
 
@@ -79,7 +79,7 @@ function inspect(file) {
   const inShellDir = parts.some((p) => shellDirs.has(p.toLowerCase()));
 
   if (bannedExact.has(base)) {
-    hits.push({ file: rel, reason: `local ${base} file — import AppShell/Topbar from @paryatech/design-system` });
+    hits.push({ file: rel, reason: `local ${base} file — import AppShell/Topbar from @paryatech/ui` });
     return;
   }
   if (base === "Sidebar" && inShellDir) {
@@ -88,7 +88,7 @@ function inspect(file) {
   }
 
   const src = readFileSync(file, "utf8");
-  if (src.includes("from \"@paryatech/design-system\"") || src.includes("from '@paryatech/design-system'")) {
+  if (src.includes("from \"@paryatech/ui\"") || src.includes("from '@paryatech/ui'")) {
     return;
   }
   const definesShell = /export\s+(function|const)\s+(AppShell|Topbar|TopBar|HeaderShell|NavigationShell)\b/.test(

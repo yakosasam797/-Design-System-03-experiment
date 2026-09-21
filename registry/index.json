@@ -1,0 +1,61 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "paryatech-ui",
+  "homepage": "https://github.com/yakosasam797/-Design-System-03-experiment",
+  "items": [
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Booking-matched Button and RowActions"
+    },
+    {
+      "name": "icon-button",
+      "type": "registry:ui",
+      "title": "IconButton",
+      "description": "Topbar-sized icon button (36×36)"
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:ui",
+      "title": "Sidebar",
+      "description": "Booking inset Sidebar + SidebarFooter + SidebarNav"
+    },
+    {
+      "name": "top-bar",
+      "type": "registry:ui",
+      "title": "Top Bar",
+      "description": "Booking Topbar (also exported as TopBar)"
+    },
+    {
+      "name": "app-shell",
+      "type": "registry:ui",
+      "title": "App Shell",
+      "description": "Canonical ParyatechOS AppShell composing Sidebar + Topbar"
+    },
+    {
+      "name": "data-sheet",
+      "type": "registry:ui",
+      "title": "Data Sheet",
+      "description": "Booking density table (DataSheet + cell helpers)"
+    },
+    {
+      "name": "search-field",
+      "type": "registry:ui",
+      "title": "Search Field",
+      "description": "Topbar / toolbar search field"
+    },
+    {
+      "name": "icon",
+      "type": "registry:ui",
+      "title": "Icon",
+      "description": "Booking icon registry and Icon component"
+    },
+    {
+      "name": "tokens",
+      "type": "registry:style",
+      "title": "Tokens",
+      "description": "Colour, typography, spacing, radius, elevation, breakpoints, focus"
+    }
+  ]
+}

@@ -13,7 +13,7 @@ npm install github:yakosasam797/-Design-System-03-experiment
 2. Import CSS as raw text (Vite example) and inject into the document `<style>`:
 
 ```ts
-import tokensCss from "@paryatech/design-system/tokens.css?raw";
+import tokensCss from "@paryatech/ui/tokens.css?raw";
 ```
 
 3. Prefer package CSS variables over duplicated `:root` blocks in the product HTML.

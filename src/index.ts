@@ -79,8 +79,8 @@ export type {
 export { Sidebar, SidebarFooter } from "./patterns/AppShell/Sidebar";
 export type { SidebarProps } from "./patterns/AppShell/Sidebar";
 
-export { Topbar } from "./patterns/AppShell/Topbar";
-export type { TopbarProps } from "./patterns/AppShell/Topbar";
+export { Topbar, Topbar as TopBar } from "./patterns/AppShell/Topbar";
+export type { TopbarProps, TopbarProps as TopBarProps } from "./patterns/AppShell/Topbar";
 
 export { BackButton } from "./components/BackButton/BackButton";
 export type { BackButtonProps } from "./components/BackButton/BackButton";

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "icon-button",
+  "type": "registry:ui",
+  "title": "IconButton",
+  "description": "Topbar-sized icon button (36×36)",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "src/components/IconButton/IconButton.tsx",
+      "type": "registry:ui",
+      "content": "import type { ButtonHTMLAttributes, ReactNode } from \"react\";\r\nimport \"./IconButton.css\";\r\n\r\nexport interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {\r\n  children: ReactNode;\r\n  alert?: boolean;\r\n  label: string;\r\n}\r\n\r\nexport function IconButton({\r\n  children,\r\n  alert = false,\r\n  label,\r\n  className = \"\",\r\n  type = \"button\",\r\n  ...rest\r\n}: IconButtonProps) {\r\n  return (\r\n    <button\r\n      type={type}\r\n      className={`pt-icon-btn ${className}`.trim()}\r\n      aria-label={label}\r\n      {...rest}\r\n    >\r\n      {children}\r\n      {alert ? <span className=\"pt-icon-btn__alert\" aria-hidden=\"true\" /> : null}\r\n    </button>\r\n  );\r\n}\r\n\r\nexport default IconButton;\r\n",
+      "target": "components/paryatech/components/IconButton/IconButton.tsx"
+    },
+    {
+      "path": "src/components/IconButton/IconButton.css",
+      "type": "registry:style",
+      "content": ".pt-icon-btn {\r\n  width: 36px;\r\n  height: 36px;\r\n  border: 1px solid var(--line);\r\n  border-radius: var(--radius-md);\r\n  background: var(--surface);\r\n  color: var(--ink-2);\r\n  display: grid;\r\n  place-items: center;\r\n  cursor: pointer;\r\n  position: relative;\r\n  flex: none;\r\n  padding: 0;\r\n}\r\n\r\n.pt-icon-btn:hover:not(:disabled) {\r\n  background: var(--surface-3);\r\n  color: var(--ink);\r\n}\r\n\r\n.pt-icon-btn:disabled {\r\n  opacity: 0.5;\r\n  cursor: not-allowed;\r\n}\r\n\r\n.pt-icon-btn__alert {\r\n  position: absolute;\r\n  top: 6px;\r\n  right: 7px;\r\n  width: 7px;\r\n  height: 7px;\r\n  border-radius: var(--radius-pill);\r\n  background: var(--bad);\r\n  border: 1.5px solid var(--surface);\r\n}\r\n",
+      "target": "components/paryatech/components/IconButton/IconButton.css"
+    }
+  ]
+}

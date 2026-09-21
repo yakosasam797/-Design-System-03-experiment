@@ -26,7 +26,7 @@ type Story = StoryObj<typeof Pagination>;
 
 /**
  * Canonical Booking list / every Booking sheet footer.
- * Import `Pagination` from `@paryatech/design-system` with these props.
+ * Import `Pagination` from `@paryatech/ui` with these props.
  * Do not copy Test states / MultiplePages.
  */
 export const BookingSinglePage: Story = {

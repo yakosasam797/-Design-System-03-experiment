@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "search-field",
+  "type": "registry:ui",
+  "title": "Search Field",
+  "description": "Topbar / toolbar search field",
+  "dependencies": [],
+  "registryDependencies": [
+    "icon"
+  ],
+  "files": [
+    {
+      "path": "src/components/SearchField/SearchField.tsx",
+      "type": "registry:ui",
+      "content": "import type { InputHTMLAttributes } from \"react\";\r\nimport { Icon } from \"../../icons\";\r\nimport \"./SearchField.css\";\r\n\r\nexport interface SearchFieldProps extends Omit<InputHTMLAttributes<HTMLInputElement>, \"type\"> {\r\n  fullWidth?: boolean;\r\n}\r\n\r\nexport function SearchField({\r\n  className = \"\",\r\n  fullWidth = false,\r\n  placeholder = \"Search\",\r\n  \"aria-label\": ariaLabel = \"Search\",\r\n  ...rest\r\n}: SearchFieldProps) {\r\n  return (\r\n    <div className={`pt-search ${fullWidth ? \"pt-search--full\" : \"\"} ${className}`.trim()}>\r\n      <Icon name=\"search\" size={16} />\r\n      <input type=\"search\" placeholder={placeholder} aria-label={ariaLabel} {...rest} />\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default SearchField;\r\n",
+      "target": "components/paryatech/components/SearchField/SearchField.tsx"
+    },
+    {
+      "path": "src/components/SearchField/SearchField.css",
+      "type": "registry:style",
+      "content": ".pt-search {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 9px;\r\n  height: 36px;\r\n  padding: 0 12px;\r\n  border: 1px solid var(--line);\r\n  border-radius: var(--radius-md);\r\n  background: transparent;\r\n  min-width: 0;\r\n}\r\n\r\n.pt-search--full {\r\n  flex: 1 1 260px;\r\n  max-width: none;\r\n}\r\n\r\n.pt-search > svg {\r\n  color: var(--ink-2);\r\n  flex: none;\r\n}\r\n\r\n.pt-search input {\r\n  flex: 1;\r\n  min-width: 0;\r\n  border: none;\r\n  outline: none;\r\n  background: transparent;\r\n  font-family: var(--type-body-search-family);\r\n  font-size: var(--type-body-search-size);\r\n  font-weight: var(--type-body-search-weight);\r\n  color: var(--ink);\r\n}\r\n\r\n.pt-search input::placeholder {\r\n  color: var(--ink-3);\r\n}\r\n",
+      "target": "components/paryatech/components/SearchField/SearchField.css"
+    }
+  ]
+}

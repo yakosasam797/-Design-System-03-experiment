@@ -1,4 +1,4 @@
-import type { ChangeEvent, ReactNode } from "react";
+import type { ChangeEvent } from "react";
 import type { AvatarTone } from "../../components/Avatar/Avatar";
 import type { BreadcrumbItem } from "../../components/Breadcrumbs/Breadcrumbs";
 import type { NotesStripProps } from "../../components/NotesStrip/NotesStrip";

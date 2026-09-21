@@ -18,7 +18,7 @@
 ## API
 
 ```tsx
-import { Icon, ICON_REGISTRY, getIconMeta, resolveIconName } from "@paryatech/design-system";
+import { Icon, ICON_REGISTRY, getIconMeta, resolveIconName } from "@paryatech/ui";
 
 <Icon name="plus" size="sm" />
 <Icon name="nav.bookings" size="nav" />   // alias → bookings

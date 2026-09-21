@@ -1,4 +1,4 @@
-# AGENTS.md — @paryatech/design-system
+# AGENTS.md — @paryatech/ui
 
 Instructions for coding agents (Cursor, Claude Code, Codex, etc.) working **in** this repository or **consuming** it from another project.
 
@@ -7,7 +7,7 @@ Instructions for coding agents (Cursor, Claude Code, Codex, etc.) working **in**
 Independent design-system package. Install from GitHub — **do not** require a sibling Booking / product repo.
 
 ```bash
-npm install github:yakosasam797/-Design-System-03-experiment
+pnpm add github:yakosasam797/-Design-System-03-experiment
 ```
 
 ## Consuming from another project
@@ -17,8 +17,8 @@ npm install github:yakosasam797/-Design-System-03-experiment
 3. Import CSS before UI:
 
 ```ts
-import "@paryatech/design-system/styles.css";
-import { AppShell, ListPage } from "@paryatech/design-system";
+import "@paryatech/ui/styles.css";
+import { AppShell, ListPage } from "@paryatech/ui";
 ```
 
 4. Prefer package exports over copying source into the consumer.
@@ -39,14 +39,14 @@ Inspect Storybook **Patterns/AppShell** before building any full page.
 6. Product modules may supply navigation data, breadcrumbs, back handler, search, account identity, and page content. They may not override shell width, height, type, colour, padding, radii, icon sizes, or active-item paint.
 7. If the shell cannot support a required layout, report a design-system gap. Do not rebuild it locally.
 8. Ignore Direction 01 extraction docs (dark 268px sidebar, role switcher). Direction 03 Booking + these stories are the source of truth.
-9. Before handoff, prove that `AppShell`, `Sidebar`, and `Topbar` imports resolve from `@paryatech/design-system`.
+9. Before handoff, prove that `AppShell`, `Sidebar`, and `Topbar` imports resolve from `@paryatech/ui`.
 
 ## Table row actions
 
 Booking sheet CTAs are **one Button recipe**, not a local CSS button.
 
 ```tsx
-import { Button, RowActions, Icon } from "@paryatech/design-system";
+import { Button, RowActions, Icon } from "@paryatech/ui";
 
 <RowActions>
   <Button variant="brand" size="sm" leadingIcon={<Icon name="eye" size="sm" />}>
@@ -75,7 +75,7 @@ Storybook: **Components/Button → Table row actions (Booking)**.
 Storybook: **Components/Pagination → Booking canonical**.
 
 ```tsx
-import { Pagination, pageCountFor, rangeLabel } from "@paryatech/design-system";
+import { Pagination, pageCountFor, rangeLabel } from "@paryatech/ui";
 
 <Pagination
   rangeLabel={rangeLabel(page, pageSize, total)}
@@ -113,7 +113,7 @@ Product implementations must use their documented module-specific preset, not a 
 
 ### Agent checklist
 
-- [ ] Shared AppShell imported from `@paryatech/design-system`
+- [ ] Shared AppShell imported from `@paryatech/ui`
 - [ ] Shared Sidebar used (no local Sidebar / NavigationShell)
 - [ ] Shared Topbar used (no local Topbar / HeaderShell)
 - [ ] Correct shell configuration selected (`list` or `detail`)
@@ -124,7 +124,7 @@ Product implementations must use their documented module-specific preset, not a 
 - [ ] Imports for AppShell / Sidebar / Topbar resolve from the package
 - [ ] Table View / Open / Continue use `Button variant="brand" size="sm"` + required leading icon
 - [ ] Table More uses `Button iconOnly` inside `RowActions`, not Topbar `IconButton`
-- [ ] Pagination uses `@paryatech/design-system` `Pagination` with the Booking canonical preset (compact: Prev · current page · Next)
+- [ ] Pagination uses `@paryatech/ui` `Pagination` with the Booking canonical preset (compact: Prev · current page · Next)
 - [ ] Pagination totals match the product reference (do not invent rows to demo paging)
 - [ ] Range text comes from `rangeLabel` (no extra noun)
 - [ ] Test-state stories (`MultiplePages`, etc.) were not copied into the product screen
@@ -165,4 +165,4 @@ After changing the package:
 1. `npm run build` succeeds.
 2. Exports resolve: `.`, `./tokens.css`, `./typography.css`, `./styles.css`.
 3. Storybook starts.
-4. A fresh consumer can `npm install github:yakosasam797/-Design-System-03-experiment` and import components without any Booking checkout.
+4. A fresh consumer can `pnpm add github:yakosasam797/-Design-System-03-experiment` and import components without any Booking checkout.

@@ -1,116 +1,159 @@
-# @paryatech/design-system
+# @paryatech/ui
 
-Paryatech design system: colour/typography tokens, reusable UI components, and AppShell / ListPage patterns.
+Paryatech UI: Booking-matched design tokens, reusable React components, and AppShell / Sidebar / Topbar patterns.
 
-Visual language was validated against a Booking List product surface. **This package does not depend on that product repository.** Clone or install this repo alone.
+Visual language matches the Direction 03 Booking module. **This package does not depend on that product repository.** Storybook is documentation and preview only — applications import the same `src/` components via the published package.
 
-## Install from GitHub
+## Installation
 
-```bash
-npm install github:yakosasam797/-Design-System-03-experiment
-```
-
-Equivalent:
+Peers (React 19):
 
 ```bash
-npm install git+https://github.com/yakosasam797/-Design-System-03-experiment.git
+pnpm add react@^19 react-dom@^19
 ```
 
-Peer dependencies (install in the consumer app):
+From GitHub:
 
 ```bash
-npm install react@^19 react-dom@^19
+pnpm add github:yakosasam797/-Design-System-03-experiment
 ```
 
-Local clone (development of the design system itself):
+From a local pack (CI / offline verify):
 
 ```bash
-git clone https://github.com/yakosasam797/-Design-System-03-experiment.git
-cd -Design-System-03-experiment
-npm install
-npm run build
-npm run storybook
+pnpm pack
+pnpm add /path/to/paryatech-ui-0.2.0.tgz
 ```
 
-## CSS imports
+## Required stylesheet
 
-**Recommended for apps** — tokens + full component CSS (includes font `@import`):
+Import once at the app root (Next.js `app/layout.tsx`, Vite `main.tsx`, etc.):
 
 ```ts
-import "@paryatech/design-system/styles.css";
+import "@paryatech/ui/styles.css";
 ```
 
-**Tokens only** (HTML inject / custom chrome):
+That file includes tokens, typography (Google Fonts), reset, focus, and all component CSS.
+
+Tokens only (advanced):
 
 ```ts
-import "@paryatech/design-system/tokens.css";
-import "@paryatech/design-system/typography.css"; // Onest / Public Sans / JetBrains Mono
+import "@paryatech/ui/tokens.css";
+import "@paryatech/ui/typography.css";
 ```
 
-**Components** also import their CSS when you import from the package entry:
+## Import the complete library
 
-```ts
-import { Button, AppShell, ListPage } from "@paryatech/design-system";
+```tsx
+import "@paryatech/ui/styles.css";
+import { Sidebar, Topbar, TopBar, Button, AppShell } from "@paryatech/ui";
 ```
 
-If your bundler does not pull CSS from the JS entry, always add `styles.css` explicitly.
+`TopBar` is an alias of `Topbar` (same component).
 
-### Fonts
+## Import individual components
 
-Families load from Google Fonts via `typography.css` / `styles.css`:
+```tsx
+import { Sidebar } from "@paryatech/ui/sidebar";
+import { TopBar, Topbar } from "@paryatech/ui/top-bar";
+import { Button } from "@paryatech/ui/button";
+```
 
-- **Onest** — display / button labels  
-- **Public Sans** — body / nav  
-- **JetBrains Mono** — IDs, money, counts  
+Other subpaths: `icon-button`, `app-shell`, `data-sheet`, `pagination`, `search-field`, `filter-select`, `text-field`, `checkbox`, `status-chip`, `status-select`, `tab-bar`, `modal`, `tooltip`, `avatar`, `empty-state`, `list-page`, `detail-page`, `icon`.
 
-No local font files are required. Icons are inline SVG in components (no icon font package).
+## Using Sidebar and Top Bar
 
-## Components (v0.1)
+```tsx
+import "@paryatech/ui/styles.css";
+import { AppShell, Sidebar, Topbar, Button, Icon } from "@paryatech/ui";
 
-| Area | Exports |
-| --- | --- |
-| Actions | `Button`, `IconButton` |
-| Feedback | `StatusChip`, `Tooltip`, `EmptyState` |
-| Inputs | `SearchField`, `FilterSelect`, `Checkbox` |
-| Data | `DataSheet` (+ header/row/cell helpers), `TabBar`, `Pagination`, `Avatar` |
-| A11y | `SkipLink` |
-| Shell | `AppShell`, `Sidebar`, `SidebarFooter`, `SidebarNav`, `SidebarSection`/`NavGroup`, `SidebarItem`/`NavItem`, `Topbar`, `BackButton`, `Breadcrumbs`, `TopbarActions`, `AccountMenu`, `NotesStrip`, `CreditsMeter` |
-| Patterns | `ListPage`, `ListBulkBar` |
+export function Example() {
+  return (
+    <AppShell
+      variant="list"
+      navGroups={[
+        {
+          id: "ops",
+          label: "Operations",
+          items: [{ id: "bookings", label: "Bookings", href: "/bookings", icon: "bookings" }],
+        },
+      ]}
+      breadcrumbs={[{ label: "Operations" }, { label: "Bookings" }]}
+      account={{ name: "Vrushabh Jain", initials: "VJ", tone: "pink" }}
+    >
+      <Button variant="brand" size="sm" leadingIcon={<Icon name="plus" size="sm" />}>
+        New
+      </Button>
+    </AppShell>
+  );
+}
+```
 
-## Tokens
+Standalone pieces (same production components):
 
-Canonical file: `src/tokens/tokens.css` (also export `@paryatech/design-system/tokens.css`).
+```tsx
+import { Sidebar, SidebarFooter } from "@paryatech/ui/sidebar";
+import { TopBar } from "@paryatech/ui/top-bar";
+```
 
-- Teal = **work** · Pink = **place / person**
-- Soft-rect radius (`--radius-md` / 10px) for CTAs; pills for status only
-- Typography roles: `--type-*` / `--font-sans` / `--font-display` / `--font-mono`
+Prefer `AppShell` for full ParyatechOS screens. Do not restyle shell chrome locally.
 
-More detail: [`docs/usage/tokens.md`](docs/usage/tokens.md).
+## shadcn-style registry (copy source)
 
-## Storybook
+Registry JSON reuses the same `src/` files (no forks):
 
 ```bash
-npm run storybook
+pnpm dlx shadcn@latest add https://raw.githubusercontent.com/yakosasam797/-Design-System-03-experiment/main/registry/r/sidebar.json
 ```
 
-Opens locally (default port 6006). Foundations → Colorography / Typography; Components; Patterns → AppShell / ListPage.
+Local verify:
 
-## Agent usage
+```bash
+pnpm generate:registry
+# then: pnpm dlx shadcn@latest add ./registry/r/button.json
+```
 
-See [`AGENTS.md`](AGENTS.md) for rules agents must follow when consuming or extending this package.
+Package install remains the recommended path for apps. Registry install is for teams that copy source like shadcn.
+
+## Updating package versions
+
+1. Bump `version` in `package.json`.
+2. Run `pnpm build` and `pnpm test`.
+3. Commit `dist/` (git consumers need built artifacts) or publish a release tag.
+4. In apps: `pnpm update @paryatech/ui` (or reinstall the GitHub / tarball reference).
+
+## Foundations
+
+Documented in Storybook **Foundations** and `src/tokens/tokens.css`:
+
+- Colours + semantic roles
+- Typography (`typography.css`)
+- Spacing, radius, elevation shadows
+- Icon sizes, control heights
+- Breakpoints (`--bp-shell`, `--bp-communication`)
+- Focus styles (`src/styles/focus.css`)
+
+Do not invent new hex values in product apps.
 
 ## Scripts
 
 | Script | Purpose |
 | --- | --- |
-| `npm run build` | Emit `dist/index.js`, `dist/index.d.ts`, `dist/design-system.css` |
-| `npm run storybook` | Component explorer |
-| `npm run build-storybook` | Static Storybook |
+| `pnpm build` | ESM `dist/` + `.d.ts` + `styles.css` |
+| `pnpm typecheck` | `tsc --noEmit` |
+| `pnpm lint` | oxlint on `src/` |
+| `pnpm test` | Vitest |
+| `pnpm storybook` | Component explorer (port 6006) |
+| `pnpm build-storybook` | Static Storybook |
+| `pnpm generate:registry` | Refresh `registry/r/*.json` |
+| `pnpm pack` | Produce installable tarball |
 
-`prepare` runs `build` after install from git so `dist/` exists for consumers.
+## Agent usage
+
+See [`AGENTS.md`](AGENTS.md).
 
 ## Not in this package
 
-- Booking (or any product) routes, domain IDs, or HTML pages  
-- npm registry publish (install from GitHub until further notice)  
-- Dedicated Loading / Error components (compose via EmptyState + DataSheet stories)
+- Booking product routes or domain HTML
+- Public npm publish (optional; pack + GitHub install are supported)
+- Dedicated Loading / Error primitives (compose EmptyState + patterns)

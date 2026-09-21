@@ -9,10 +9,10 @@ npm install github:yakosasam797/-Design-System-03-experiment
 ```
 
 ```ts
-import "@paryatech/design-system/tokens.css";
-import "@paryatech/design-system/typography.css";
+import "@paryatech/ui/tokens.css";
+import "@paryatech/ui/typography.css";
 // or
-import "@paryatech/design-system/styles.css";
+import "@paryatech/ui/styles.css";
 ```
 
 ## Layers
